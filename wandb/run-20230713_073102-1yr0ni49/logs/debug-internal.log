@@ -1,0 +1,106 @@
+2023-07-13 07:31:02,830 INFO    MainThread:99660 [internal.py:wandb_internal():90] W&B internal server running at pid: 99660, started at: 2023-07-13 07:31:02.830256
+2023-07-13 07:31:02,832 INFO    WriterThread:99660 [datastore.py:open_for_write():75] open: /OneFormer/wandb/run-20230713_073102-1yr0ni49/run-1yr0ni49.wandb
+2023-07-13 07:31:02,832 DEBUG   SenderThread:99660 [sender.py:send():235] send: header
+2023-07-13 07:31:02,833 DEBUG   SenderThread:99660 [sender.py:send():235] send: run
+2023-07-13 07:31:08,121 DEBUG   HandlerThread:99660 [handler.py:handle_request():141] handle_request: check_version
+2023-07-13 07:31:08,122 INFO    SenderThread:99660 [dir_watcher.py:__init__():205] watching files in: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files
+2023-07-13 07:31:08,123 INFO    SenderThread:99660 [sender.py:_start_run_threads():812] run started: 1yr0ni49 with start time 1689233462
+2023-07-13 07:31:08,123 DEBUG   SenderThread:99660 [sender.py:send():235] send: summary
+2023-07-13 07:31:08,123 INFO    SenderThread:99660 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-07-13 07:31:08,123 DEBUG   SenderThread:99660 [sender.py:send_request():249] send_request: check_version
+2023-07-13 07:31:09,123 INFO    Thread-7  :99660 [dir_watcher.py:_on_file_created():256] file/dir created: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/wandb-summary.json
+2023-07-13 07:31:13,123 DEBUG   HandlerThread:99660 [handler.py:handle_request():141] handle_request: run_start
+2023-07-13 07:31:13,128 DEBUG   HandlerThread:99660 [meta.py:__init__():35] meta init
+2023-07-13 07:31:13,128 DEBUG   HandlerThread:99660 [meta.py:__init__():49] meta init done
+2023-07-13 07:31:13,128 DEBUG   HandlerThread:99660 [meta.py:probe():209] probe
+2023-07-13 07:31:13,138 DEBUG   HandlerThread:99660 [meta.py:_setup_git():199] setup git
+2023-07-13 07:31:13,144 DEBUG   HandlerThread:99660 [meta.py:_setup_git():206] setup git done
+2023-07-13 07:31:13,144 DEBUG   HandlerThread:99660 [meta.py:_save_pip():53] save pip
+2023-07-13 07:31:13,144 DEBUG   HandlerThread:99660 [meta.py:_save_pip():67] save pip done
+2023-07-13 07:31:13,144 DEBUG   HandlerThread:99660 [meta.py:_save_conda():74] save conda
+2023-07-13 07:31:13,965 DEBUG   HandlerThread:99660 [meta.py:_save_conda():84] save conda done
+2023-07-13 07:31:13,965 DEBUG   HandlerThread:99660 [meta.py:probe():247] probe done
+2023-07-13 07:31:13,995 DEBUG   SenderThread:99660 [sender.py:send():235] send: files
+2023-07-13 07:31:13,995 INFO    SenderThread:99660 [sender.py:_save_file():949] saving file wandb-metadata.json with policy now
+2023-07-13 07:31:13,997 DEBUG   HandlerThread:99660 [handler.py:handle_request():141] handle_request: stop_status
+2023-07-13 07:31:13,997 DEBUG   SenderThread:99660 [sender.py:send_request():249] send_request: stop_status
+2023-07-13 07:31:14,125 INFO    Thread-7  :99660 [dir_watcher.py:_on_file_created():256] file/dir created: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/requirements.txt
+2023-07-13 07:31:14,125 INFO    Thread-7  :99660 [dir_watcher.py:_on_file_created():256] file/dir created: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/conda-environment.yaml
+2023-07-13 07:31:14,125 INFO    Thread-7  :99660 [dir_watcher.py:_on_file_created():256] file/dir created: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/wandb-metadata.json
+2023-07-13 07:31:14,125 INFO    Thread-7  :99660 [dir_watcher.py:_on_file_created():256] file/dir created: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/output.log
+2023-07-13 07:31:16,125 INFO    Thread-7  :99660 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/output.log
+2023-07-13 07:31:19,219 DEBUG   SenderThread:99660 [sender.py:send():235] send: telemetry
+2023-07-13 07:31:19,220 DEBUG   SenderThread:99660 [sender.py:send():235] send: telemetry
+2023-07-13 07:31:20,122 DEBUG   SenderThread:99660 [sender.py:send():235] send: telemetry
+2023-07-13 07:31:20,126 INFO    Thread-7  :99660 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/output.log
+2023-07-13 07:31:22,127 INFO    Thread-7  :99660 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/output.log
+2023-07-13 07:31:23,086 DEBUG   HandlerThread:99660 [handler.py:handle_request():141] handle_request: poll_exit
+2023-07-13 07:31:23,087 DEBUG   SenderThread:99660 [sender.py:send():235] send: exit
+2023-07-13 07:31:23,087 INFO    SenderThread:99660 [sender.py:send_exit():371] handling exit code: 1
+2023-07-13 07:31:23,087 INFO    SenderThread:99660 [sender.py:send_exit():373] handling runtime: 9
+2023-07-13 07:31:23,087 INFO    SenderThread:99660 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-07-13 07:31:23,087 INFO    SenderThread:99660 [sender.py:send_exit():379] send defer
+2023-07-13 07:31:23,087 DEBUG   SenderThread:99660 [sender.py:send_request():249] send_request: poll_exit
+2023-07-13 07:31:23,087 DEBUG   HandlerThread:99660 [handler.py:handle_request():141] handle_request: defer
+2023-07-13 07:31:23,087 INFO    HandlerThread:99660 [handler.py:handle_request_defer():164] handle defer: 0
+2023-07-13 07:31:23,088 DEBUG   SenderThread:99660 [sender.py:send_request():249] send_request: defer
+2023-07-13 07:31:23,088 INFO    SenderThread:99660 [sender.py:send_request_defer():388] handle sender defer: 0
+2023-07-13 07:31:23,088 INFO    SenderThread:99660 [sender.py:transition_state():392] send defer: 1
+2023-07-13 07:31:23,088 DEBUG   HandlerThread:99660 [handler.py:handle_request():141] handle_request: defer
+2023-07-13 07:31:23,088 INFO    HandlerThread:99660 [handler.py:handle_request_defer():164] handle defer: 1
+2023-07-13 07:31:23,127 INFO    Thread-7  :99660 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/wandb-summary.json
+2023-07-13 07:31:23,128 INFO    Thread-7  :99660 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/output.log
+2023-07-13 07:31:23,168 DEBUG   SenderThread:99660 [sender.py:send_request():249] send_request: defer
+2023-07-13 07:31:23,168 INFO    SenderThread:99660 [sender.py:send_request_defer():388] handle sender defer: 1
+2023-07-13 07:31:23,168 INFO    SenderThread:99660 [sender.py:transition_state():392] send defer: 2
+2023-07-13 07:31:23,168 DEBUG   SenderThread:99660 [sender.py:send():235] send: stats
+2023-07-13 07:31:23,168 DEBUG   HandlerThread:99660 [handler.py:handle_request():141] handle_request: defer
+2023-07-13 07:31:23,168 INFO    HandlerThread:99660 [handler.py:handle_request_defer():164] handle defer: 2
+2023-07-13 07:31:23,168 DEBUG   SenderThread:99660 [sender.py:send_request():249] send_request: defer
+2023-07-13 07:31:23,168 INFO    SenderThread:99660 [sender.py:send_request_defer():388] handle sender defer: 2
+2023-07-13 07:31:23,168 INFO    SenderThread:99660 [sender.py:transition_state():392] send defer: 3
+2023-07-13 07:31:23,168 DEBUG   HandlerThread:99660 [handler.py:handle_request():141] handle_request: defer
+2023-07-13 07:31:23,168 INFO    HandlerThread:99660 [handler.py:handle_request_defer():164] handle defer: 3
+2023-07-13 07:31:23,169 DEBUG   SenderThread:99660 [sender.py:send_request():249] send_request: defer
+2023-07-13 07:31:23,169 INFO    SenderThread:99660 [sender.py:send_request_defer():388] handle sender defer: 3
+2023-07-13 07:31:23,169 INFO    SenderThread:99660 [sender.py:transition_state():392] send defer: 4
+2023-07-13 07:31:23,169 DEBUG   HandlerThread:99660 [handler.py:handle_request():141] handle_request: defer
+2023-07-13 07:31:23,169 INFO    HandlerThread:99660 [handler.py:handle_request_defer():164] handle defer: 4
+2023-07-13 07:31:23,169 DEBUG   SenderThread:99660 [sender.py:send():235] send: summary
+2023-07-13 07:31:23,169 INFO    SenderThread:99660 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-07-13 07:31:23,169 DEBUG   SenderThread:99660 [sender.py:send_request():249] send_request: defer
+2023-07-13 07:31:23,169 INFO    SenderThread:99660 [sender.py:send_request_defer():388] handle sender defer: 4
+2023-07-13 07:31:23,169 INFO    SenderThread:99660 [sender.py:transition_state():392] send defer: 5
+2023-07-13 07:31:23,169 DEBUG   HandlerThread:99660 [handler.py:handle_request():141] handle_request: defer
+2023-07-13 07:31:23,169 INFO    HandlerThread:99660 [handler.py:handle_request_defer():164] handle defer: 5
+2023-07-13 07:31:23,169 DEBUG   SenderThread:99660 [sender.py:send_request():249] send_request: defer
+2023-07-13 07:31:23,169 INFO    SenderThread:99660 [sender.py:send_request_defer():388] handle sender defer: 5
+2023-07-13 07:31:23,188 DEBUG   HandlerThread:99660 [handler.py:handle_request():141] handle_request: poll_exit
+2023-07-13 07:31:24,128 INFO    Thread-7  :99660 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/wandb-summary.json
+2023-07-13 07:31:24,332 WARNING MainThread:99660 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2023-07-13 07:31:24,586 INFO    Thread-11 :99660 [upload_job.py:push():132] Uploaded file /tmp/tmpj31g9kqowandb/lolqwgaz-wandb-metadata.json
+2023-07-13 07:31:28,335 WARNING MainThread:99660 [internal.py:is_dead():387] Internal process exiting, parent pid 99513 disappeared
+2023-07-13 07:31:28,335 ERROR   MainThread:99660 [internal.py:wandb_internal():149] Internal process shutdown.
+2023-07-13 07:31:28,455 INFO    SenderThread:99660 [sender.py:transition_state():392] send defer: 6
+2023-07-13 07:31:28,455 INFO    SenderThread:99660 [sender.py:finish():1111] shutting down sender
+2023-07-13 07:31:28,455 INFO    SenderThread:99660 [dir_watcher.py:finish():336] shutting down directory watcher
+2023-07-13 07:31:28,455 DEBUG   HandlerThread:99660 [handler.py:handle_request():141] handle_request: defer
+2023-07-13 07:31:28,455 INFO    HandlerThread:99660 [handler.py:handle_request_defer():164] handle defer: 6
+2023-07-13 07:31:28,455 INFO    HandlerThread:99660 [handler.py:finish():806] shutting down handler
+2023-07-13 07:31:29,129 INFO    SenderThread:99660 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/config.yaml
+2023-07-13 07:31:29,129 INFO    SenderThread:99660 [dir_watcher.py:finish():366] scan: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files
+2023-07-13 07:31:29,129 INFO    SenderThread:99660 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/conda-environment.yaml conda-environment.yaml
+2023-07-13 07:31:29,129 INFO    SenderThread:99660 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/wandb-metadata.json wandb-metadata.json
+2023-07-13 07:31:29,129 INFO    SenderThread:99660 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/config.yaml config.yaml
+2023-07-13 07:31:29,129 INFO    SenderThread:99660 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/wandb-summary.json wandb-summary.json
+2023-07-13 07:31:29,129 INFO    SenderThread:99660 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/output.log output.log
+2023-07-13 07:31:29,129 INFO    SenderThread:99660 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/requirements.txt requirements.txt
+2023-07-13 07:31:29,129 INFO    SenderThread:99660 [file_pusher.py:finish():145] shutting down file pusher
+2023-07-13 07:31:29,129 INFO    SenderThread:99660 [file_pusher.py:join():150] waiting for file pusher
+2023-07-13 07:31:29,170 INFO    WriterThread:99660 [datastore.py:close():279] close: /OneFormer/wandb/run-20230713_073102-1yr0ni49/run-1yr0ni49.wandb
+2023-07-13 07:31:39,785 INFO    Thread-13 :99660 [upload_job.py:push():132] Uploaded file /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/config.yaml
+2023-07-13 07:31:39,852 INFO    Thread-12 :99660 [upload_job.py:push():132] Uploaded file /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/conda-environment.yaml
+2023-07-13 07:31:39,858 INFO    Thread-16 :99660 [upload_job.py:push():132] Uploaded file /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/requirements.txt
+2023-07-13 07:31:39,933 INFO    Thread-14 :99660 [upload_job.py:push():132] Uploaded file /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/wandb-summary.json
+2023-07-13 07:31:40,134 INFO    Thread-15 :99660 [upload_job.py:push():132] Uploaded file /OneFormer/wandb/run-20230713_073102-1yr0ni49/files/output.log
+2023-07-13 07:31:40,856 INFO    MainThread:99660 [internal.py:handle_exit():80] Internal process exited

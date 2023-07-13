@@ -1,0 +1,1722 @@
+mapillary_vistas_panoptic_train !!!!!!!!!!!!!!!!!!!!!
+[31m[5mWARNING[39m[25m [32m[07/13 08:07:58 fvcore.common.config]: [39mLoading config configs/mapillary_vistas/dinat/../Base-Mapillary-UnifiedSegmentation.yaml with yaml.unsafe_load. Your machine may be at risk if the file contains malicious content.
+[32m[07/13 08:07:58 detectron2]: [39mRank of current process: 0. World size: 1
+[32m[07/13 08:07:58 detectron2]: [39mEnvironment info:
+-------------------------------  ------------------------------------------------------------------------------
+sys.platform                     linux
+Python                           3.8.17 (default, Jul  5 2023, 21:04:15) [GCC 11.2.0]
+numpy                            1.23.1
+detectron2                       0.6 @/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2
+Compiler                         GCC 9.4
+CUDA compiler                    CUDA 11.3
+detectron2 arch flags            8.6
+DETECTRON2_ENV_MODULE            <not set>
+PyTorch                          1.10.1 @/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch
+PyTorch debug build              False
+torch._C._GLIBCXX_USE_CXX11_ABI  False
+GPU available                    Yes
+GPU 0                            NVIDIA GeForce RTX 3080 Ti (arch=8.6)
+Driver version                   535.54.03
+CUDA_HOME                        /usr/local/cuda
+Pillow                           10.0.0
+torchvision                      0.11.2 @/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torchvision
+torchvision arch flags           3.5, 5.0, 6.0, 7.0, 7.5, 8.0, 8.6
+fvcore                           0.1.5.post20221221
+iopath                           0.1.9
+cv2                              4.8.0
+-------------------------------  ------------------------------------------------------------------------------
+PyTorch built with:
+  - GCC 7.3
+  - C++ Version: 201402
+  - Intel(R) oneAPI Math Kernel Library Version 2021.4-Product Build 20210904 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v2.2.3 (Git Hash 7336ca9f055cf1bfa13efb658fe15dc9b41f0740)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 11.3
+  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_37,code=compute_37
+  - CuDNN 8.2
+  - Magma 2.5.2
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.3, CUDNN_VERSION=8.2.0, CXX_COMPILER=/opt/rh/devtoolset-7/root/usr/bin/c++, CXX_FLAGS= -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DEDGE_PROFILER_USE_KINETO -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wno-unused-function -Wno-unused-result -Wno-unused-local-typedefs -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.10.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON,
+[32m[07/13 08:07:58 detectron2]: [39mCommand line arguments: Namespace(config_file='configs/mapillary_vistas/dinat/oneformer_dinat_large_bs16_300k.yaml', dist_url='tcp://127.0.0.1:50163', eval_only=False, machine_rank=0, num_gpus=1, num_machines=1, opts=['OUTPUT_DIR', 'outputs/mapillary', 'WANDB.NAME', 'mapillary'], resume=False)
+[32m[07/13 08:07:58 detectron2]: [39mContents of args.config_file=configs/mapillary_vistas/dinat/oneformer_dinat_large_bs16_300k.yaml:
+[38m_BASE_: ../oneformer_R50_bs16_300k.yaml
+[38mMODEL:
+[38m  BACKBONE:
+[38m    NAME: "D2DiNAT"
+[38m  DiNAT:
+[38m    EMBED_DIM: 192
+[38m    MLP_RATIO: 2.0
+[38m    DEPTHS: [3, 4, 18, 5]
+[38m    NUM_HEADS: [6, 12, 24, 48]
+[38m    KERNEL_SIZE: 11
+[38m    DROP_PATH_RATE: 0.3
+[38m    DILATIONS: [[1, 20, 1], [1, 5, 1, 10], [1, 2, 1, 3, 1, 4, 1, 5, 1, 2, 1, 3, 1, 4, 1, 5, 1, 5], [1, 2, 1, 2, 1]]
+[38m  WEIGHTS: "dinat_large_in22k_in1k_384_11x11.pkl"
+[38m  PIXEL_MEAN: [123.675, 116.280, 103.530]
+[38m  PIXEL_STD: [58.395, 57.120, 57.375]
+[38m  ONE_FORMER:
+[38m    NUM_OBJECT_QUERIES: 250
+[38mSOLVER:
+[38m  AMP:
+[38m    ENABLED: False
+[38mTEST:
+[38m  DETECTIONS_PER_IMAGE: 250
+[32m[07/13 08:07:58 detectron2]: [39mRunning with full config:
+[38mCUDNN_BENCHMARK: false
+[38mDATALOADER:
+[38m  ASPECT_RATIO_GROUPING: true
+[38m  FILTER_EMPTY_ANNOTATIONS: true
+[38m  NUM_WORKERS: 10
+[38m  REPEAT_THRESHOLD: 0.0
+[38m  SAMPLER_TRAIN: TrainingSampler
+[38mDATASETS:
+[38m  PRECOMPUTED_PROPOSAL_TOPK_TEST: 1000
+[38m  PRECOMPUTED_PROPOSAL_TOPK_TRAIN: 2000
+[38m  PROPOSAL_FILES_TEST: []
+[38m  PROPOSAL_FILES_TRAIN: []
+[38m  TEST: []
+[38m  TEST_INSTANCE:
+[38m  - mapillary_vistas_panoptic_val
+[38m  TEST_PANOPTIC:
+[38m  - mapillary_vistas_panoptic_val
+[38m  TEST_SEMANTIC:
+[38m  - mapillary_vistas_sem_seg_val
+[38m  TRAIN:
+[38m  - mapillary_vistas_panoptic_train
+[38mGLOBAL:
+[38m  HACK: 1.0
+[38mINPUT:
+[38m  COLOR_AUG_SSD: true
+[38m  CROP:
+[38m    ENABLED: true
+[38m    SINGLE_CATEGORY_MAX_AREA: 1.0
+[38m    SIZE:
+[38m    - 1024
+[38m    - 1024
+[38m    TYPE: absolute
+[38m  DATASET_MAPPER_NAME: oneformer_unified
+[38m  FORMAT: RGB
+[38m  IMAGE_SIZE: 1024
+[38m  MASK_FORMAT: polygon
+[38m  MAX_SCALE: 2.0
+[38m  MAX_SEQ_LEN: 77
+[38m  MAX_SIZE_TEST: 2048
+[38m  MAX_SIZE_TRAIN: 8192
+[38m  MIN_SCALE: 0.1
+[38m  MIN_SIZE_TEST: 2048
+[38m  MIN_SIZE_TRAIN:
+[38m  - 1024
+[38m  - 1228
+[38m  - 1433
+[38m  - 1638
+[38m  - 1843
+[38m  - 2048
+[38m  - 2252
+[38m  - 2457
+[38m  - 2662
+[38m  - 2867
+[38m  - 3072
+[38m  - 3276
+[38m  - 3481
+[38m  - 3686
+[38m  - 3891
+[38m  - 4096
+[38m  MIN_SIZE_TRAIN_SAMPLING: choice
+[38m  RANDOM_FLIP: horizontal
+[38m  SIZE_DIVISIBILITY: 1024
+[38m  TASK_PROB:
+[38m    INSTANCE: 0.5
+[38m    SEMANTIC: 0.5
+[38m  TASK_SEQ_LEN: 77
+[38mMODEL:
+[38m  ANCHOR_GENERATOR:
+[38m    ANGLES:
+[38m    - - -90
+[38m      - 0
+[38m      - 90
+[38m    ASPECT_RATIOS:
+[38m    - - 0.5
+[38m      - 1.0
+[38m      - 2.0
+[38m    NAME: DefaultAnchorGenerator
+[38m    OFFSET: 0.0
+[38m    SIZES:
+[38m    - - 32
+[38m      - 64
+[38m      - 128
+[38m      - 256
+[38m      - 512
+[38m  BACKBONE:
+[38m    FREEZE_AT: 0
+[38m    NAME: D2DiNAT
+[38m  CONVNEXT:
+[38m    DEPTHS:
+[38m    - 3
+[38m    - 3
+[38m    - 27
+[38m    - 3
+[38m    DIMS:
+[38m    - 192
+[38m    - 384
+[38m    - 768
+[38m    - 1536
+[38m    DROP_PATH_RATE: 0.4
+[38m    IN_CHANNELS: 3
+[38m    LSIT: 1.0
+[38m    OUT_FEATURES:
+[38m    - res2
+[38m    - res3
+[38m    - res4
+[38m    - res5
+[38m    OUT_INDICES:
+[38m    - 0
+[38m    - 1
+[38m    - 2
+[38m    - 3
+[38m  DEVICE: cuda
+[38m  DiNAT:
+[38m    ATTN_DROP_RATE: 0.0
+[38m    DEPTHS:
+[38m    - 3
+[38m    - 4
+[38m    - 18
+[38m    - 5
+[38m    DILATIONS:
+[38m    - - 1
+[38m      - 20
+[38m      - 1
+[38m    - - 1
+[38m      - 5
+[38m      - 1
+[38m      - 10
+[38m    - - 1
+[38m      - 2
+[38m      - 1
+[38m      - 3
+[38m      - 1
+[38m      - 4
+[38m      - 1
+[38m      - 5
+[38m      - 1
+[38m      - 2
+[38m      - 1
+[38m      - 3
+[38m      - 1
+[38m      - 4
+[38m      - 1
+[38m      - 5
+[38m      - 1
+[38m      - 5
+[38m    - - 1
+[38m      - 2
+[38m      - 1
+[38m      - 2
+[38m      - 1
+[38m    DROP_PATH_RATE: 0.3
+[38m    DROP_RATE: 0
+[38m    EMBED_DIM: 192
+[38m    IN_PATCH_SIZE: 4
+[38m    KERNEL_SIZE: 11
+[38m    MLP_RATIO: 2.0
+[38m    NUM_HEADS:
+[38m    - 6
+[38m    - 12
+[38m    - 24
+[38m    - 48
+[38m    OUT_FEATURES:
+[38m    - res2
+[38m    - res3
+[38m    - res4
+[38m    - res5
+[38m    OUT_INDICES:
+[38m    - 0
+[38m    - 1
+[38m    - 2
+[38m    - 3
+[38m    QKV_BIAS: true
+[38m    QK_SCALE: null
+[38m  FPN:
+[38m    FUSE_TYPE: sum
+[38m    IN_FEATURES: []
+[38m    NORM: ''
+[38m    OUT_CHANNELS: 256
+[38m  IS_DEMO: false
+[38m  IS_TRAIN: true
+[38m  KEYPOINT_ON: false
+[38m  LOAD_PROPOSALS: false
+[38m  MASK_ON: false
+[38m  META_ARCHITECTURE: OneFormer
+[38m  ONE_FORMER:
+[38m    CLASS_DEC_LAYERS: 2
+[38m    CLASS_WEIGHT: 2.0
+[38m    CONTRASTIVE_TEMPERATURE: 0.07
+[38m    CONTRASTIVE_WEIGHT: 0.5
+[38m    DEC_LAYERS: 10
+[38m    DEEP_SUPERVISION: true
+[38m    DICE_WEIGHT: 5.0
+[38m    DIM_FEEDFORWARD: 2048
+[38m    DROPOUT: 0.1
+[38m    ENC_LAYERS: 0
+[38m    ENFORCE_INPUT_PROJ: false
+[38m    HIDDEN_DIM: 256
+[38m    IMPORTANCE_SAMPLE_RATIO: 0.75
+[38m    MASK_WEIGHT: 5.0
+[38m    NHEADS: 8
+[38m    NO_OBJECT_WEIGHT: 0.1
+[38m    NUM_OBJECT_CTX: 16
+[38m    NUM_OBJECT_QUERIES: 250
+[38m    OVERSAMPLE_RATIO: 3.0
+[38m    PRE_NORM: false
+[38m    SIZE_DIVISIBILITY: 32
+[38m    TRAIN_NUM_POINTS: 12544
+[38m    TRANSFORMER_DECODER_NAME: ContrastiveMultiScaleMaskedTransformerDecoder
+[38m    TRANSFORMER_IN_FEATURE: multi_scale_pixel_decoder
+[38m    USE_TASK_NORM: true
+[38m  PANOPTIC_FPN:
+[38m    COMBINE:
+[38m      ENABLED: true
+[38m      INSTANCES_CONFIDENCE_THRESH: 0.5
+[38m      OVERLAP_THRESH: 0.5
+[38m      STUFF_AREA_LIMIT: 4096
+[38m    INSTANCE_LOSS_WEIGHT: 1.0
+[38m  PIXEL_MEAN:
+[38m  - 123.675
+[38m  - 116.28
+[38m  - 103.53
+[38m  PIXEL_STD:
+[38m  - 58.395
+[38m  - 57.12
+[38m  - 57.375
+[38m  PROPOSAL_GENERATOR:
+[38m    MIN_SIZE: 0
+[38m    NAME: RPN
+[38m  RESNETS:
+[38m    DEFORM_MODULATED: false
+[38m    DEFORM_NUM_GROUPS: 1
+[38m    DEFORM_ON_PER_STAGE:
+[38m    - false
+[38m    - false
+[38m    - false
+[38m    - false
+[38m    DEPTH: 50
+[38m    NORM: SyncBN
+[38m    NUM_GROUPS: 1
+[38m    OUT_FEATURES:
+[38m    - res2
+[38m    - res3
+[38m    - res4
+[38m    - res5
+[38m    RES2_OUT_CHANNELS: 256
+[38m    RES4_DILATION: 1
+[38m    RES5_DILATION: 1
+[38m    RES5_MULTI_GRID:
+[38m    - 1
+[38m    - 1
+[38m    - 1
+[38m    STEM_OUT_CHANNELS: 64
+[38m    STEM_TYPE: basic
+[38m    STRIDE_IN_1X1: false
+[38m    WIDTH_PER_GROUP: 64
+[38m  RETINANET:
+[38m    BBOX_REG_LOSS_TYPE: smooth_l1
+[38m    BBOX_REG_WEIGHTS: &id002
+[38m    - 1.0
+[38m    - 1.0
+[38m    - 1.0
+[38m    - 1.0
+[38m    FOCAL_LOSS_ALPHA: 0.25
+[38m    FOCAL_LOSS_GAMMA: 2.0
+[38m    IN_FEATURES:
+[38m    - p3
+[38m    - p4
+[38m    - p5
+[38m    - p6
+[38m    - p7
+[38m    IOU_LABELS:
+[38m    - 0
+[38m    - -1
+[38m    - 1
+[38m    IOU_THRESHOLDS:
+[38m    - 0.4
+[38m    - 0.5
+[38m    NMS_THRESH_TEST: 0.5
+[38m    NORM: ''
+[38m    NUM_CLASSES: 80
+[38m    NUM_CONVS: 4
+[38m    PRIOR_PROB: 0.01
+[38m    SCORE_THRESH_TEST: 0.05
+[38m    SMOOTH_L1_LOSS_BETA: 0.1
+[38m    TOPK_CANDIDATES_TEST: 1000
+[38m  ROI_BOX_CASCADE_HEAD:
+[38m    BBOX_REG_WEIGHTS:
+[38m    - &id001
+[38m      - 10.0
+[38m      - 10.0
+[38m      - 5.0
+[38m      - 5.0
+[38m    - - 20.0
+[38m      - 20.0
+[38m      - 10.0
+[38m      - 10.0
+[38m    - - 30.0
+[38m      - 30.0
+[38m      - 15.0
+[38m      - 15.0
+[38m    IOUS:
+[38m    - 0.5
+[38m    - 0.6
+[38m    - 0.7
+[38m  ROI_BOX_HEAD:
+[38m    BBOX_REG_LOSS_TYPE: smooth_l1
+[38m    BBOX_REG_LOSS_WEIGHT: 1.0
+[38m    BBOX_REG_WEIGHTS: *id001
+[38m    CLS_AGNOSTIC_BBOX_REG: false
+[38m    CONV_DIM: 256
+[38m    FC_DIM: 1024
+[38m    FED_LOSS_FREQ_WEIGHT_POWER: 0.5
+[38m    FED_LOSS_NUM_CLASSES: 50
+[38m    NAME: ''
+[38m    NORM: ''
+[38m    NUM_CONV: 0
+[38m    NUM_FC: 0
+[38m    POOLER_RESOLUTION: 14
+[38m    POOLER_SAMPLING_RATIO: 0
+[38m    POOLER_TYPE: ROIAlignV2
+[38m    SMOOTH_L1_BETA: 0.0
+[38m    TRAIN_ON_PRED_BOXES: false
+[38m    USE_FED_LOSS: false
+[38m    USE_SIGMOID_CE: false
+[38m  ROI_HEADS:
+[38m    BATCH_SIZE_PER_IMAGE: 512
+[38m    IN_FEATURES:
+[38m    - res4
+[38m    IOU_LABELS:
+[38m    - 0
+[38m    - 1
+[38m    IOU_THRESHOLDS:
+[38m    - 0.5
+[38m    NAME: Res5ROIHeads
+[38m    NMS_THRESH_TEST: 0.5
+[38m    NUM_CLASSES: 80
+[38m    POSITIVE_FRACTION: 0.25
+[38m    PROPOSAL_APPEND_GT: true
+[38m    SCORE_THRESH_TEST: 0.05
+[38m  ROI_KEYPOINT_HEAD:
+[38m    CONV_DIMS:
+[38m    - 512
+[38m    - 512
+[38m    - 512
+[38m    - 512
+[38m    - 512
+[38m    - 512
+[38m    - 512
+[38m    - 512
+[38m    LOSS_WEIGHT: 1.0
+[38m    MIN_KEYPOINTS_PER_IMAGE: 1
+[38m    NAME: KRCNNConvDeconvUpsampleHead
+[38m    NORMALIZE_LOSS_BY_VISIBLE_KEYPOINTS: true
+[38m    NUM_KEYPOINTS: 17
+[38m    POOLER_RESOLUTION: 14
+[38m    POOLER_SAMPLING_RATIO: 0
+[38m    POOLER_TYPE: ROIAlignV2
+[38m  ROI_MASK_HEAD:
+[38m    CLS_AGNOSTIC_MASK: false
+[38m    CONV_DIM: 256
+[38m    NAME: MaskRCNNConvUpsampleHead
+[38m    NORM: ''
+[38m    NUM_CONV: 0
+[38m    POOLER_RESOLUTION: 14
+[38m    POOLER_SAMPLING_RATIO: 0
+[38m    POOLER_TYPE: ROIAlignV2
+[38m  RPN:
+[38m    BATCH_SIZE_PER_IMAGE: 256
+[38m    BBOX_REG_LOSS_TYPE: smooth_l1
+[38m    BBOX_REG_LOSS_WEIGHT: 1.0
+[38m    BBOX_REG_WEIGHTS: *id002
+[38m    BOUNDARY_THRESH: -1
+[38m    CONV_DIMS:
+[38m    - -1
+[38m    HEAD_NAME: StandardRPNHead
+[38m    IN_FEATURES:
+[38m    - res4
+[38m    IOU_LABELS:
+[38m    - 0
+[38m    - -1
+[38m    - 1
+[38m    IOU_THRESHOLDS:
+[38m    - 0.3
+[38m    - 0.7
+[38m    LOSS_WEIGHT: 1.0
+[38m    NMS_THRESH: 0.7
+[38m    POSITIVE_FRACTION: 0.5
+[38m    POST_NMS_TOPK_TEST: 1000
+[38m    POST_NMS_TOPK_TRAIN: 2000
+[38m    PRE_NMS_TOPK_TEST: 6000
+[38m    PRE_NMS_TOPK_TRAIN: 12000
+[38m    SMOOTH_L1_BETA: 0.0
+[38m  SEM_SEG_HEAD:
+[38m    ASPP_CHANNELS: 256
+[38m    ASPP_DILATIONS:
+[38m    - 6
+[38m    - 12
+[38m    - 18
+[38m    ASPP_DROPOUT: 0.1
+[38m    COMMON_STRIDE: 4
+[38m    CONVS_DIM: 256
+[38m    DEFORMABLE_TRANSFORMER_ENCODER_IN_FEATURES:
+[38m    - res3
+[38m    - res4
+[38m    - res5
+[38m    DEFORMABLE_TRANSFORMER_ENCODER_N_HEADS: 8
+[38m    DEFORMABLE_TRANSFORMER_ENCODER_N_POINTS: 4
+[38m    IGNORE_VALUE: 65
+[38m    INST_EMBED_DIM: 256
+[38m    IN_FEATURES:
+[38m    - res2
+[38m    - res3
+[38m    - res4
+[38m    - res5
+[38m    LOSS_TYPE: hard_pixel_mining
+[38m    LOSS_WEIGHT: 1.0
+[38m    MASK_DIM: 256
+[38m    NAME: OneFormerHead
+[38m    NORM: GN
+[38m    NUM_CLASSES: 65
+[38m    PIXEL_DECODER_NAME: MSDeformAttnPixelDecoder
+[38m    PROJECT_CHANNELS:
+[38m    - 48
+[38m    PROJECT_FEATURES:
+[38m    - res2
+[38m    SEM_EMBED_DIM: 256
+[38m    TRANSFORMER_ENC_LAYERS: 6
+[38m    USE_DEPTHWISE_SEPARABLE_CONV: false
+[38m  SWIN:
+[38m    APE: false
+[38m    ATTN_DROP_RATE: 0.0
+[38m    DEPTHS:
+[38m    - 2
+[38m    - 2
+[38m    - 6
+[38m    - 2
+[38m    DROP_PATH_RATE: 0.3
+[38m    DROP_RATE: 0.0
+[38m    EMBED_DIM: 96
+[38m    MLP_RATIO: 4.0
+[38m    NUM_HEADS:
+[38m    - 3
+[38m    - 6
+[38m    - 12
+[38m    - 24
+[38m    OUT_FEATURES:
+[38m    - res2
+[38m    - res3
+[38m    - res4
+[38m    - res5
+[38m    PATCH_NORM: true
+[38m    PATCH_SIZE: 4
+[38m    PRETRAIN_IMG_SIZE: 224
+[38m    QKV_BIAS: true
+[38m    QK_SCALE: null
+[38m    USE_CHECKPOINT: false
+[38m    WINDOW_SIZE: 7
+[38m  TEST:
+[38m    DETECTION_ON: false
+[38m    INSTANCE_ON: true
+[38m    OBJECT_MASK_THRESHOLD: 0.8
+[38m    OVERLAP_THRESHOLD: 0.8
+[38m    PANOPTIC_ON: true
+[38m    SEMANTIC_ON: true
+[38m    SEM_SEG_POSTPROCESSING_BEFORE_INFERENCE: false
+[38m    TASK: panoptic
+[38m  TEXT_ENCODER:
+[38m    CONTEXT_LENGTH: 77
+[38m    NUM_LAYERS: 6
+[38m    N_CTX: 16
+[38m    PROJ_NUM_LAYERS: 2
+[38m    VOCAB_SIZE: 49408
+[38m    WIDTH: 256
+[38m  WEIGHTS: dinat_large_in22k_in1k_384_11x11.pkl
+[38mOUTPUT_DIR: outputs/mapillary
+[38mSEED: -1
+[38mSOLVER:
+[38m  AMP:
+[38m    ENABLED: false
+[38m  BACKBONE_MULTIPLIER: 0.1
+[38m  BASE_LR: 0.0001
+[38m  BASE_LR_END: 0.0
+[38m  BIAS_LR_FACTOR: 1.0
+[38m  CHECKPOINT_PERIOD: 5000
+[38m  CLIP_GRADIENTS:
+[38m    CLIP_TYPE: full_model
+[38m    CLIP_VALUE: 0.01
+[38m    ENABLED: true
+[38m    NORM_TYPE: 2.0
+[38m  GAMMA: 0.1
+[38m  IMS_PER_BATCH: 16
+[38m  LR_SCHEDULER_NAME: WarmupPolyLR
+[38m  MAX_ITER: 300000
+[38m  MOMENTUM: 0.9
+[38m  NESTEROV: false
+[38m  NUM_DECAYS: 3
+[38m  OPTIMIZER: ADAMW
+[38m  POLY_LR_CONSTANT_ENDING: 0.0
+[38m  POLY_LR_POWER: 0.9
+[38m  REFERENCE_WORLD_SIZE: 0
+[38m  RESCALE_INTERVAL: false
+[38m  STEPS:
+[38m  - 30000
+[38m  WARMUP_FACTOR: 1.0
+[38m  WARMUP_ITERS: 0
+[38m  WARMUP_METHOD: linear
+[38m  WEIGHT_DECAY: 0.05
+[38m  WEIGHT_DECAY_BIAS: null
+[38m  WEIGHT_DECAY_EMBED: 0.0
+[38m  WEIGHT_DECAY_NORM: 0.0
+[38mTEST:
+[38m  AUG:
+[38m    CROP_SIZE:
+[38m    - 640
+[38m    - 640
+[38m    ENABLED: false
+[38m    FLIP: true
+[38m    IS_SLIDE: false
+[38m    KEEP_RATIO: true
+[38m    MAX_SIZE: 4096
+[38m    MIN_SIZES:
+[38m    - 512
+[38m    - 768
+[38m    - 1024
+[38m    - 1280
+[38m    - 1536
+[38m    - 1792
+[38m    SCALE:
+[38m    - 2048
+[38m    - 640
+[38m    SETR_MULTI_SCALE: true
+[38m    SIZE_DIVISOR: 32
+[38m    STRIDE:
+[38m    - 426
+[38m    - 426
+[38m  DETECTIONS_PER_IMAGE: 250
+[38m  EVAL_PERIOD: 30000
+[38m  EXPECTED_RESULTS: []
+[38m  KEYPOINT_OKS_SIGMAS: []
+[38m  PRECISE_BN:
+[38m    ENABLED: false
+[38m    NUM_ITER: 200
+[38mVERSION: 2
+[38mVIS_PERIOD: 0
+[38mWANDB:
+[38m  NAME: mapillary
+[38m  PROJECT: OneFormer
+[32m[07/13 08:07:58 detectron2]: [39mFull config saved to outputs/mapillary/config.yaml
+[32m[07/13 08:07:58 d2.utils.env]: [39mUsing a generated random seed 58345411
+[32m[07/13 08:08:01 d2.engine.defaults]: [39mModel:
+OneFormer(
+  (backbone): D2DiNAT(
+    (patch_embed): ConvTokenizer(
+      (proj): Sequential(
+        (0): Conv2d(3, 96, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (1): Conv2d(96, 192, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      )
+      (norm): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+    )
+    (pos_drop): Dropout(p=0.0, inplace=False)
+    (levels): ModuleList(
+      (0): NATBlock(
+        (blocks): ModuleList(
+          (0): NATLayer(
+            (norm1): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=6
+              (qkv): Linear(in_features=192, out_features=576, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=192, out_features=192, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): Identity()
+            (norm2): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=192, out_features=384, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=384, out_features=192, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (1): NATLayer(
+            (norm1): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=20, head_dim=32, num_heads=6
+              (qkv): Linear(in_features=192, out_features=576, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=192, out_features=192, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=192, out_features=384, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=384, out_features=192, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (2): NATLayer(
+            (norm1): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=6
+              (qkv): Linear(in_features=192, out_features=576, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=192, out_features=192, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=192, out_features=384, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=384, out_features=192, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+        (downsample): ConvDownsampler(
+          (reduction): Conv2d(192, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (norm): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (1): NATBlock(
+        (blocks): ModuleList(
+          (0): NATLayer(
+            (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=12
+              (qkv): Linear(in_features=384, out_features=1152, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=384, out_features=768, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=768, out_features=384, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (1): NATLayer(
+            (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=5, head_dim=32, num_heads=12
+              (qkv): Linear(in_features=384, out_features=1152, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=384, out_features=768, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=768, out_features=384, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (2): NATLayer(
+            (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=12
+              (qkv): Linear(in_features=384, out_features=1152, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=384, out_features=768, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=768, out_features=384, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (3): NATLayer(
+            (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=10, head_dim=32, num_heads=12
+              (qkv): Linear(in_features=384, out_features=1152, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=384, out_features=768, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=768, out_features=384, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+        (downsample): ConvDownsampler(
+          (reduction): Conv2d(384, 768, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (2): NATBlock(
+        (blocks): ModuleList(
+          (0): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (1): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=2, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (2): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (3): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=3, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (4): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (5): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=4, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (6): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (7): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=5, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (8): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (9): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=2, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (10): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (11): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=3, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (12): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (13): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=4, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (14): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (15): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=5, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (16): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (17): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=5, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+        (downsample): ConvDownsampler(
+          (reduction): Conv2d(768, 1536, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (norm): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (3): NATBlock(
+        (blocks): ModuleList(
+          (0): NATLayer(
+            (norm1): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=48
+              (qkv): Linear(in_features=1536, out_features=4608, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=1536, out_features=1536, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=1536, out_features=3072, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=3072, out_features=1536, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (1): NATLayer(
+            (norm1): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=2, head_dim=32, num_heads=48
+              (qkv): Linear(in_features=1536, out_features=4608, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=1536, out_features=1536, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=1536, out_features=3072, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=3072, out_features=1536, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (2): NATLayer(
+            (norm1): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=48
+              (qkv): Linear(in_features=1536, out_features=4608, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=1536, out_features=1536, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=1536, out_features=3072, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=3072, out_features=1536, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (3): NATLayer(
+            (norm1): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=2, head_dim=32, num_heads=48
+              (qkv): Linear(in_features=1536, out_features=4608, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=1536, out_features=1536, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=1536, out_features=3072, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=3072, out_features=1536, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (4): NATLayer(
+            (norm1): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=48
+              (qkv): Linear(in_features=1536, out_features=4608, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=1536, out_features=1536, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=1536, out_features=3072, bias=True)
+              (act): GELU()
+              (fc2): Linear(in_features=3072, out_features=1536, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+      )
+    )
+    (norm0): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+    (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+    (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (norm3): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+  )
+  (sem_seg_head): OneFormerHead(
+    (pixel_decoder): MSDeformAttnPixelDecoder(
+      (input_proj): ModuleList(
+        (0): Sequential(
+          (0): Conv2d(1536, 256, kernel_size=(1, 1), stride=(1, 1))
+          (1): GroupNorm(32, 256, eps=1e-05, affine=True)
+        )
+        (1): Sequential(
+          (0): Conv2d(768, 256, kernel_size=(1, 1), stride=(1, 1))
+          (1): GroupNorm(32, 256, eps=1e-05, affine=True)
+        )
+        (2): Sequential(
+          (0): Conv2d(384, 256, kernel_size=(1, 1), stride=(1, 1))
+          (1): GroupNorm(32, 256, eps=1e-05, affine=True)
+        )
+      )
+      (transformer): MSDeformAttnTransformerEncoderOnly(
+        (encoder): MSDeformAttnTransformerEncoder(
+          (layers): ModuleList(
+            (0): MSDeformAttnTransformerEncoderLayer(
+              (self_attn): MSDeformAttn(
+                (sampling_offsets): Linear(in_features=256, out_features=192, bias=True)
+                (attention_weights): Linear(in_features=256, out_features=96, bias=True)
+                (value_proj): Linear(in_features=256, out_features=256, bias=True)
+                (output_proj): Linear(in_features=256, out_features=256, bias=True)
+              )
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (linear1): Linear(in_features=256, out_features=1024, bias=True)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=1024, out_features=256, bias=True)
+              (dropout3): Dropout(p=0.1, inplace=False)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            )
+            (1): MSDeformAttnTransformerEncoderLayer(
+              (self_attn): MSDeformAttn(
+                (sampling_offsets): Linear(in_features=256, out_features=192, bias=True)
+                (attention_weights): Linear(in_features=256, out_features=96, bias=True)
+                (value_proj): Linear(in_features=256, out_features=256, bias=True)
+                (output_proj): Linear(in_features=256, out_features=256, bias=True)
+              )
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (linear1): Linear(in_features=256, out_features=1024, bias=True)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=1024, out_features=256, bias=True)
+              (dropout3): Dropout(p=0.1, inplace=False)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            )
+            (2): MSDeformAttnTransformerEncoderLayer(
+              (self_attn): MSDeformAttn(
+                (sampling_offsets): Linear(in_features=256, out_features=192, bias=True)
+                (attention_weights): Linear(in_features=256, out_features=96, bias=True)
+                (value_proj): Linear(in_features=256, out_features=256, bias=True)
+                (output_proj): Linear(in_features=256, out_features=256, bias=True)
+              )
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (linear1): Linear(in_features=256, out_features=1024, bias=True)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=1024, out_features=256, bias=True)
+              (dropout3): Dropout(p=0.1, inplace=False)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            )
+            (3): MSDeformAttnTransformerEncoderLayer(
+              (self_attn): MSDeformAttn(
+                (sampling_offsets): Linear(in_features=256, out_features=192, bias=True)
+                (attention_weights): Linear(in_features=256, out_features=96, bias=True)
+                (value_proj): Linear(in_features=256, out_features=256, bias=True)
+                (output_proj): Linear(in_features=256, out_features=256, bias=True)
+              )
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (linear1): Linear(in_features=256, out_features=1024, bias=True)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=1024, out_features=256, bias=True)
+              (dropout3): Dropout(p=0.1, inplace=False)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            )
+            (4): MSDeformAttnTransformerEncoderLayer(
+              (self_attn): MSDeformAttn(
+                (sampling_offsets): Linear(in_features=256, out_features=192, bias=True)
+                (attention_weights): Linear(in_features=256, out_features=96, bias=True)
+                (value_proj): Linear(in_features=256, out_features=256, bias=True)
+                (output_proj): Linear(in_features=256, out_features=256, bias=True)
+              )
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (linear1): Linear(in_features=256, out_features=1024, bias=True)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=1024, out_features=256, bias=True)
+              (dropout3): Dropout(p=0.1, inplace=False)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            )
+            (5): MSDeformAttnTransformerEncoderLayer(
+              (self_attn): MSDeformAttn(
+                (sampling_offsets): Linear(in_features=256, out_features=192, bias=True)
+                (attention_weights): Linear(in_features=256, out_features=96, bias=True)
+                (value_proj): Linear(in_features=256, out_features=256, bias=True)
+                (output_proj): Linear(in_features=256, out_features=256, bias=True)
+              )
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (linear1): Linear(in_features=256, out_features=1024, bias=True)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=1024, out_features=256, bias=True)
+              (dropout3): Dropout(p=0.1, inplace=False)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            )
+          )
+        )
+      )
+      (pe_layer): Positional encoding PositionEmbeddingSine
+          num_pos_feats: 128
+          temperature: 10000
+          normalize: True
+          scale: 6.283185307179586
+      (mask_features): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+      (adapter_1): Conv2d(
+        192, 256, kernel_size=(1, 1), stride=(1, 1), bias=False
+        (norm): GroupNorm(32, 256, eps=1e-05, affine=True)
+      )
+      (layer_1): Conv2d(
+        256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+        (norm): GroupNorm(32, 256, eps=1e-05, affine=True)
+      )
+    )
+    (predictor): ContrastiveMultiScaleMaskedTransformerDecoder(
+      (pe_layer): Positional encoding PositionEmbeddingSine
+          num_pos_feats: 128
+          temperature: 10000
+          normalize: True
+          scale: 6.283185307179586
+      (class_transformer): Transformer(
+        (encoder): TransformerEncoder(
+          (layers): ModuleList()
+        )
+        (decoder): TransformerDecoder(
+          (layers): ModuleList(
+            (0): TransformerDecoderLayer(
+              (self_attn): MultiheadAttention(
+                (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+              )
+              (multihead_attn): MultiheadAttention(
+                (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+              )
+              (linear1): Linear(in_features=256, out_features=2048, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=2048, out_features=256, bias=True)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (norm3): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (dropout3): Dropout(p=0.1, inplace=False)
+            )
+            (1): TransformerDecoderLayer(
+              (self_attn): MultiheadAttention(
+                (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+              )
+              (multihead_attn): MultiheadAttention(
+                (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+              )
+              (linear1): Linear(in_features=256, out_features=2048, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=2048, out_features=256, bias=True)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (norm3): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (dropout3): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (transformer_self_attention_layers): ModuleList(
+        (0): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (1): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (2): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (3): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (4): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (5): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (6): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (7): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (8): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (transformer_cross_attention_layers): ModuleList(
+        (0): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (1): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (2): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (3): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (4): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (5): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (6): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (7): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (8): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (transformer_ffn_layers): ModuleList(
+        (0): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (1): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (2): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (3): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (4): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (5): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (6): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (7): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (8): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (decoder_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (query_embed): Embedding(250, 256)
+      (level_embed): Embedding(3, 256)
+      (input_proj): ModuleList(
+        (0): Sequential()
+        (1): Sequential()
+        (2): Sequential()
+      )
+      (class_input_proj): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+      (class_embed): Linear(in_features=256, out_features=66, bias=True)
+      (mask_embed): MLP(
+        (layers): ModuleList(
+          (0): Linear(in_features=256, out_features=256, bias=True)
+          (1): Linear(in_features=256, out_features=256, bias=True)
+          (2): Linear(in_features=256, out_features=256, bias=True)
+        )
+      )
+    )
+  )
+  (task_mlp): MLP(
+    (layers): ModuleList(
+      (0): Linear(in_features=77, out_features=256, bias=True)
+      (1): Linear(in_features=256, out_features=256, bias=True)
+    )
+  )
+  (text_encoder): TextTransformer(
+    (transformer): Transformer(
+      (resblocks): Sequential(
+        (0): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (ln_1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=256, out_features=1024, bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Linear(in_features=1024, out_features=256, bias=True)
+          )
+          (ln_2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (1): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (ln_1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=256, out_features=1024, bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Linear(in_features=1024, out_features=256, bias=True)
+          )
+          (ln_2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (2): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (ln_1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=256, out_features=1024, bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Linear(in_features=1024, out_features=256, bias=True)
+          )
+          (ln_2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (3): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (ln_1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=256, out_features=1024, bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Linear(in_features=1024, out_features=256, bias=True)
+          )
+          (ln_2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (4): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (ln_1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=256, out_features=1024, bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Linear(in_features=1024, out_features=256, bias=True)
+          )
+          (ln_2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (5): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (ln_1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=256, out_features=1024, bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Linear(in_features=1024, out_features=256, bias=True)
+          )
+          (ln_2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+    )
+    (ln_final): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (token_embedding): Embedding(49408, 256)
+  )
+  (text_projector): MLP(
+    (layers): ModuleList(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): Linear(in_features=256, out_features=256, bias=True)
+    )
+  )
+  (prompt_ctx): Embedding(16, 256)
+  (criterion): Criterion SetCriterion
+      matcher: Matcher HungarianMatcher
+          cost_class: 2.0
+          cost_mask: 5.0
+          cost_dice: 5.0
+      losses: ['labels', 'masks', 'contrastive']
+      weight_dict: {'loss_ce': 2.0, 'loss_mask': 5.0, 'loss_dice': 5.0, 'loss_contrastive': 0.5, 'loss_ce_0': 2.0, 'loss_mask_0': 5.0, 'loss_dice_0': 5.0, 'loss_contrastive_0': 0.5, 'loss_ce_1': 2.0, 'loss_mask_1': 5.0, 'loss_dice_1': 5.0, 'loss_contrastive_1': 0.5, 'loss_ce_2': 2.0, 'loss_mask_2': 5.0, 'loss_dice_2': 5.0, 'loss_contrastive_2': 0.5, 'loss_ce_3': 2.0, 'loss_mask_3': 5.0, 'loss_dice_3': 5.0, 'loss_contrastive_3': 0.5, 'loss_ce_4': 2.0, 'loss_mask_4': 5.0, 'loss_dice_4': 5.0, 'loss_contrastive_4': 0.5, 'loss_ce_5': 2.0, 'loss_mask_5': 5.0, 'loss_dice_5': 5.0, 'loss_contrastive_5': 0.5, 'loss_ce_6': 2.0, 'loss_mask_6': 5.0, 'loss_dice_6': 5.0, 'loss_contrastive_6': 0.5, 'loss_ce_7': 2.0, 'loss_mask_7': 5.0, 'loss_dice_7': 5.0, 'loss_contrastive_7': 0.5, 'loss_ce_8': 2.0, 'loss_mask_8': 5.0, 'loss_dice_8': 5.0, 'loss_contrastive_8': 0.5}
+      num_classes: 65
+      eos_coef: 0.1
+      num_points: 12544
+      oversample_ratio: 3.0
+      importance_sample_ratio: 0.75
+)
+[32m[07/13 08:08:01 oneformer.data.dataset_mappers.oneformer_unified_dataset_mapper]: [39m[OneFormerUnifiedDatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=8192, sample_style='choice'), RandomCrop_CategoryAreaConstraint(crop_type='absolute', crop_size=[1024, 1024], single_category_max_area=1.0, ignored_category=65), <detectron2.projects.point_rend.color_augmentation.ColorAugSSDTransform object at 0x7f98c0491190>, RandomFlip()]
+Traceback (most recent call last):
+  File "train_net.py", line 439, in <module>
+    launch(
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2/engine/launch.py", line 84, in launch
+    main_func(*args)
+  File "train_net.py", line 423, in main
+    trainer = Trainer(cfg)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 378, in __init__
+    data_loader = self.build_train_loader(cfg)
+  File "train_net.py", line 162, in build_train_loader
+    return build_detection_train_loader(cfg, mapper=mapper)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2/config/config.py", line 207, in wrapped
+    explicit_args = _get_args_from_config(from_config, *args, **kwargs)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2/data/build.py", line 420, in _train_loader_from_config
+    dataset = get_detection_dataset_dicts(
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2/data/build.py", line 242, in get_detection_dataset_dicts
+    dataset_dicts = [DatasetCatalog.get(dataset_name) for dataset_name in names]
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2/data/build.py", line 242, in <listcomp>
+    dataset_dicts = [DatasetCatalog.get(dataset_name) for dataset_name in names]
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2/data/catalog.py", line 58, in get
+    return f()
+  File "/OneFormer/oneformer/data/datasets/register_mapillary_vistas_panoptic.py", line 413, in <lambda>
+    lambda: load_mapillary_vistas_panoptic_json(
+  File "/OneFormer/oneformer/data/datasets/register_mapillary_vistas_panoptic.py", line 362, in load_mapillary_vistas_panoptic_json
+    with PathManager.open(json_file) as f:
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/iopath/common/file_io.py", line 1012, in open
+    bret = handler._open(path, mode, buffering=buffering, **kwargs)  # type: ignore
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/iopath/common/file_io.py", line 604, in _open
+    return open(  # type: ignore
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/source/datasets/mapillary_vistas/training/panoptic/panoptic_2018.json'

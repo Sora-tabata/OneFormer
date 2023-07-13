@@ -428,16 +428,16 @@ def register_mapillary_vistas_panoptic(
 
 _PREDEFINED_SPLITS_ADE20K_PANOPTIC = {
     "mapillary_vistas_panoptic_train": (
-        "mapillary_vistas/training/images",
-        "mapillary_vistas/training/panoptic",
-        "mapillary_vistas/training/panoptic/panoptic_2018.json",
-        "mapillary_vistas/training/labels",
+        "training/images",
+        "training/panoptic",
+        "training/panoptic/panoptic_2018.json",
+        "training/labels",
     ),
     "mapillary_vistas_panoptic_val": (
-        "mapillary_vistas/validation/images",
-        "mapillary_vistas/validation/panoptic",
-        "mapillary_vistas/validation/panoptic/panoptic_2018.json",
-        "mapillary_vistas/validation/labels",
+        "validation/images",
+        "validation/panoptic",
+        "validation/panoptic/panoptic_2018.json",
+        "validation/labels",
     ),
 }
 
@@ -482,7 +482,7 @@ def get_metadata():
 
     meta["thing_dataset_id_to_contiguous_id"] = thing_dataset_id_to_contiguous_id
     meta["stuff_dataset_id_to_contiguous_id"] = stuff_dataset_id_to_contiguous_id
-
+    print(meta, "meta!!!")
     return meta
 
 
@@ -505,4 +505,5 @@ def register_all_mapillary_vistas_panoptic(root):
 
 
 _root = os.getenv("DETECTRON2_DATASETS", "datasets")
-register_all_mapillary_vistas_panoptic(_root)
+register_all_mapillary_vistas_panoptic("/mnt/source/datasets/mapillary_vistas/")
+print(_PREDEFINED_SPLITS_ADE20K_PANOPTIC.items(), "this!!")

@@ -1,0 +1,30 @@
+/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1639180588308/work/aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "train_net.py", line 435, in <module>
+    launch(
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2/engine/launch.py", line 84, in launch
+    main_func(*args)
+  File "train_net.py", line 423, in main
+    trainer = Trainer(cfg)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 376, in __init__
+    model = self.build_model(cfg)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 514, in build_model
+    model = build_model(cfg)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2/modeling/meta_arch/build.py", line 23, in build_model
+    model.to(torch.device(cfg.MODEL.DEVICE))
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/nn/modules/module.py", line 899, in to
+    return self._apply(convert)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/nn/modules/module.py", line 570, in _apply
+    module._apply(fn)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/nn/modules/module.py", line 570, in _apply
+    module._apply(fn)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/nn/modules/module.py", line 570, in _apply
+    module._apply(fn)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/nn/modules/module.py", line 593, in _apply
+    param_applied = fn(param)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/nn/modules/module.py", line 897, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/cuda/__init__.py", line 214, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
