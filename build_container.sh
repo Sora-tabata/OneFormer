@@ -8,7 +8,7 @@ docker pull sorajang/oneformer
 
 
 # Create a new container
-sudo docker run -i -t --gpus all -d \
+docker run -i -t --gpus all -d \
 --shm-size=2gb \
 -v $HOME:/mnt/source \
 --name="oneformer" sorajang/oneformer bash
