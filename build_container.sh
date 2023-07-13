@@ -24,4 +24,5 @@ docker exec -it oneformer bash -i -c "apt-get update && \
     pip3 install git+https://github.com/cocodataset/panopticapi.git && \
     pip3 install git+https://github.com/mcordts/cityscapesScripts.git && \
     pip3 install -r requirements.txt && \
-    python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'"
+    python -m pip install 'git+https://github.com/facebookresearch/detectron2.git' && \
+    pip3 install mxnet-mkl==1.6.0 numpy==1.23.1"
