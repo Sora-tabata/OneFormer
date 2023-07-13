@@ -359,7 +359,7 @@ def load_mapillary_vistas_panoptic_json(json_file, image_dir, gt_dir, semseg_dir
             segment_info["isthing"] = False
         return segment_info
 
-    with PathManager.open(json_file, 'rb') as f:
+    with PathManager.open(json_file) as f:
         json_info = json.load(f)
 
     ret = []
