@@ -1,5 +1,5 @@
 export DETECTRON2_DATASETS="/mnt/source/datasets/mapillary_vistas/"
-
+export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:64
 python3 oneformer/data/datasets/register_mapillary_vistas_panoptic.py
 
 python train_net.py --dist-url 'tcp://127.0.0.1:50163' \

@@ -67,6 +67,9 @@ from oneformer.utils.events import WandbWriter, setup_wandb
 from time import sleep
 from oneformer.data.build import *
 from oneformer.data.dataset_mappers.dataset_mapper import DatasetMapper
+import os
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:64"
+
 
 class Trainer(DefaultTrainer):
     """

@@ -505,5 +505,5 @@ def register_all_mapillary_vistas_panoptic(root):
 
 
 _root = os.getenv("DETECTRON2_DATASETS", "datasets")
-register_all_mapillary_vistas_panoptic("/mnt/source/datasets/mapillary_vistas/")
+register_all_mapillary_vistas_panoptic(_root)
 print(_PREDEFINED_SPLITS_ADE20K_PANOPTIC.items(), "this!!")
