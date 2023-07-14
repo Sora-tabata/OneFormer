@@ -482,7 +482,7 @@ def get_metadata():
 
     meta["thing_dataset_id_to_contiguous_id"] = thing_dataset_id_to_contiguous_id
     meta["stuff_dataset_id_to_contiguous_id"] = stuff_dataset_id_to_contiguous_id
-    print(meta, "meta!!!")
+    #print(meta, "meta!!!")
     return meta
 
 
@@ -506,4 +506,4 @@ def register_all_mapillary_vistas_panoptic(root):
 
 _root = os.getenv("DETECTRON2_DATASETS", "datasets")
 register_all_mapillary_vistas_panoptic(_root)
-print(_PREDEFINED_SPLITS_ADE20K_PANOPTIC.items(), "this!!")
+#print(_PREDEFINED_SPLITS_ADE20K_PANOPTIC.items(), "this!!")

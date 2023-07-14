@@ -19,7 +19,7 @@ DATASETS:
   TEST_INSTANCE: ("mapillary_vistas_panoptic_val",)
   TEST_SEMANTIC: ("mapillary_vistas_sem_seg_val",)
 SOLVER:
-  IMS_PER_BATCH: 64
+  IMS_PER_BATCH: 1
   BASE_LR: 0.0001
   MAX_ITER: 300000
   WARMUP_FACTOR: 1.0
@@ -64,5 +64,5 @@ TEST:
     FLIP: True
 DATALOADER:
   FILTER_EMPTY_ANNOTATIONS: True
-  NUM_WORKERS: 2
+  NUM_WORKERS: 10
 VERSION: 2
