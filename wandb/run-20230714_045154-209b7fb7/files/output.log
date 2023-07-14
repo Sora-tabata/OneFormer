@@ -1699,3 +1699,41 @@ Total Params: 240.740949 M
   return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
 [32m[07/14 04:52:05 d2.engine.train_loop]: [39mStarting training from iteration 0
 /opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1639180588308/work/aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+[31m[4m[5mERROR[39m[24m[25m [32m[07/14 04:52:27 d2.engine.train_loop]: [39mException during training:
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 155, in train
+    self.run_step()
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 310, in run_step
+    loss_dict = self.model(data)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/OneFormer/oneformer/oneformer_model.py", line 279, in forward
+    features = self.backbone(images.tensor)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/OneFormer/oneformer/modeling/backbone/dinat.py", line 280, in forward
+    y = super().forward(x)
+  File "/OneFormer/oneformer/modeling/backbone/dinat.py", line 226, in forward
+    x = self.forward_embeddings(x)
+  File "/OneFormer/oneformer/modeling/backbone/dinat.py", line 212, in forward_embeddings
+    x = self.patch_embed(x)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/OneFormer/oneformer/modeling/backbone/dinat.py", line 30, in forward
+    x = self.proj(x).permute(0, 2, 3, 1)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/nn/modules/container.py", line 141, in forward
+    input = module(input)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 446, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/opt/miniconda3/envs/oneformer/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 442, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: CUDA out of memory. Tried to allocate 3.00 GiB (GPU 0; 11.75 GiB total capacity; 7.66 GiB already allocated; 1.53 GiB free; 7.66 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[32m[07/14 04:52:27 d2.engine.hooks]: [39mTotal training time: 0:00:21 (0:00:00 on hooks)
+[32m[07/14 04:52:27 d2.utils.events]: [39m iter: 0       lr: N/A  max_mem: 7841M
