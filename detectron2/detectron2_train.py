@@ -12,8 +12,16 @@ import matplotlib.pyplot as plt
 
 from detectron2.structures import BoxMode
 from detectron2.data import DatasetCatalog, MetadataCatalog
-     
-     
+import detectron2
+from detectron2.utils.logger import setup_logger
+setup_logger()
+from detectron2 import model_zoo
+from detectron2.config import get_cfg
+from detectron2.data import MetadataCatalog, DatasetCatalog
+from detectron2.engine import DefaultTrainer, DefaultPredictor
+from detectron2.utils.visualizer import ColorMode, Visualizer
+
+
 def get_data_dicts(directory, classes):
     dataset_dicts = []
     for filename in [file for file in os.listdir(directory) if file.endswith('.json')]:
@@ -49,39 +57,38 @@ def get_data_dicts(directory, classes):
         dataset_dicts.append(record)
     return dataset_dicts
 
-
-
 classes = ['BL', 'CL', 'DM', 'JB', 'LA', 'PC', 'RA', 'SA', 'SL', 'SLA', 'SRA']
 
 data_path = '/mnt/source/datasets/CeyMo/'
 
 for d in ["train", "test"]:
     DatasetCatalog.register(
-        "category_" + d, 
+        "ceymo_" + d, 
         lambda d=d: get_data_dicts(data_path+d, classes)
     )
-    MetadataCatalog.get("category_" + d).set(thing_classes=classes)
+    MetadataCatalog.get("ceymo_" + d).set(thing_classes=classes)
 
-microcontroller_metadata = MetadataCatalog.get("category_train")
-
-
-from detectron2 import model_zoo
-from detectron2.engine import DefaultTrainer, DefaultPredictor
-from detectron2.config import get_cfg
-from detectron2.utils.visualizer import ColorMode, Visualizer
+microcontroller_metadata = MetadataCatalog.get("ceymo_train")
 
 cfg = get_cfg()
-cfg.merge_from_file("configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")
-cfg.DATASETS.TRAIN = ("category_train",)
+#cfg.merge_from_file("configs/COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml")
+#cfg.merge_from_file("configs/Cityscapes/mask_rcnn_R_50_FPN.yaml")
+
+cfg.DATASETS.TRAIN = ("ceymo_train",)
 cfg.DATASETS.TEST = ()
 cfg.DATALOADER.NUM_WORKERS = 2
-cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")
-cfg.SOLVER.IMS_PER_BATCH = 2
-cfg.SOLVER.BASE_LR = 0.00025
-cfg.SOLVER.MAX_ITER = 1000
-cfg.MODEL.ROI_HEADS.NUM_CLASSES = 2
+#cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml")  # Let training initialize from model zoo
+cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("Cityscapes/mask_rcnn_R_50_FPN.yaml")  # Let training initialize from model zoo
 
+cfg.SOLVER.IMS_PER_BATCH = 4 # This is the real "batch size" commonly known to deep learning people
+cfg.SOLVER.BASE_LR = 0.0025  # pick a good LR
+cfg.SOLVER.MAX_ITER = 1000  # 300 iterations seems good enough for this toy dataset; you will need to train longer for a practical dataset
+cfg.SOLVER.STEPS = []        # do not decay learning rate
+cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 128   # The "RoIHead batch size". 128 is faster, and good enough for this toy dataset (default: 512)
+cfg.MODEL.ROI_HEADS.NUM_CLASSES = 11 # only has one class (ballon). (see https://detectron2.readthedocs.io/tutorials/datasets.html#update-the-config-for-new-datasets)
+# NOTE: this config means the number of classes, but a few popular unofficial tutorials incorrect uses num_classes+1 here.
 
+'''
 os.makedirs(cfg.OUTPUT_DIR, exist_ok=True)
 trainer = DefaultTrainer(cfg) 
 trainer.resume_or_load(resume=False)
@@ -89,11 +96,4 @@ trainer.resume_or_load(resume=False)
 
 trainer.train()
 '''
-
 cfg.MODEL.WEIGHTS = os.path.join(cfg.OUTPUT_DIR, "model_final.pth")
-cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5 
-cfg.DATASETS.TEST = ("ceymo_test", )
-predictor = DefaultPredictor(cfg)
-
-
-'''

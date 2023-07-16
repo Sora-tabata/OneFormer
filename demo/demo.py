@@ -128,7 +128,8 @@ if __name__ == "__main__":
                                              ,torch.where(predictions['sem_seg'][13]>0.9, 2, 0)
             #print(road_marking.ToPILImage())
             img_ = tensor_to_image(road_marking)
-            img_.save('output.png')
+            print(os.path.basename(path), "path")
+            img_.save(args.output + os.path.basename(path))
             logger.info(
                 "{}: {} in {:.2f}s".format(
                     path,
@@ -143,12 +144,14 @@ if __name__ == "__main__":
                     for k in visualized_output.keys():
                         os.makedirs(k, exist_ok=True)
                         out_filename = os.path.join(k, args.output)
+                        #img_.save(out_filename)
                         visualized_output[k].save(out_filename)    
                 else:
                     for k in visualized_output.keys():
                         opath = os.path.join(args.output, k)    
                         os.makedirs(opath, exist_ok=True)
                         out_filename = os.path.join(opath, os.path.basename(path))
+                        #img_.save(out_filename)
                         visualized_output[k].save(out_filename)    
             else:
                 raise ValueError("Please specify an output path!")
