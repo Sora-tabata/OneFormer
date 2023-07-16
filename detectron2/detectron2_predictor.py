@@ -39,14 +39,14 @@ cfg.SOLVER.MAX_ITER = 1000  # 300 iterations seems good enough for this toy data
 cfg.SOLVER.STEPS = []        # do not decay learning rate
 cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 128   # The "RoIHead batch size". 128 is faster, and good enough for this toy dataset (default: 512)
 cfg.MODEL.ROI_HEADS.NUM_CLASSES = 11 # only has one class (ballon). (see https://detectron2.readthedocs.io/tutorials/datasets.html#update-the-config-for-new-datasets)
-cfg.MODEL.WEIGHTS = os.path.join(cfg.OUTPUT_DIR, "model_final.pth")
+cfg.MODEL.WEIGHTS = os.path.join("/mnt/source/OneFormer/model_ceymo_3.pth")
 
 #cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.1
 predictor = DefaultPredictor(cfg)
 
 
-'''
-citysacpes_data = '/mnt/source/datasets/stuttgart_00/'
+
+citysacpes_data = '/mnt/source/datasets/cityscapes_oneformer/'
 files = os.listdir(citysacpes_data)
 for val in files:
     file_name = citysacpes_data + val
@@ -62,9 +62,9 @@ for val in files:
     #plt.figure(figsize = (14, 10))
     #plt.imshow(cv2.cvtColor(v.get_image()[:, :, ::-1], cv2.COLOR_BGR2RGB))
     #plt.savefig('/mnt/source/datasets/cityscapes_mark/'+val)
-    cv2.imwrite('/mnt/source/datasets/cityscapes_mark/'+val, image)
+    cv2.imwrite('/mnt/source/datasets/cityscapes_oneformer_mark_3/'+val, image)
     print(val)
-'''
+
 '''
 file_name = stuttgart_00_000000_000037_rightImg8bit
 img = cv2.imread(file_name)
