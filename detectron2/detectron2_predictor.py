@@ -39,13 +39,13 @@ cfg.SOLVER.MAX_ITER = 1000  # 300 iterations seems good enough for this toy data
 cfg.SOLVER.STEPS = []        # do not decay learning rate
 cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 128   # The "RoIHead batch size". 128 is faster, and good enough for this toy dataset (default: 512)
 cfg.MODEL.ROI_HEADS.NUM_CLASSES = 11 # only has one class (ballon). (see https://detectron2.readthedocs.io/tutorials/datasets.html#update-the-config-for-new-datasets)
-cfg.MODEL.WEIGHTS = os.path.join("/mnt/source/OneFormer/model_ceymo_3.pth")
+cfg.MODEL.WEIGHTS = os.path.join("/mnt/source/OneFormer/model_ceymo.pth")
 
 #cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.1
 predictor = DefaultPredictor(cfg)
 
 
-
+'''
 citysacpes_data = '/mnt/source/datasets/cityscapes_oneformer/'
 files = os.listdir(citysacpes_data)
 for val in files:
@@ -66,8 +66,9 @@ for val in files:
     print(val)
 
 '''
-file_name = stuttgart_00_000000_000037_rightImg8bit
-img = cv2.imread(file_name)
+citysacpes_data = '/mnt/source/datasets/cityscapes_oneformer/'
+file_name = 'stuttgart_00_000000_000049_rightImg8bit.png'
+img = cv2.imread(citysacpes_data + file_name)
 outputs = predictor(img)
 v = Visualizer(img[:, :, ::-1],
                 metadata=microcontroller_metadata, 
@@ -79,6 +80,5 @@ image = cv2.cvtColor(v.get_image()[:, :, ::-1], cv2.COLOR_BGR2RGB)
 #plt.figure(figsize = (14, 10))
 #plt.imshow(cv2.cvtColor(v.get_image()[:, :, ::-1], cv2.COLOR_BGR2RGB))
 #plt.savefig('/mnt/source/datasets/cityscapes_mark/'+val)
-cv2.imwrite('/mnt/source/datasets/'+val, image)
-print(val)
-'''
+cv2.imwrite('/mnt/source/datasets/out.png', image)
+print(outputs['instances'].pred_masks[0].shape)

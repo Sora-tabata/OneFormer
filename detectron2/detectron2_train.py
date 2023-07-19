@@ -71,16 +71,16 @@ for d in ["train", "test"]:
 microcontroller_metadata = MetadataCatalog.get("ceymo_train")
 
 cfg = get_cfg()
-#cfg.merge_from_file("configs/COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml")
+cfg.merge_from_file("configs/COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml")
 #cfg.merge_from_file("configs/Cityscapes/mask_rcnn_R_50_FPN.yaml")
 
 cfg.DATASETS.TRAIN = ("ceymo_train",)
 cfg.DATASETS.TEST = ()
 cfg.DATALOADER.NUM_WORKERS = 2
-#cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml")  # Let training initialize from model zoo
-cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("Cityscapes/mask_rcnn_R_50_FPN.yaml")  # Let training initialize from model zoo
+cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml")  # Let training initialize from model zoo
+#cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("Cityscapes/mask_rcnn_R_50_FPN.yaml")  # Let training initialize from model zoo
 
-cfg.SOLVER.IMS_PER_BATCH = 4 # This is the real "batch size" commonly known to deep learning people
+cfg.SOLVER.IMS_PER_BATCH = 8 # This is the real "batch size" commonly known to deep learning people
 cfg.SOLVER.BASE_LR = 0.0025  # pick a good LR
 cfg.SOLVER.MAX_ITER = 1000  # 300 iterations seems good enough for this toy dataset; you will need to train longer for a practical dataset
 cfg.SOLVER.STEPS = []        # do not decay learning rate
