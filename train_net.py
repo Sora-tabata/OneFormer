@@ -69,7 +69,7 @@ from oneformer.data.build import *
 from oneformer.data.dataset_mappers.dataset_mapper import DatasetMapper
 torch.cuda.empty_cache() 
 import os
-os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:24"
+#os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:24"
 
 
 class Trainer(DefaultTrainer):
@@ -439,7 +439,7 @@ if __name__ == "__main__":
     #DatasetCatalog.register("/mnt/source/datasets/mapillary_vistas")
     #egohands_metadata = MetadataCatalog.get("/mnt/source/datasets/mapillary_vistas")
     #print(egohands_metadata.thing_classes)
-    print(setup(args).DATASETS.TRAIN[0], "!!!!!!!!!!!!!!!!!!!!!")
+    #print(setup(args).DATASETS.TRAIN[0], "!!!!!!!!!!!!!!!!!!!!!")
     launch(
         main,
         args.num_gpus,
