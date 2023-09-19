@@ -22,7 +22,7 @@ import warnings
 import detectron2.utils.comm as comm
 from detectron2.checkpoint import DetectionCheckpointer
 from detectron2.config import get_cfg
-from detectron2.data import MetadataCatalog, build_detection_train_loader, DatasetCatalog
+from detectron2.data import MetadataCatalog, build_detection_train_loader
 from detectron2.engine import (
     DefaultTrainer,
     default_argument_parser,
@@ -67,10 +67,6 @@ from oneformer.utils.events import WandbWriter, setup_wandb
 from time import sleep
 from oneformer.data.build import *
 from oneformer.data.dataset_mappers.dataset_mapper import DatasetMapper
-torch.cuda.empty_cache() 
-import os
-#os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:24"
-
 
 class Trainer(DefaultTrainer):
     """
@@ -436,10 +432,6 @@ def main(args):
 if __name__ == "__main__":
     args = default_argument_parser().parse_args()
     print("Command Line Args:", args)
-    #DatasetCatalog.register("/mnt/source/datasets/mapillary_vistas")
-    #egohands_metadata = MetadataCatalog.get("/mnt/source/datasets/mapillary_vistas")
-    #print(egohands_metadata.thing_classes)
-    #print(setup(args).DATASETS.TRAIN[0], "!!!!!!!!!!!!!!!!!!!!!")
     launch(
         main,
         args.num_gpus,
