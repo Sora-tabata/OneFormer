@@ -163,7 +163,8 @@ class Trainer(DefaultTrainer):
         # coco unified segmentation lsj new baseline
         elif cfg.INPUT.DATASET_MAPPER_NAME == "coco_unified_lsj":
             mapper = COCOUnifiedNewBaselineDatasetMapper(cfg, True)
-            return build_detection_train_loader(cfg, mapper=mapper)
+            #mapper = OneFormerUnifiedDatasetMapper(cfg, True)
+            return build_detection_train_loader(cfg, mapper=None)
         else:
             mapper = None
             return build_detection_train_loader(cfg, mapper=mapper)

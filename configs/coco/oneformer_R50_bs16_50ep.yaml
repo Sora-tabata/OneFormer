@@ -54,6 +54,6 @@ MODEL:
     DETECTION_ON: False
     OVERLAP_THRESHOLD: 0.8
     OBJECT_MASK_THRESHOLD: 0.8
-    TASK: "panoptic"
+    TASK: "instance"
 TEST:
   DETECTIONS_PER_IMAGE: 150

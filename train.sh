@@ -1,4 +1,4 @@
-#export DETECTRON2_DATASETS="/mnt/source/datasets/mapillary_vistas/"
+export DETECTRON2_DATASETS="/mnt/source/datasets/mapillary_vistas/"
 #export PYTORCH_CUDA_ALLOC_CONF="max_split_size_mb:24"
 #python3 oneformer/data/datasets/register_mapillary_vistas_panoptic.py
 

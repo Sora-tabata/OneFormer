@@ -1,0 +1,1678 @@
+[32m[09/19 11:11:07 d2.engine.defaults]: [39mModel:
+OneFormer(
+  (backbone): D2DiNAT(
+    (patch_embed): ConvTokenizer(
+      (proj): Sequential(
+        (0): Conv2d(3, 96, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (1): Conv2d(96, 192, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      )
+      (norm): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+    )
+    (pos_drop): Dropout(p=0.0, inplace=False)
+    (levels): ModuleList(
+      (0): NATBlock(
+        (blocks): ModuleList(
+          (0): NATLayer(
+            (norm1): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=6
+              (qkv): Linear(in_features=192, out_features=576, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=192, out_features=192, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): Identity()
+            (norm2): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=192, out_features=384, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=384, out_features=192, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (1): NATLayer(
+            (norm1): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=20, head_dim=32, num_heads=6
+              (qkv): Linear(in_features=192, out_features=576, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=192, out_features=192, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=192, out_features=384, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=384, out_features=192, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (2): NATLayer(
+            (norm1): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=6
+              (qkv): Linear(in_features=192, out_features=576, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=192, out_features=192, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=192, out_features=384, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=384, out_features=192, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+        (downsample): ConvDownsampler(
+          (reduction): Conv2d(192, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (norm): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (1): NATBlock(
+        (blocks): ModuleList(
+          (0): NATLayer(
+            (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=12
+              (qkv): Linear(in_features=384, out_features=1152, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=384, out_features=768, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=768, out_features=384, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (1): NATLayer(
+            (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=5, head_dim=32, num_heads=12
+              (qkv): Linear(in_features=384, out_features=1152, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=384, out_features=768, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=768, out_features=384, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (2): NATLayer(
+            (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=12
+              (qkv): Linear(in_features=384, out_features=1152, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=384, out_features=768, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=768, out_features=384, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (3): NATLayer(
+            (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=10, head_dim=32, num_heads=12
+              (qkv): Linear(in_features=384, out_features=1152, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=384, out_features=768, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=768, out_features=384, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+        (downsample): ConvDownsampler(
+          (reduction): Conv2d(384, 768, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (2): NATBlock(
+        (blocks): ModuleList(
+          (0): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (1): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=2, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (2): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (3): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=3, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (4): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (5): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=4, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (6): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (7): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=5, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (8): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (9): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=2, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (10): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (11): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=3, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (12): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (13): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=4, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (14): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (15): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=5, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (16): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (17): NATLayer(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=5, head_dim=32, num_heads=24
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=1536, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=1536, out_features=768, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+        (downsample): ConvDownsampler(
+          (reduction): Conv2d(768, 1536, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (norm): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (3): NATBlock(
+        (blocks): ModuleList(
+          (0): NATLayer(
+            (norm1): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=48
+              (qkv): Linear(in_features=1536, out_features=4608, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=1536, out_features=1536, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=1536, out_features=3072, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=3072, out_features=1536, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (1): NATLayer(
+            (norm1): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=2, head_dim=32, num_heads=48
+              (qkv): Linear(in_features=1536, out_features=4608, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=1536, out_features=1536, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=1536, out_features=3072, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=3072, out_features=1536, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (2): NATLayer(
+            (norm1): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=48
+              (qkv): Linear(in_features=1536, out_features=4608, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=1536, out_features=1536, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=1536, out_features=3072, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=3072, out_features=1536, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (3): NATLayer(
+            (norm1): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=2, head_dim=32, num_heads=48
+              (qkv): Linear(in_features=1536, out_features=4608, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=1536, out_features=1536, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=1536, out_features=3072, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=3072, out_features=1536, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (4): NATLayer(
+            (norm1): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (attn): NeighborhoodAttention2D(
+              kernel_size=11, dilation=1, head_dim=32, num_heads=48
+              (qkv): Linear(in_features=1536, out_features=4608, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=1536, out_features=1536, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): DropPath()
+            (norm2): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=1536, out_features=3072, bias=True)
+              (act): GELU(approximate=none)
+              (fc2): Linear(in_features=3072, out_features=1536, bias=True)
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+      )
+    )
+    (norm0): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+    (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+    (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (norm3): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+  )
+  (sem_seg_head): OneFormerHead(
+    (pixel_decoder): MSDeformAttnPixelDecoder(
+      (input_proj): ModuleList(
+        (0): Sequential(
+          (0): Conv2d(1536, 256, kernel_size=(1, 1), stride=(1, 1))
+          (1): GroupNorm(32, 256, eps=1e-05, affine=True)
+        )
+        (1): Sequential(
+          (0): Conv2d(768, 256, kernel_size=(1, 1), stride=(1, 1))
+          (1): GroupNorm(32, 256, eps=1e-05, affine=True)
+        )
+        (2): Sequential(
+          (0): Conv2d(384, 256, kernel_size=(1, 1), stride=(1, 1))
+          (1): GroupNorm(32, 256, eps=1e-05, affine=True)
+        )
+      )
+      (transformer): MSDeformAttnTransformerEncoderOnly(
+        (encoder): MSDeformAttnTransformerEncoder(
+          (layers): ModuleList(
+            (0): MSDeformAttnTransformerEncoderLayer(
+              (self_attn): MSDeformAttn(
+                (sampling_offsets): Linear(in_features=256, out_features=192, bias=True)
+                (attention_weights): Linear(in_features=256, out_features=96, bias=True)
+                (value_proj): Linear(in_features=256, out_features=256, bias=True)
+                (output_proj): Linear(in_features=256, out_features=256, bias=True)
+              )
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (linear1): Linear(in_features=256, out_features=1024, bias=True)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=1024, out_features=256, bias=True)
+              (dropout3): Dropout(p=0.1, inplace=False)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            )
+            (1): MSDeformAttnTransformerEncoderLayer(
+              (self_attn): MSDeformAttn(
+                (sampling_offsets): Linear(in_features=256, out_features=192, bias=True)
+                (attention_weights): Linear(in_features=256, out_features=96, bias=True)
+                (value_proj): Linear(in_features=256, out_features=256, bias=True)
+                (output_proj): Linear(in_features=256, out_features=256, bias=True)
+              )
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (linear1): Linear(in_features=256, out_features=1024, bias=True)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=1024, out_features=256, bias=True)
+              (dropout3): Dropout(p=0.1, inplace=False)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            )
+            (2): MSDeformAttnTransformerEncoderLayer(
+              (self_attn): MSDeformAttn(
+                (sampling_offsets): Linear(in_features=256, out_features=192, bias=True)
+                (attention_weights): Linear(in_features=256, out_features=96, bias=True)
+                (value_proj): Linear(in_features=256, out_features=256, bias=True)
+                (output_proj): Linear(in_features=256, out_features=256, bias=True)
+              )
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (linear1): Linear(in_features=256, out_features=1024, bias=True)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=1024, out_features=256, bias=True)
+              (dropout3): Dropout(p=0.1, inplace=False)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            )
+            (3): MSDeformAttnTransformerEncoderLayer(
+              (self_attn): MSDeformAttn(
+                (sampling_offsets): Linear(in_features=256, out_features=192, bias=True)
+                (attention_weights): Linear(in_features=256, out_features=96, bias=True)
+                (value_proj): Linear(in_features=256, out_features=256, bias=True)
+                (output_proj): Linear(in_features=256, out_features=256, bias=True)
+              )
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (linear1): Linear(in_features=256, out_features=1024, bias=True)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=1024, out_features=256, bias=True)
+              (dropout3): Dropout(p=0.1, inplace=False)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            )
+            (4): MSDeformAttnTransformerEncoderLayer(
+              (self_attn): MSDeformAttn(
+                (sampling_offsets): Linear(in_features=256, out_features=192, bias=True)
+                (attention_weights): Linear(in_features=256, out_features=96, bias=True)
+                (value_proj): Linear(in_features=256, out_features=256, bias=True)
+                (output_proj): Linear(in_features=256, out_features=256, bias=True)
+              )
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (linear1): Linear(in_features=256, out_features=1024, bias=True)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=1024, out_features=256, bias=True)
+              (dropout3): Dropout(p=0.1, inplace=False)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            )
+            (5): MSDeformAttnTransformerEncoderLayer(
+              (self_attn): MSDeformAttn(
+                (sampling_offsets): Linear(in_features=256, out_features=192, bias=True)
+                (attention_weights): Linear(in_features=256, out_features=96, bias=True)
+                (value_proj): Linear(in_features=256, out_features=256, bias=True)
+                (output_proj): Linear(in_features=256, out_features=256, bias=True)
+              )
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (linear1): Linear(in_features=256, out_features=1024, bias=True)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=1024, out_features=256, bias=True)
+              (dropout3): Dropout(p=0.1, inplace=False)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            )
+          )
+        )
+      )
+      (pe_layer): Positional encoding PositionEmbeddingSine
+          num_pos_feats: 128
+          temperature: 10000
+          normalize: True
+          scale: 6.283185307179586
+      (mask_features): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+      (adapter_1): Conv2d(
+        192, 256, kernel_size=(1, 1), stride=(1, 1), bias=False
+        (norm): GroupNorm(32, 256, eps=1e-05, affine=True)
+      )
+      (layer_1): Conv2d(
+        256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+        (norm): GroupNorm(32, 256, eps=1e-05, affine=True)
+      )
+    )
+    (predictor): ContrastiveMultiScaleMaskedTransformerDecoder(
+      (pe_layer): Positional encoding PositionEmbeddingSine
+          num_pos_feats: 128
+          temperature: 10000
+          normalize: True
+          scale: 6.283185307179586
+      (class_transformer): Transformer(
+        (encoder): TransformerEncoder(
+          (layers): ModuleList()
+        )
+        (decoder): TransformerDecoder(
+          (layers): ModuleList(
+            (0): TransformerDecoderLayer(
+              (self_attn): MultiheadAttention(
+                (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+              )
+              (multihead_attn): MultiheadAttention(
+                (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+              )
+              (linear1): Linear(in_features=256, out_features=2048, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=2048, out_features=256, bias=True)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (norm3): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (dropout3): Dropout(p=0.1, inplace=False)
+            )
+            (1): TransformerDecoderLayer(
+              (self_attn): MultiheadAttention(
+                (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+              )
+              (multihead_attn): MultiheadAttention(
+                (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+              )
+              (linear1): Linear(in_features=256, out_features=2048, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+              (linear2): Linear(in_features=2048, out_features=256, bias=True)
+              (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (norm3): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (dropout1): Dropout(p=0.1, inplace=False)
+              (dropout2): Dropout(p=0.1, inplace=False)
+              (dropout3): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (transformer_self_attention_layers): ModuleList(
+        (0): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (1): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (2): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (3): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (4): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (5): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (6): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (7): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (8): SelfAttentionLayer(
+          (self_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (transformer_cross_attention_layers): ModuleList(
+        (0): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (1): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (2): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (3): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (4): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (5): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (6): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (7): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (8): CrossAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (transformer_ffn_layers): ModuleList(
+        (0): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (1): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (2): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (3): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (4): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (5): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (6): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (7): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (8): FFNLayer(
+          (linear1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=256, bias=True)
+          (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (decoder_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (query_embed): Embedding(150, 256)
+      (level_embed): Embedding(3, 256)
+      (input_proj): ModuleList(
+        (0): Sequential()
+        (1): Sequential()
+        (2): Sequential()
+      )
+      (class_input_proj): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+      (class_embed): Linear(in_features=256, out_features=134, bias=True)
+      (mask_embed): MLP(
+        (layers): ModuleList(
+          (0): Linear(in_features=256, out_features=256, bias=True)
+          (1): Linear(in_features=256, out_features=256, bias=True)
+          (2): Linear(in_features=256, out_features=256, bias=True)
+        )
+      )
+    )
+  )
+  (task_mlp): MLP(
+    (layers): ModuleList(
+      (0): Linear(in_features=77, out_features=256, bias=True)
+      (1): Linear(in_features=256, out_features=256, bias=True)
+    )
+  )
+  (text_encoder): TextTransformer(
+    (transformer): Transformer(
+      (resblocks): Sequential(
+        (0): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (ln_1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=256, out_features=1024, bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Linear(in_features=1024, out_features=256, bias=True)
+          )
+          (ln_2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (1): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (ln_1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=256, out_features=1024, bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Linear(in_features=1024, out_features=256, bias=True)
+          )
+          (ln_2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (2): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (ln_1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=256, out_features=1024, bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Linear(in_features=1024, out_features=256, bias=True)
+          )
+          (ln_2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (3): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (ln_1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=256, out_features=1024, bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Linear(in_features=1024, out_features=256, bias=True)
+          )
+          (ln_2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (4): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (ln_1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=256, out_features=1024, bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Linear(in_features=1024, out_features=256, bias=True)
+          )
+          (ln_2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (5): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+          )
+          (ln_1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=256, out_features=1024, bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Linear(in_features=1024, out_features=256, bias=True)
+          )
+          (ln_2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+    )
+    (ln_final): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (token_embedding): Embedding(49408, 256)
+  )
+  (text_projector): MLP(
+    (layers): ModuleList(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): Linear(in_features=256, out_features=256, bias=True)
+    )
+  )
+  (prompt_ctx): Embedding(16, 256)
+  (criterion): Criterion SetCriterion
+      matcher: Matcher HungarianMatcher
+          cost_class: 2.0
+          cost_mask: 5.0
+          cost_dice: 5.0
+      losses: ['labels', 'masks', 'contrastive']
+      weight_dict: {'loss_ce': 2.0, 'loss_mask': 5.0, 'loss_dice': 5.0, 'loss_contrastive': 0.5, 'loss_ce_0': 2.0, 'loss_mask_0': 5.0, 'loss_dice_0': 5.0, 'loss_contrastive_0': 0.5, 'loss_ce_1': 2.0, 'loss_mask_1': 5.0, 'loss_dice_1': 5.0, 'loss_contrastive_1': 0.5, 'loss_ce_2': 2.0, 'loss_mask_2': 5.0, 'loss_dice_2': 5.0, 'loss_contrastive_2': 0.5, 'loss_ce_3': 2.0, 'loss_mask_3': 5.0, 'loss_dice_3': 5.0, 'loss_contrastive_3': 0.5, 'loss_ce_4': 2.0, 'loss_mask_4': 5.0, 'loss_dice_4': 5.0, 'loss_contrastive_4': 0.5, 'loss_ce_5': 2.0, 'loss_mask_5': 5.0, 'loss_dice_5': 5.0, 'loss_contrastive_5': 0.5, 'loss_ce_6': 2.0, 'loss_mask_6': 5.0, 'loss_dice_6': 5.0, 'loss_contrastive_6': 0.5, 'loss_ce_7': 2.0, 'loss_mask_7': 5.0, 'loss_dice_7': 5.0, 'loss_contrastive_7': 0.5, 'loss_ce_8': 2.0, 'loss_mask_8': 5.0, 'loss_dice_8': 5.0, 'loss_contrastive_8': 0.5}
+      num_classes: 133
+      eos_coef: 0.1
+      num_points: 12544
+      oversample_ratio: 3.0
+      importance_sample_ratio: 0.75
+)
+[32m[09/19 11:11:07 oneformer.data.dataset_mappers.coco_unified_new_baseline_dataset_mapper]: [39m[COCOUnifiedNewBaselineDatasetMapper] Full TransformGens used in training: [RandomFlip(), ResizeScale(min_scale=0.1, max_scale=2.0, target_height=1024, target_width=1024), FixedSizeCrop(crop_size=(1024, 1024))]
+[32m[09/19 11:11:17 oneformer.data.datasets.register_coco_panoptic_annos_semseg]: [39mLoading /mnt/source/datasets/coco/annotations/instances_train2017.json takes 6.96 seconds.
+[32m[09/19 11:11:17 oneformer.data.datasets.register_coco_panoptic_annos_semseg]: [39mLoaded 118287 images in COCO format from /mnt/source/datasets/coco/annotations/instances_train2017.json
+[32m[09/19 11:11:21 d2.data.build]: [39mRemoved 1021 images with no usable annotations. 117266 images left.
+[32m[09/19 11:11:22 d2.data.build]: [39mDistribution of instances among all 80 categories:
+[36m|   category    | #instances   |   category   | #instances   |   category    | #instances   |
+[36m|:-------------:|:-------------|:------------:|:-------------|:-------------:|:-------------|
+[36m|    person     | 257253       |   bicycle    | 7056         |      car      | 43533        |
+[36m|  motorcycle   | 8654         |   airplane   | 5129         |      bus      | 6061         |
+[36m|     train     | 4570         |    truck     | 9970         |     boat      | 10576        |
+[36m| traffic light | 12842        | fire hydrant | 1865         |   stop sign   | 1983         |
+[36m| parking meter | 1283         |    bench     | 9820         |     bird      | 10542        |
+[36m|      cat      | 4766         |     dog      | 5500         |     horse     | 6567         |
+[36m|     sheep     | 9223         |     cow      | 8014         |   elephant    | 5484         |
+[36m|     bear      | 1294         |    zebra     | 5269         |    giraffe    | 5128         |
+[36m|   backpack    | 8714         |   umbrella   | 11265        |    handbag    | 12342        |
+[36m|      tie      | 6448         |   suitcase   | 6112         |    frisbee    | 2681         |
+[36m|     skis      | 6623         |  snowboard   | 2681         |  sports ball  | 6299         |
+[36m|     kite      | 8802         | baseball bat | 3273         | baseball gl.. | 3747         |
+[36m|  skateboard   | 5536         |  surfboard   | 6095         | tennis racket | 4807         |
+[36m|    bottle     | 24070        |  wine glass  | 7839         |      cup      | 20574        |
+[36m|     fork      | 5474         |    knife     | 7760         |     spoon     | 6159         |
+[36m|     bowl      | 14323        |    banana    | 9195         |     apple     | 5776         |
+[36m|   sandwich    | 4356         |    orange    | 6302         |   broccoli    | 7261         |
+[36m|    carrot     | 7758         |   hot dog    | 2884         |     pizza     | 5807         |
+[36m|     donut     | 7005         |     cake     | 6296         |     chair     | 38073        |
+[36m|     couch     | 5779         | potted plant | 8631         |      bed      | 4192         |
+[36m| dining table  | 15695        |    toilet    | 4149         |      tv       | 5803         |
+[36m|    laptop     | 4960         |    mouse     | 2261         |    remote     | 5700         |
+[36m|   keyboard    | 2854         |  cell phone  | 6422         |   microwave   | 1672         |
+[36m|     oven      | 3334         |   toaster    | 225          |     sink      | 5609         |
+[36m| refrigerator  | 2634         |     book     | 24077        |     clock     | 6320         |
+[36m|     vase      | 6577         |   scissors   | 1464         |  teddy bear   | 4729         |
+[36m|  hair drier   | 198          |  toothbrush  | 1945         |               |              |
+[36m|     total     | 849949       |              |              |               |              |
+[32m[09/19 11:11:22 d2.data.dataset_mapper]: [39m[DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=(800,), max_size=1333, sample_style='choice'), RandomFlip()]
+[32m[09/19 11:11:22 d2.data.build]: [39mUsing training sampler TrainingSampler
+[32m[09/19 11:11:22 d2.data.common]: [39mSerializing the dataset using: <class 'detectron2.data.common._TorchSerializedList'>
+[32m[09/19 11:11:22 d2.data.common]: [39mSerializing 117266 elements to byte tensors and concatenating them all ...
+[32m[09/19 11:11:24 d2.data.common]: [39mSerialized dataset takes 529.74 MiB
+[32m[09/19 11:11:25 d2.checkpoint.detection_checkpoint]: [39m[DetectionCheckpointer] Loading from /mnt/source/OneFormer/150_16_dinat_l_oneformer_coco_100ep.pth ...
+[32m[09/19 11:11:25 fvcore.common.checkpoint]: [39m[Checkpointer] Loading from /mnt/source/OneFormer/150_16_dinat_l_oneformer_coco_100ep.pth ...
+Total Params: 240.732825 M
+[32m[09/19 11:11:29 d2.engine.train_loop]: [39mStarting training from iteration 0
+[{'file_name': '/mnt/source/datasets/coco/train2017/000000071972.jpg', 'image_id': 71972, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000071972.png', 'segments_info': [{'id': 6186603, 'category_id': 74, 'iscrowd': 0, 'bbox': [126, 81, 160, 159], 'area': 20380, 'isthing': True}, {'id': 1974050, 'category_id': 92, 'iscrowd': 0, 'bbox': [615, 247, 25, 56], 'area': 567, 'isthing': False}, {'id': 3492938, 'category_id': 116, 'iscrowd': 0, 'bbox': [111, 392, 143, 23], 'area': 2127, 'isthing': False}, {'id': 13288125, 'category_id': 119, 'iscrowd': 0, 'bbox': [0, 34, 640, 381], 'area': 142453, 'isthing': False}, {'id': 3948864, 'category_id': 129, 'iscrowd': 0, 'bbox': [0, 0, 640, 415], 'area': 97662, 'isthing': False}], 'width': 640, 'height': 415, 'image': tensor([[[145, 144, 143,  ..., 102, 105, 106],
+         [148, 147, 146,  ..., 101, 104, 105],
+         [152, 151, 150,  ...,  98, 101, 103],
+         ...,
+         [  1,   2,   3,  ..., 119, 117, 117],
+         [  2,   2,   2,  ..., 118, 114, 113],
+         [  2,   2,   1,  ..., 117, 113, 111]],
+        [[123, 122, 121,  ...,  87,  88,  89],
+         [126, 125, 124,  ...,  86,  88,  89],
+         [130, 129, 128,  ...,  85,  88,  90],
+         ...,
+         [ 54,  55,  56,  ..., 138, 136, 136],
+         [ 55,  55,  55,  ..., 137, 135, 134],
+         [ 55,  55,  55,  ..., 136, 134, 133]],
+        [[100,  99,  98,  ...,  75,  78,  79],
+         [103, 102, 101,  ...,  75,  78,  79],
+         [107, 106, 105,  ...,  75,  77,  78],
+         ...,
+         [123, 124, 126,  ..., 152, 150, 150],
+         [124, 125, 127,  ..., 151, 149, 148],
+         [125, 126, 127,  ..., 151, 148, 147]]], dtype=torch.uint8), 'sem_seg': tensor([[129, 129, 129,  ..., 129, 129, 129],
+        [129, 129, 129,  ..., 129, 129, 129],
+        [129, 129, 129,  ..., 129, 129, 129],
+        ...,
+        [129, 129, 129,  ..., 119, 119, 119],
+        [129, 129, 129,  ..., 119, 119, 119],
+        [129, 129, 129,  ..., 119, 119, 119]]), 'instances': Instances(num_instances=1, image_height=800, image_width=1234, fields=[gt_boxes: Boxes(tensor([[242.7509, 156.5301, 552.0222, 462.1494]])), gt_classes: tensor([74])])}, {'file_name': '/mnt/source/datasets/coco/train2017/000000224692.jpg', 'image_id': 224692, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000224692.png', 'segments_info': [{'id': 5652352, 'category_id': 0, 'iscrowd': 0, 'bbox': [400, 167, 91, 249], 'area': 12286, 'isthing': True}, {'id': 4350024, 'category_id': 0, 'iscrowd': 0, 'bbox': [102, 176, 82, 254], 'area': 13642, 'isthing': True}, {'id': 2634557, 'category_id': 26, 'iscrowd': 0, 'bbox': [131, 222, 39, 43], 'area': 437, 'isthing': True}, {'id': 3895007, 'category_id': 27, 'iscrowd': 0, 'bbox': [424, 195, 18, 80], 'area': 689, 'isthing': True}, {'id': 3028800, 'category_id': 58, 'iscrowd': 0, 'bbox': [477, 312, 25, 34], 'area': 734, 'isthing': True}, {'id': 4145999, 'category_id': 58, 'iscrowd': 0, 'bbox': [77, 312, 17, 31], 'area': 372, 'isthing': True}, {'id': 3354700, 'category_id': 58, 'iscrowd': 0, 'bbox': [556, 316, 16, 27], 'area': 291, 'isthing': True}, {'id': 3423045, 'category_id': 58, 'iscrowd': 0, 'bbox': [104, 315, 11, 26], 'area': 174, 'isthing': True}, {'id': 3290442, 'category_id': 58, 'iscrowd': 0, 'bbox': [503, 314, 24, 34], 'area': 480, 'isthing': True}, {'id': 2699321, 'category_id': 58, 'iscrowd': 0, 'bbox': [522, 313, 18, 31], 'area': 447, 'isthing': True}, {'id': 2896441, 'category_id': 58, 'iscrowd': 0, 'bbox': [500, 314, 10, 30], 'area': 163, 'isthing': True}, {'id': 3352909, 'category_id': 58, 'iscrowd': 0, 'bbox': [91, 320, 11, 21], 'area': 169, 'isthing': True}, {'id': 2107431, 'category_id': 58, 'iscrowd': 0, 'bbox': [545, 320, 17, 22], 'area': 272, 'isthing': True}, {'id': 4871767, 'category_id': 58, 'iscrowd': 0, 'bbox': [61, 316, 18, 25], 'area': 294, 'isthing': True}, {'id': 8879484, 'category_id': 77, 'iscrowd': 0, 'bbox': [191, 209, 118, 209], 'area': 17835, 'isthing': True}, {'id': 9603208, 'category_id': 77, 'iscrowd': 0, 'bbox': [304, 209, 114, 201], 'area': 17523, 'isthing': True}, {'id': 3879485, 'category_id': 83, 'iscrowd': 0, 'bbox': [407, 286, 19, 61], 'area': 301, 'isthing': False}, {'id': 2897472, 'category_id': 88, 'iscrowd': 0, 'bbox': [558, 312, 36, 35], 'area': 607, 'isthing': False}, {'id': 2306346, 'category_id': 116, 'iscrowd': 0, 'bbox': [0, 0, 640, 283], 'area': 114769, 'isthing': False}, {'id': 16448249, 'category_id': 119, 'iscrowd': 0, 'bbox': [0, 0, 275, 155], 'area': 23143, 'isthing': False}, {'id': 7700612, 'category_id': 123, 'iscrowd': 0, 'bbox': [0, 276, 640, 204], 'area': 71100, 'isthing': False}, {'id': 8747649, 'category_id': 127, 'iscrowd': 0, 'bbox': [168, 287, 267, 113], 'area': 3105, 'isthing': False}, {'id': 1382173, 'category_id': 129, 'iscrowd': 0, 'bbox': [0, 244, 20, 23], 'area': 334, 'isthing': False}, {'id': 4934738, 'category_id': 130, 'iscrowd': 0, 'bbox': [0, 25, 93, 124], 'area': 4910, 'isthing': False}], 'width': 640, 'height': 480, 'image': tensor([[[255, 255, 255,  ...,  37,  37,  37],
+         [255, 255, 255,  ...,  33,  38,  41],
+         [255, 255, 255,  ...,  26,  39,  48],
+         ...,
+         [153, 158, 166,  ..., 112, 122, 128],
+         [145, 147, 151,  ...,  90,  97, 102],
+         [139, 140, 141,  ...,  76,  81,  84]],
+        [[255, 255, 255,  ...,  50,  37,  29],
+         [255, 255, 255,  ...,  51,  42,  37],
+         [255, 255, 255,  ...,  52,  50,  49],
+         ...,
+         [151, 158, 168,  ..., 102, 110, 115],
+         [138, 142, 148,  ...,  82,  88,  91],
+         [129, 131, 134,  ...,  69,  73,  75]],
+        [[255, 255, 255,  ...,  40,  41,  42],
+         [255, 255, 255,  ...,  40,  41,  43],
+         [255, 255, 255,  ...,  39,  42,  44],
+         ...,
+         [130, 137, 147,  ...,  93, 101, 107],
+         [123, 127, 133,  ...,  74,  80,  85],
+         [119, 121, 124,  ...,  61,  66,  70]]], dtype=torch.uint8), 'sem_seg': tensor([[119, 119, 119,  ..., 116, 116, 116],
+        [119, 119, 119,  ..., 116, 116, 116],
+        [119, 119, 119,  ..., 116, 116, 116],
+        ...,
+        [123, 123, 123,  ..., 123, 123, 123],
+        [123, 123, 123,  ..., 123, 123, 123],
+        [123, 123, 123,  ..., 123, 123, 123]]), 'instances': Instances(num_instances=17, image_height=800, image_width=1067, fields=[gt_boxes: Boxes(tensor([[169.8030, 293.7167, 306.2457, 717.1500],
+        [667.1751, 278.6500, 818.2389, 693.9333],
+        [217.6180, 369.8167, 284.1555, 441.8000],
+        [151.7307, 533.9667, 170.6033, 568.0834],
+        [127.5732, 520.2667, 157.5325, 571.9833],
+        [101.2650, 526.1833, 132.0913, 568.8667],
+        [838.0618, 523.6167, 879.6749, 579.7000],
+        [834.3607, 523.9667, 850.6657, 573.6000],
+        [908.0337, 533.7167, 936.3425, 570.6000],
+        [795.6319, 520.5834, 836.2780, 577.4667],
+        [173.1874, 524.8667, 192.0767, 569.0834],
+        [927.2396, 526.0167, 953.0643, 571.0499],
+        [870.7553, 520.5333, 900.0645, 572.5834],
+        [318.6996, 347.3333, 515.0443, 697.1166],
+        [506.0747, 348.4167, 696.9844, 683.1000],
+        [706.5040, 324.1667, 736.4301, 459.2000],
+        [312.5977, 348.3167, 546.5874, 691.2167]])), gt_classes: tensor([ 0,  0, 26, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 77, 77, 27, 21])])}, {'file_name': '/mnt/source/datasets/coco/train2017/000000089770.jpg', 'image_id': 89770, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000089770.png', 'segments_info': [{'id': 7885866, 'category_id': 0, 'iscrowd': 0, 'bbox': [314, 234, 17, 21], 'area': 197, 'isthing': True}, {'id': 4211024, 'category_id': 0, 'iscrowd': 0, 'bbox': [9, 240, 11, 36], 'area': 224, 'isthing': True}, {'id': 4734810, 'category_id': 0, 'iscrowd': 0, 'bbox': [175, 238, 13, 36], 'area': 340, 'isthing': True}, {'id': 3880762, 'category_id': 0, 'iscrowd': 0, 'bbox': [188, 253, 9, 20], 'area': 99, 'isthing': True}, {'id': 5660268, 'category_id': 0, 'iscrowd': 0, 'bbox': [93, 240, 5, 15], 'area': 49, 'isthing': True}, {'id': 4342083, 'category_id': 0, 'iscrowd': 0, 'bbox': [326, 238, 15, 25], 'area': 235, 'isthing': True}, {'id': 5919315, 'category_id': 0, 'iscrowd': 0, 'bbox': [168, 240, 8, 26], 'area': 144, 'isthing': True}, {'id': 5984860, 'category_id': 0, 'iscrowd': 0, 'bbox': [163, 239, 7, 24], 'area': 77, 'isthing': True}, {'id': 2040114, 'category_id': 0, 'iscrowd': 0, 'bbox': [149, 240, 9, 29], 'area': 188, 'isthing': True}, {'id': 2566708, 'category_id': 0, 'iscrowd': 0, 'bbox': [212, 225, 32, 79], 'area': 1416, 'isthing': True}, {'id': 1447968, 'category_id': 0, 'iscrowd': 0, 'bbox': [136, 238, 12, 34], 'area': 308, 'isthing': True}, {'id': 3485019, 'category_id': 0, 'iscrowd': 0, 'bbox': [199, 260, 17, 43], 'area': 350, 'isthing': True}, {'id': 4143424, 'category_id': 0, 'iscrowd': 0, 'bbox': [238, 234, 14, 57], 'area': 267, 'isthing': True}, {'id': 6579821, 'category_id': 0, 'iscrowd': 1, 'bbox': [18, 225, 480, 52], 'area': 3988, 'isthing': True}, {'id': 4208688, 'category_id': 13, 'iscrowd': 0, 'bbox': [383, 266, 84, 42], 'area': 2171, 'isthing': True}, {'id': 4340274, 'category_id': 13, 'iscrowd': 0, 'bbox': [532, 263, 36, 18], 'area': 322, 'isthing': True}, {'id': 3220761, 'category_id': 13, 'iscrowd': 0, 'bbox': [467, 263, 30, 13], 'area': 283, 'isthing': True}, {'id': 11710378, 'category_id': 14, 'iscrowd': 0, 'bbox': [148, 209, 2, 1], 'area': 2, 'isthing': True}, {'id': 14078923, 'category_id': 14, 'iscrowd': 0, 'bbox': [134, 202, 3, 3], 'area': 8, 'isthing': True}, {'id': 11907503, 'category_id': 14, 'iscrowd': 0, 'bbox': [8, 126, 22, 9], 'area': 31, 'isthing': True}, {'id': 12170157, 'category_id': 14, 'iscrowd': 0, 'bbox': [179, 88, 5, 5], 'area': 13, 'isthing': True}, {'id': 13091517, 'category_id': 14, 'iscrowd': 0, 'bbox': [154, 202, 6, 3], 'area': 10, 'isthing': True}, {'id': 12434362, 'category_id': 14, 'iscrowd': 0, 'bbox': [103, 135, 4, 7], 'area': 22, 'isthing': True}, {'id': 9475219, 'category_id': 74, 'iscrowd': 0, 'bbox': [467, 66, 49, 58], 'area': 2184, 'isthing': True}, {'id': 8946815, 'category_id': 74, 'iscrowd': 0, 'bbox': [528, 68, 30, 54], 'area': 1237, 'isthing': True}, {'id': 6910071, 'category_id': 87, 'iscrowd': 0, 'bbox': [0, 216, 640, 212], 'area': 88859, 'isthing': False}, {'id': 4804210, 'category_id': 101, 'iscrowd': 0, 'bbox': [323, 182, 185, 47], 'area': 4229, 'isthing': False}, {'id': 1777695, 'category_id': 116, 'iscrowd': 0, 'bbox': [524, 199, 28, 40], 'area': 655, 'isthing': False}, {'id': 2895664, 'category_id': 117, 'iscrowd': 0, 'bbox': [566, 251, 47, 39], 'area': 984, 'isthing': False}, {'id': 15526375, 'category_id': 119, 'iscrowd': 0, 'bbox': [0, 0, 640, 258], 'area': 88667, 'isthing': False}, {'id': 7039338, 'category_id': 129, 'iscrowd': 0, 'bbox': [102, 94, 538, 190], 'area': 58129, 'isthing': False}], 'width': 640, 'height': 428, 'image': tensor([[[231, 231, 232,  ..., 221, 221, 221],
+         [231, 231, 232,  ..., 221, 221, 221],
+         [231, 231, 232,  ..., 221, 222, 222],
+         ...,
+         [123, 123, 123,  ...,  58,  75,  84],
+         [118, 118, 118,  ...,  38,  60,  73],
+         [115, 115, 115,  ...,  27,  52,  66]],
+        [[232, 232, 233,  ..., 228, 227, 227],
+         [232, 232, 233,  ..., 228, 228, 228],
+         [232, 232, 233,  ..., 228, 229, 229],
+         ...,
+         [120, 119, 118,  ...,  57,  72,  79],
+         [115, 114, 113,  ...,  38,  57,  68],
+         [112, 111, 110,  ...,  27,  49,  61]],
+        [[236, 236, 237,  ..., 238, 239, 239],
+         [236, 236, 237,  ..., 238, 239, 239],
+         [236, 236, 237,  ..., 238, 239, 239],
+         ...,
+         [115, 115, 114,  ...,  49,  65,  74],
+         [110, 110, 109,  ...,  31,  52,  63],
+         [107, 107, 106,  ...,  21,  44,  57]]], dtype=torch.uint8), 'sem_seg': tensor([[119, 119, 119,  ..., 119, 119, 119],
+        [119, 119, 119,  ..., 119, 119, 119],
+        [119, 119, 119,  ..., 119, 119, 119],
+        ...,
+        [ 87,  87,  87,  ...,  87,  87,  87],
+        [ 87,  87,  87,  ...,  87,  87,  87],
+        [ 87,  87,  87,  ...,  87,  87,  87]]), 'instances': Instances(num_instances=24, image_height=800, image_width=1196, fields=[gt_boxes: Boxes(tensor([[ 230.9027,  123.3832,  322.7518,  231.3832],
+        [ 152.7143,  125.9626,  210.0101,  227.1589],
+        [ 738.4366,  420.4486,  800.0119,  568.6168],
+        [ 724.3088,  437.9626,  751.5365,  542.9907],
+        [ 791.5651,  484.9159,  825.1840,  565.6262],
+        [ 827.8936,  473.2897,  844.7871,  510.6542],
+        [1159.1670,  447.7757, 1178.4150,  515.5140],
+        [ 843.3856,  444.5421,  868.1652,  512.6916],
+        [ 877.3781,  445.6075,  891.1695,  491.3084],
+        [ 919.6119,  444.2056,  942.3919,  508.8224],
+        [ 576.5094,  438.1122,  608.5211,  475.9066],
+        [ 900.1208,  448.3738,  917.8179,  501.8692],
+        [ 865.8292,  448.7477,  881.6949,  498.1869],
+        [ 559.1300,  445.3458,  587.6658,  491.7383],
+        [ 322.4341,  497.6635,  480.4743,  576.6916],
+        [ 134.8115,  492.3739,  203.1704,  524.9533],
+        [ 852.7106,  164.3738,  861.7740,  174.0374],
+        [ 896.2338,  376.6542,  909.2777,  383.5514],
+        [ 915.2017,  390.2056,  921.1255,  392.2804],
+        [ 939.6075,  377.3645,  946.5593,  384.2056],
+        [ 266.3903,  491.0093,  323.2938,  515.6262],
+        [ 995.3523,  252.7663, 1003.4814,  265.9252],
+        [1138.7041,  235.5140, 1181.8910,  252.3738],
+        [1012.4514,  448.9907, 1021.4587,  476.8224]])), gt_classes: tensor([74, 74,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 13, 13, 14, 14,
+        14, 14, 13, 14, 14,  0])])}, {'file_name': '/mnt/source/datasets/coco/train2017/000000121302.jpg', 'image_id': 121302, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000121302.png', 'segments_info': [{'id': 5921373, 'category_id': 4, 'iscrowd': 0, 'bbox': [11, 210, 613, 172], 'area': 33510, 'isthing': True}, {'id': 10586223, 'category_id': 119, 'iscrowd': 0, 'bbox': [0, 71, 640, 427], 'area': 239258, 'isthing': False}], 'width': 640, 'height': 569, 'image': tensor([[[0, 0, 0,  ..., 0, 0, 0],
+         [0, 0, 0,  ..., 0, 0, 0],
+         [0, 0, 0,  ..., 0, 0, 0],
+         ...,
+         [0, 0, 0,  ..., 0, 0, 0],
+         [0, 0, 0,  ..., 0, 0, 0],
+         [0, 0, 0,  ..., 0, 0, 0]],
+        [[0, 0, 0,  ..., 0, 0, 0],
+         [0, 0, 0,  ..., 0, 0, 0],
+         [0, 0, 0,  ..., 0, 0, 0],
+         ...,
+         [0, 0, 0,  ..., 0, 0, 0],
+         [0, 0, 0,  ..., 0, 0, 0],
+         [0, 0, 0,  ..., 0, 0, 0]],
+        [[0, 0, 0,  ..., 0, 0, 0],
+         [0, 0, 0,  ..., 0, 0, 0],
+         [0, 0, 0,  ..., 0, 0, 0],
+         ...,
+         [0, 0, 0,  ..., 0, 0, 0],
+         [0, 0, 0,  ..., 0, 0, 0],
+         [0, 0, 0,  ..., 0, 0, 0]]], dtype=torch.uint8), 'sem_seg': tensor([[255, 255, 255,  ..., 255, 255, 255],
+        [255, 255, 255,  ..., 255, 255, 255],
+        [255, 255, 255,  ..., 255, 255, 255],
+        ...,
+        [255, 255, 255,  ..., 255, 255, 255],
+        [255, 255, 255,  ..., 255, 255, 255],
+        [255, 255, 255,  ..., 255, 255, 255]]), 'instances': Instances(num_instances=1, image_height=800, image_width=900, fields=[gt_boxes: Boxes(tensor([[ 20.9109, 295.2408, 883.8563, 537.4060]])), gt_classes: tensor([4])])}, {'file_name': '/mnt/source/datasets/coco/train2017/000000127587.jpg', 'image_id': 127587, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000127587.png', 'segments_info': [{'id': 3227791, 'category_id': 19, 'iscrowd': 0, 'bbox': [516, 248, 21, 13], 'area': 130, 'isthing': True}, {'id': 9081792, 'category_id': 19, 'iscrowd': 0, 'bbox': [171, 200, 38, 35], 'area': 638, 'isthing': True}, {'id': 3820178, 'category_id': 19, 'iscrowd': 0, 'bbox': [501, 252, 29, 27], 'area': 481, 'isthing': True}, {'id': 6581932, 'category_id': 19, 'iscrowd': 0, 'bbox': [367, 219, 48, 31], 'area': 945, 'isthing': True}, {'id': 5923742, 'category_id': 19, 'iscrowd': 0, 'bbox': [24, 209, 56, 32], 'area': 997, 'isthing': True}, {'id': 8093370, 'category_id': 19, 'iscrowd': 0, 'bbox': [288, 211, 46, 29], 'area': 786, 'isthing': True}, {'id': 8421554, 'category_id': 19, 'iscrowd': 0, 'bbox': [107, 219, 53, 31], 'area': 1018, 'isthing': True}, {'id': 4214685, 'category_id': 19, 'iscrowd': 0, 'bbox': [619, 213, 21, 28], 'area': 358, 'isthing': True}, {'id': 6384813, 'category_id': 19, 'iscrowd': 0, 'bbox': [211, 192, 51, 26], 'area': 777, 'isthing': True}, {'id': 4609941, 'category_id': 19, 'iscrowd': 0, 'bbox': [466, 254, 28, 25], 'area': 415, 'isthing': True}, {'id': 2366244, 'category_id': 19, 'iscrowd': 0, 'bbox': [287, 229, 45, 32], 'area': 882, 'isthing': True}, {'id': 2890528, 'category_id': 19, 'iscrowd': 0, 'bbox': [120, 195, 56, 25], 'area': 640, 'isthing': True}, {'id': 2305141, 'category_id': 19, 'iscrowd': 0, 'bbox': [457, 244, 27, 24], 'area': 360, 'isthing': True}, {'id': 5530772, 'category_id': 19, 'iscrowd': 1, 'bbox': [144, 202, 411, 54], 'area': 2185, 'isthing': True}, {'id': 4671045, 'category_id': 116, 'iscrowd': 0, 'bbox': [0, 0, 640, 180], 'area': 93486, 'isthing': False}, {'id': 5995133, 'category_id': 117, 'iscrowd': 0, 'bbox': [0, 250, 92, 42], 'area': 2019, 'isthing': False}, {'id': 6920344, 'category_id': 125, 'iscrowd': 0, 'bbox': [0, 80, 640, 400], 'area': 200563, 'isthing': False}], 'width': 640, 'height': 480, 'image': tensor([[[ 47,  54,  65,  ...,  78,  87,  93],
+         [ 51,  54,  60,  ..., 101, 108, 112],
+         [ 56,  55,  53,  ..., 135, 139, 141],
+         ...,
+         [ 97,  77,  48,  ..., 105, 102, 100],
+         [ 96,  79,  54,  ..., 104, 109, 113],
+         [ 96,  81,  58,  ..., 103, 114, 122]],
+        [[ 44,  52,  64,  ...,  68,  70,  72],
+         [ 48,  53,  60,  ...,  88,  92,  96],
+         [ 55,  54,  53,  ..., 118, 126, 132],
+         ...,
+         [104,  82,  50,  ..., 123, 115, 109],
+         [ 97,  78,  51,  ..., 119, 116, 114],
+         [ 92,  76,  52,  ..., 116, 117, 118]],
+        [[ 29,  35,  44,  ...,  76,  83,  87],
+         [ 27,  31,  36,  ...,  81,  86,  89],
+         [ 25,  25,  25,  ...,  88,  90,  91],
+         ...,
+         [ 34,  25,  11,  ...,  11,  14,  16],
+         [ 25,  18,   7,  ...,  10,  11,  11],
+         [ 19,  13,   4,  ...,  10,   9,   8]]], dtype=torch.uint8), 'sem_seg': tensor([[116, 116, 116,  ..., 116, 116, 116],
+        [116, 116, 116,  ..., 116, 116, 116],
+        [116, 116, 116,  ..., 116, 116, 116],
+        ...,
+        [125, 125, 125,  ..., 125, 125, 125],
+        [125, 125, 125,  ..., 125, 125, 125],
+        [125, 125, 125,  ..., 125, 125, 125]]), 'instances': Instances(num_instances=13, image_height=800, image_width=1067, fields=[gt_boxes: Boxes(tensor([[ 513.9439,  381.3500,  589.2507,  434.4333],
+        [ 510.4761,  351.0000,  587.5836,  399.1833],
+        [ 375.5840,  364.9500,  455.5423,  417.4833],
+        [ 183.0072,  419.8667,  231.5890,  466.0500],
+        [ 259.2643,  406.8167,  305.8289,  450.3500],
+        [ 170.3699,  412.9000,  213.4000,  435.2667],
+        [ 629.1298,  319.3667,  715.8903,  364.2833],
+        [ 799.9832,  364.3167,  889.3278,  416.3500],
+        [ 933.8751,  347.7667, 1027.8878,  401.1334],
+        [ 772.7247,  325.2000,  866.5374,  366.2333],
+        [ 243.8428,  423.0667,  289.7572,  465.6333],
+        [   0.0000,  354.3000,   34.4774,  402.0167],
+        [ 718.0243,  333.5667,  783.1613,  391.4667]])), gt_classes: tensor([19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19])])}, {'file_name': '/mnt/source/datasets/coco/train2017/000000135955.jpg', 'image_id': 135955, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000135955.png', 'segments_info': [{'id': 11248544, 'category_id': 0, 'iscrowd': 0, 'bbox': [597, 280, 7, 24], 'area': 135, 'isthing': True}, {'id': 10594478, 'category_id': 0, 'iscrowd': 0, 'bbox': [586, 279, 6, 22], 'area': 88, 'isthing': True}, {'id': 14342359, 'category_id': 0, 'iscrowd': 0, 'bbox': [579, 280, 6, 17], 'area': 68, 'isthing': True}, {'id': 12697281, 'category_id': 0, 'iscrowd': 0, 'bbox': [592, 278, 7, 28], 'area': 119, 'isthing': True}, {'id': 7827654, 'category_id': 0, 'iscrowd': 0, 'bbox': [619, 283, 5, 16], 'area': 69, 'isthing': True}, {'id': 9473954, 'category_id': 6, 'iscrowd': 0, 'bbox': [173, 97, 391, 331], 'area': 96447, 'isthing': True}, {'id': 11120813, 'category_id': 87, 'iscrowd': 0, 'bbox': [592, 300, 48, 88], 'area': 3025, 'isthing': False}, {'id': 4611684, 'category_id': 98, 'iscrowd': 0, 'bbox': [0, 324, 539, 156], 'area': 35474, 'isthing': False}, {'id': 16448505, 'category_id': 119, 'iscrowd': 0, 'bbox': [0, 0, 640, 291], 'area': 123303, 'isthing': False}], 'width': 640, 'height': 480, 'image': tensor([[[246, 246, 246,  ..., 235, 235, 235],
+         [246, 246, 246,  ..., 235, 235, 235],
+         [246, 246, 246,  ..., 235, 235, 235],
+         ...,
+         [102, 104, 106,  ..., 131, 131, 131],
+         [100, 102, 105,  ..., 130, 129, 129],
+         [ 98, 101, 105,  ..., 129, 128, 128]],
+        [[252, 252, 252,  ..., 243, 243, 243],
+         [252, 252, 252,  ..., 243, 243, 243],
+         [252, 252, 252,  ..., 243, 243, 243],
+         ...,
+         [ 94,  96,  98,  ..., 122, 122, 122],
+         [ 92,  94,  97,  ..., 122, 121, 121],
+         [ 90,  93,  97,  ..., 122, 121, 121]],
+        [[252, 252, 252,  ..., 245, 245, 245],
+         [252, 252, 252,  ..., 245, 245, 245],
+         [252, 252, 252,  ..., 245, 245, 245],
+         ...,
+         [ 71,  73,  75,  ..., 115, 115, 115],
+         [ 70,  72,  76,  ..., 114, 114, 114],
+         [ 69,  72,  76,  ..., 114, 113, 113]]], dtype=torch.uint8), 'sem_seg': tensor([[119, 119, 119,  ..., 119, 119, 119],
+        [119, 119, 119,  ..., 119, 119, 119],
+        [119, 119, 119,  ..., 119, 119, 119],
+        ...,
+        [ 98,  98,  98,  ..., 255, 255, 255],
+        [ 98,  98,  98,  ..., 255, 255, 255],
+        [ 98,  98,  98,  ..., 255, 255, 255]]), 'instances': Instances(num_instances=6, image_height=800, image_width=1067, fields=[gt_boxes: Boxes(tensor([[ 287.7232,  160.8500,  940.5105,  712.7667],
+        [ 995.3443,  466.0333, 1006.9813,  507.6333],
+        [1032.0057,  471.6667, 1040.2250,  499.0500],
+        [ 987.0084,  463.2333,  998.5787,  510.6500],
+        [ 977.7554,  464.1833,  986.6082,  501.1834],
+        [ 965.1682,  467.0333,  975.0046,  495.4667]])), gt_classes: tensor([6, 0, 0, 0, 0, 0])])}, {'file_name': '/mnt/source/datasets/coco/train2017/000000219488.jpg', 'image_id': 219488, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000219488.png', 'segments_info': [{'id': 5000011, 'category_id': 0, 'iscrowd': 0, 'bbox': [238, 70, 165, 81], 'area': 4020, 'isthing': True}, {'id': 4604995, 'category_id': 16, 'iscrowd': 0, 'bbox': [109, 247, 52, 78], 'area': 2381, 'isthing': True}, {'id': 4604994, 'category_id': 17, 'iscrowd': 0, 'bbox': [169, 100, 112, 279], 'area': 16411, 'isthing': True}, {'id': 5131340, 'category_id': 26, 'iscrowd': 0, 'bbox': [281, 140, 36, 51], 'area': 688, 'isthing': True}, {'id': 7763833, 'category_id': 116, 'iscrowd': 0, 'bbox': [0, 49, 122, 112], 'area': 8328, 'isthing': False}, {'id': 8421763, 'category_id': 117, 'iscrowd': 0, 'bbox': [16, 91, 610, 213], 'area': 50442, 'isthing': False}, {'id': 13160405, 'category_id': 119, 'iscrowd': 0, 'bbox': [0, 0, 640, 174], 'area': 52286, 'isthing': False}, {'id': 6710886, 'category_id': 125, 'iscrowd': 0, 'bbox': [0, 167, 640, 247], 'area': 58425, 'isthing': False}], 'width': 640, 'height': 426, 'image': tensor([[[224, 226, 229,  ..., 240, 243, 244],
+         [225, 227, 230,  ..., 239, 242, 243],
+         [226, 228, 232,  ..., 237, 240, 242],
+         ...,
+         [177, 184, 195,  ..., 226, 226, 226],
+         [168, 173, 181,  ..., 224, 223, 223],
+         [163, 167, 173,  ..., 223, 222, 221]],
+        [[207, 209, 212,  ..., 225, 226, 227],
+         [208, 210, 213,  ..., 224, 226, 227],
+         [209, 211, 215,  ..., 223, 225, 227],
+         ...,
+         [142, 152, 171,  ..., 209, 206, 204],
+         [132, 141, 156,  ..., 207, 203, 201],
+         [127, 134, 148,  ..., 206, 201, 199]],
+        [[191, 193, 196,  ..., 217, 219, 220],
+         [192, 194, 197,  ..., 216, 218, 219],
+         [193, 195, 199,  ..., 214, 217, 218],
+         ...,
+         [120, 132, 155,  ..., 194, 191, 190],
+         [109, 120, 140,  ..., 192, 188, 187],
+         [103, 113, 132,  ..., 191, 187, 185]]], dtype=torch.uint8), 'sem_seg': tensor([[255, 255, 255,  ..., 255, 255, 255],
+        [255, 255, 255,  ..., 255, 255, 255],
+        [255, 255, 255,  ..., 255, 255, 255],
+        ...,
+        [255, 255, 255,  ..., 255, 255, 255],
+        [255, 255, 255,  ..., 255, 255, 255],
+        [255, 255, 255,  ..., 255, 255, 255]]), 'instances': Instances(num_instances=4, image_height=800, image_width=1202, fields=[gt_boxes: Boxes(tensor([[203.8517, 463.2488, 302.7725, 610.2347],
+        [316.5956, 175.4930, 528.2227, 712.2629],
+        [446.6745, 132.0188, 757.0347, 284.4883],
+        [527.1709, 262.8920, 596.2484, 359.6996]])), gt_classes: tensor([16, 17,  0, 26])])}, {'file_name': '/mnt/source/datasets/coco/train2017/000000068023.jpg', 'image_id': 68023, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000068023.png', 'segments_info': [{'id': 7431524, 'category_id': 22, 'iscrowd': 0, 'bbox': [92, 63, 391, 357], 'area': 76828, 'isthing': True}, {'id': 5729136, 'category_id': 125, 'iscrowd': 0, 'bbox': [0, 0, 640, 427], 'area': 195942, 'isthing': False}], 'width': 640, 'height': 427, 'image': tensor([[[ 42,  39,  34,  ..., 136, 131, 129],
+         [ 41,  39,  35,  ..., 136, 132, 130],
+         [ 39,  38,  37,  ..., 135, 133, 132],
+         ...,
+         [ 55,  56,  56,  ..., 117, 102,  92],
+         [ 68,  67,  64,  ..., 117, 110, 106],
+         [ 76,  74,  69,  ..., 117, 115, 114]],
+        [[ 55,  52,  47,  ..., 126, 121, 119],
+         [ 54,  52,  48,  ..., 126, 122, 120],
+         [ 52,  51,  50,  ..., 125, 123, 122],
+         ...,
+         [ 55,  56,  57,  ..., 115, 101,  93],
+         [ 70,  68,  65,  ..., 116, 110, 106],
+         [ 78,  75,  70,  ..., 116, 115, 114]],
+        [[ 35,  31,  25,  ..., 116, 111, 109],
+         [ 34,  31,  27,  ..., 116, 112, 110],
+         [ 33,  32,  29,  ..., 115, 113, 112],
+         ...,
+         [ 44,  45,  49,  ..., 100,  87,  79],
+         [ 59,  58,  57,  ...,  99,  96,  94],
+         [ 67,  65,  62,  ...,  99, 101, 102]]], dtype=torch.uint8), 'sem_seg': tensor([[125, 125, 125,  ..., 125, 125, 125],
+        [125, 125, 125,  ..., 125, 125, 125],
+        [125, 125, 125,  ..., 125, 125, 125],
+        ...,
+        [125, 125, 125,  ..., 125, 125, 125],
+        [125, 125, 125,  ..., 125, 125, 125],
+        [125, 125, 125,  ..., 125, 125, 125]]), 'instances': Instances(num_instances=1, image_height=800, image_width=1199, fields=[gt_boxes: Boxes(tensor([[172.5811, 118.3513, 904.2146, 787.1100]])), gt_classes: tensor([22])])}, {'file_name': '/mnt/source/datasets/coco/train2017/000000101548.jpg', 'image_id': 101548, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000101548.png', 'segments_info': [{'id': 2362715, 'category_id': 26, 'iscrowd': 0, 'bbox': [128, 263, 86, 99], 'area': 5252, 'isthing': True}, {'id': 5722962, 'category_id': 26, 'iscrowd': 0, 'bbox': [377, 308, 98, 77], 'area': 4979, 'isthing': True}, {'id': 2045749, 'category_id': 39, 'iscrowd': 0, 'bbox': [347, 175, 11, 40], 'area': 368, 'isthing': True}, {'id': 3361146, 'category_id': 58, 'iscrowd': 0, 'bbox': [428, 167, 51, 55], 'area': 1976, 'isthing': True}, {'id': 7900569, 'category_id': 59, 'iscrowd': 0, 'bbox': [260, 251, 348, 229], 'area': 52915, 'isthing': True}, {'id': 6256270, 'category_id': 59, 'iscrowd': 0, 'bbox': [77, 220, 347, 260], 'area': 28903, 'isthing': True}, {'id': 6188682, 'category_id': 81, 'iscrowd': 0, 'bbox': [223, 235, 212, 245], 'area': 770, 'isthing': False}, {'id': 6453177, 'category_id': 85, 'iscrowd': 0, 'bbox': [569, 0, 61, 310], 'area': 14598, 'isthing': False}, {'id': 659750, 'category_id': 112, 'iscrowd': 0, 'bbox': [0, 320, 134, 53], 'area': 2213, 'isthing': False}, {'id': 16711422, 'category_id': 115, 'iscrowd': 0, 'bbox': [618, 0, 22, 163], 'area': 2694, 'isthing': False}, {'id': 5338266, 'category_id': 131, 'iscrowd': 0, 'bbox': [0, 0, 640, 357], 'area': 150137, 'isthing': False}, {'id': 2178398, 'category_id': 132, 'iscrowd': 0, 'bbox': [0, 329, 640, 151], 'area': 22671, 'isthing': False}], 'width': 640, 'height': 480, 'image': tensor([[[255, 255, 255,  ..., 181, 186, 190],
+         [255, 255, 255,  ..., 186, 185, 185],
+         [255, 255, 255,  ..., 193, 184, 178],
+         ...,
+         [108, 120, 138,  ..., 105, 110, 113],
+         [127, 131, 137,  ...,  98, 105, 110],
+         [139, 138, 137,  ...,  93, 102, 108]],
+        [[255, 255, 255,  ..., 149, 154, 158],
+         [255, 255, 255,  ..., 154, 153, 152],
+         [255, 255, 255,  ..., 161, 151, 144],
+         ...,
+         [ 88,  98, 114,  ...,  72,  74,  76],
+         [104, 106, 110,  ...,  64,  67,  69],
+         [114, 112, 108,  ...,  59,  62,  64]],
+        [[255, 255, 255,  ..., 108, 115, 119],
+         [255, 255, 255,  ..., 113, 114, 114],
+         [255, 255, 255,  ..., 120, 112, 106],
+         ...,
+         [ 35,  41,  50,  ...,  41,  45,  47],
+         [ 34,  36,  38,  ...,  24,  27,  29],
+         [ 34,  32,  30,  ...,  13,  15,  17]]], dtype=torch.uint8), 'sem_seg': tensor([[115, 115, 115,  ..., 131, 131, 131],
+        [115, 115, 115,  ..., 131, 131, 131],
+        [115, 115, 115,  ..., 131, 131, 131],
+        ...,
+        [132, 132, 132,  ..., 132, 132, 132],
+        [132, 132, 132,  ..., 132, 132, 132],
+        [132, 132, 132,  ..., 132, 132, 132]]), 'instances': Instances(num_instances=6, image_height=800, image_width=1067, fields=[gt_boxes: Boxes(tensor([[268.5505, 278.3500, 353.0770, 370.0333],
+        [273.8689, 512.9000, 438.9038, 642.7666],
+        [469.3967, 292.0667, 488.7694, 359.1167],
+        [ 53.7668, 417.7667, 632.7477, 800.0000],
+        [359.7957, 366.0833, 938.7933, 800.0000],
+        [710.9055, 438.0833, 853.5667, 603.4166]])), gt_classes: tensor([58, 26, 39, 59, 59, 26])])}, {'file_name': '/mnt/source/datasets/coco/train2017/000000324171.jpg', 'image_id': 324171, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000324171.png', 'segments_info': [{'id': 7301747, 'category_id': 40, 'iscrowd': 0, 'bbox': [425, 1, 124, 158], 'area': 4620, 'isthing': True}, {'id': 4609899, 'category_id': 42, 'iscrowd': 0, 'bbox': [208, 308, 422, 64], 'area': 7499, 'isthing': True}, {'id': 1333085, 'category_id': 50, 'iscrowd': 0, 'bbox': [167, 192, 81, 61], 'area': 2566, 'isthing': True}, {'id': 811627, 'category_id': 50, 'iscrowd': 0, 'bbox': [202, 163, 42, 38], 'area': 1049, 'isthing': True}, {'id': 2840660, 'category_id': 50, 'iscrowd': 0, 'bbox': [302, 117, 35, 25], 'area': 642, 'isthing': True}, {'id': 867903, 'category_id': 50, 'iscrowd': 0, 'bbox': [295, 153, 52, 39], 'area': 1388, 'isthing': True}, {'id': 2782075, 'category_id': 50, 'iscrowd': 0, 'bbox': [305, 248, 85, 89], 'area': 4722, 'isthing': True}, {'id': 1335134, 'category_id': 50, 'iscrowd': 0, 'bbox': [351, 207, 68, 97], 'area': 2583, 'isthing': True}, {'id': 2842213, 'category_id': 50, 'iscrowd': 0, 'bbox': [160, 134, 33, 28], 'area': 436, 'isthing': True}, {'id': 1332826, 'category_id': 50, 'iscrowd': 0, 'bbox': [236, 146, 55, 44], 'area': 1378, 'isthing': True}, {'id': 3899280, 'category_id': 50, 'iscrowd': 0, 'bbox': [204, 119, 66, 30], 'area': 931, 'isthing': True}, {'id': 1456200, 'category_id': 56, 'iscrowd': 0, 'bbox': [492, 2, 148, 107], 'area': 9066, 'isthing': True}, {'id': 2107444, 'category_id': 56, 'iscrowd': 0, 'bbox': [357, 9, 132, 54], 'area': 5446, 'isthing': True}, {'id': 7897749, 'category_id': 60, 'iscrowd': 0, 'bbox': [1, 19, 635, 376], 'area': 166329, 'isthing': True}, {'id': 923436, 'category_id': 83, 'iscrowd': 0, 'bbox': [0, 0, 639, 149], 'area': 5708, 'isthing': False}, {'id': 2242402, 'category_id': 87, 'iscrowd': 0, 'bbox': [476, 116, 164, 311], 'area': 9393, 'isthing': False}, {'id': 2172729, 'category_id': 104, 'iscrowd': 0, 'bbox': [22, 0, 475, 97], 'area': 15001, 'isthing': False}, {'id': 4670544, 'category_id': 121, 'iscrowd': 0, 'bbox': [0, 0, 640, 427], 'area': 20312, 'isthing': False}, {'id': 461332, 'category_id': 122, 'iscrowd': 0, 'bbox': [526, 75, 23, 35], 'area': 472, 'isthing': False}, {'id': 3357516, 'category_id': 131, 'iscrowd': 0, 'bbox': [624, 59, 16, 61], 'area': 576, 'isthing': False}], 'width': 640, 'height': 427, 'image': tensor([[[136, 136, 137,  ...,  42,  34,  29],
+         [136, 136, 137,  ...,  44,  36,  31],
+         [135, 135, 136,  ...,  47,  39,  34],
+         ...,
+         [ 80,  82,  84,  ..., 121, 123, 124],
+         [ 79,  81,  83,  ..., 120, 122, 123],
+         [ 79,  80,  82,  ..., 120, 122, 123]],
+        [[122, 122, 123,  ...,  24,  16,  11],
+         [123, 123, 124,  ...,  26,  18,  13],
+         [124, 124, 125,  ...,  28,  20,  15],
+         ...,
+         [ 42,  44,  46,  ..., 126, 128, 129],
+         [ 41,  43,  45,  ..., 125, 127, 128],
+         [ 41,  42,  44,  ..., 125, 127, 128]],
+        [[  0,   0,   0,  ...,  17,  12,   9],
+         [  0,   0,   0,  ...,  18,  13,   9],
+         [  0,   0,   0,  ...,  20,  14,  10],
+         ...,
+         [ 19,  21,  23,  ..., 146, 148, 149],
+         [ 20,  21,  23,  ..., 145, 147, 148],
+         [ 20,  21,  23,  ..., 145, 147, 148]]], dtype=torch.uint8), 'sem_seg': tensor([[121, 121, 121,  ...,  83,  83,  83],
+        [121, 121, 121,  ...,  83,  83,  83],
+        [121, 121, 121,  ...,  83,  83,  83],
+        ...,
+        [ 87,  87,  87,  ..., 121, 121, 121],
+        [ 87,  87,  87,  ..., 121, 121, 121],
+        [ 87,  87,  87,  ..., 121, 121, 121]]), 'instances': Instances(num_instances=14, image_height=800, image_width=1199, fields=[gt_boxes: Boxes(tensor([[   8.0370,   35.7845, 1197.2015,  740.7213],
+        [ 168.5531,    2.1920,  402.2083,  298.7166],
+        [  17.8539,  576.4684,  812.4349,  696.3747],
+        [ 467.3852,  463.7752,  628.4071,  632.3934],
+        [ 413.8798,  386.9602,  541.4796,  570.9789],
+        [ 733.3946,  358.9508,  887.0726,  474.9977],
+        [ 549.2731,  285.9579,  646.1674,  359.3255],
+        [ 742.4246,  305.6674,  821.6522,  377.3677],
+        [ 837.1268,  250.9602,  899.2875,  304.4684],
+        [ 692.9283,  222.3887,  817.5119,  279.8876],
+        [ 653.0616,  270.7635,  757.3184,  355.5035],
+        [ 567.1270,  219.3911,  632.6411,  267.1475],
+        [ 278.8424,   16.4684,  531.6815,  118.0328],
+        [   0.0000,    3.1288,  305.2953,  205.2084]])), gt_classes: tensor([60, 40, 42, 50, 50, 50, 50, 50, 50, 50, 50, 50, 56, 56])])}, {'file_name': '/mnt/source/datasets/coco/train2017/000000169172.jpg', 'image_id': 169172, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000169172.png', 'segments_info': [{'id': 4937332, 'category_id': 0, 'iscrowd': 0, 'bbox': [455, 180, 30, 50], 'area': 847, 'isthing': True}, {'id': 5862546, 'category_id': 0, 'iscrowd': 0, 'bbox': [356, 209, 75, 89], 'area': 3142, 'isthing': True}, {'id': 5992333, 'category_id': 0, 'iscrowd': 0, 'bbox': [408, 177, 33, 54], 'area': 977, 'isthing': True}, {'id': 6716578, 'category_id': 0, 'iscrowd': 0, 'bbox': [506, 283, 17, 19], 'area': 265, 'isthing': True}, {'id': 7376067, 'category_id': 0, 'iscrowd': 0, 'bbox': [202, 155, 192, 264], 'area': 23441, 'isthing': True}, {'id': 4411250, 'category_id': 0, 'iscrowd': 0, 'bbox': [19, 217, 271, 209], 'area': 16828, 'isthing': True}, {'id': 5926797, 'category_id': 0, 'iscrowd': 0, 'bbox': [356, 200, 122, 182], 'area': 5812, 'isthing': True}, {'id': 3817043, 'category_id': 0, 'iscrowd': 0, 'bbox': [500, 173, 17, 45], 'area': 499, 'isthing': True}, {'id': 6916000, 'category_id': 0, 'iscrowd': 0, 'bbox': [362, 210, 158, 212], 'area': 9551, 'isthing': True}, {'id': 2962003, 'category_id': 60, 'iscrowd': 0, 'bbox': [2, 284, 40, 112], 'area': 1522, 'isthing': True}, {'id': 2767472, 'category_id': 85, 'iscrowd': 0, 'bbox': [0, 0, 334, 137], 'area': 11942, 'isthing': False}, {'id': 5001315, 'category_id': 114, 'iscrowd': 0, 'bbox': [0, 8, 517, 218], 'area': 29782, 'isthing': False}, {'id': 2632262, 'category_id': 115, 'iscrowd': 0, 'bbox': [0, 189, 56, 66], 'area': 3209, 'isthing': False}, {'id': 6850726, 'category_id': 131, 'iscrowd': 0, 'bbox': [0, 0, 640, 426], 'area': 126868, 'isthing': False}, {'id': 4675441, 'category_id': 132, 'iscrowd': 0, 'bbox': [0, 343, 478, 83], 'area': 17590, 'isthing': False}], 'width': 640, 'height': 426, 'image': tensor([[[107,  95,  73,  ...,  71,  70,  70],
+         [106,  94,  72,  ...,  72,  70,  69],
+         [105,  93,  71,  ...,  73,  70,  68],
+         ...,
+         [118, 122, 129,  ..., 179, 174, 172],
+         [117, 121, 128,  ..., 178, 173, 171],
+         [116, 120, 128,  ..., 177, 173, 170]],
+        [[ 72,  63,  48,  ...,  52,  47,  44],
+         [ 72,  63,  47,  ...,  52,  48,  46],
+         [ 72,  62,  44,  ...,  53,  50,  49],
+         ...,
+         [ 72,  75,  81,  ..., 151, 146, 144],
+         [ 71,  74,  80,  ..., 151, 147, 144],
+         [ 71,  74,  79,  ..., 151, 147, 144]],
+        [[ 53,  41,  19,  ...,  53,  31,  19],
+         [ 46,  39,  26,  ...,  48,  30,  20],
+         [ 35,  36,  38,  ...,  40,  28,  21],
+         ...,
+         [ 55,  56,  60,  ..., 128, 123, 120],
+         [ 50,  54,  61,  ..., 128, 122, 119],
+         [ 48,  53,  61,  ..., 128, 122, 119]]], dtype=torch.uint8), 'sem_seg': tensor([[ 85,  85,  85,  ..., 131, 131, 131],
+        [ 85,  85,  85,  ..., 131, 131, 131],
+        [ 85,  85,  85,  ..., 131, 131, 131],
+        ...,
+        [132, 132, 132,  ..., 131, 131, 131],
+        [132, 132, 132,  ..., 131, 131, 131],
+        [132, 132, 132,  ..., 131, 131, 131]]), 'instances': Instances(num_instances=10, image_height=800, image_width=1202, fields=[gt_boxes: Boxes(tensor([[677.8153, 393.7089, 976.2869, 792.8075],
+        [378.5173, 290.7981, 739.0797, 787.6620],
+        [668.8379, 373.9343, 897.1616, 719.0986],
+        [854.2088, 337.8028, 912.1114, 433.7465],
+        [766.2562, 332.3380, 828.7602, 435.3052],
+        [939.3066, 324.7887, 971.2160, 412.2253],
+        [  3.4182, 532.9202,  80.5152, 745.2394],
+        [949.9180, 530.8169, 981.5081, 567.0798],
+        [668.1241, 392.6761, 809.3779, 559.3052],
+        [ 22.5751, 408.2441, 546.1400, 800.0000]])), gt_classes: tensor([ 0,  0,  0,  0,  0,  0, 60,  0,  0,  0])])}, {'file_name': '/mnt/source/datasets/coco/train2017/000000346445.jpg', 'image_id': 346445, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000346445.png', 'segments_info': [{'id': 4276290, 'category_id': 0, 'iscrowd': 0, 'bbox': [419, 335, 17, 25], 'area': 266, 'isthing': True}, {'id': 2435120, 'category_id': 0, 'iscrowd': 0, 'bbox': [575, 333, 37, 82], 'area': 1058, 'isthing': True}, {'id': 3158071, 'category_id': 0, 'iscrowd': 0, 'bbox': [549, 337, 21, 77], 'area': 1094, 'isthing': True}, {'id': 5660013, 'category_id': 0, 'iscrowd': 0, 'bbox': [80, 338, 12, 29], 'area': 188, 'isthing': True}, {'id': 2501168, 'category_id': 0, 'iscrowd': 0, 'bbox': [388, 340, 16, 25], 'area': 269, 'isthing': True}, {'id': 9869472, 'category_id': 2, 'iscrowd': 0, 'bbox': [97, 343, 21, 25], 'area': 281, 'isthing': True}, {'id': 9078925, 'category_id': 2, 'iscrowd': 0, 'bbox': [190, 341, 89, 62], 'area': 4211, 'isthing': True}, {'id': 7039595, 'category_id': 2, 'iscrowd': 0, 'bbox': [66, 339, 28, 25], 'area': 311, 'isthing': True}, {'id': 6448227, 'category_id': 2, 'iscrowd': 0, 'bbox': [367, 340, 14, 17], 'area': 166, 'isthing': True}, {'id': 7632504, 'category_id': 2, 'iscrowd': 0, 'bbox': [111, 342, 39, 28], 'area': 929, 'isthing': True}, {'id': 6448232, 'category_id': 2, 'iscrowd': 0, 'bbox': [60, 343, 10, 18], 'area': 101, 'isthing': True}, {'id': 6776939, 'category_id': 2, 'iscrowd': 0, 'bbox': [154, 345, 27, 30], 'area': 385, 'isthing': True}, {'id': 6908525, 'category_id': 2, 'iscrowd': 0, 'bbox': [186, 345, 27, 32], 'area': 312, 'isthing': True}, {'id': 9211027, 'category_id': 2, 'iscrowd': 0, 'bbox': [89, 342, 28, 25], 'area': 232, 'isthing': True}, {'id': 6512480, 'category_id': 2, 'iscrowd': 0, 'bbox': [273, 346, 51, 43], 'area': 1471, 'isthing': True}, {'id': 7434869, 'category_id': 2, 'iscrowd': 0, 'bbox': [168, 347, 31, 30], 'area': 507, 'isthing': True}, {'id': 5065549, 'category_id': 3, 'iscrowd': 0, 'bbox': [390, 354, 38, 46], 'area': 864, 'isthing': True}, {'id': 4144448, 'category_id': 3, 'iscrowd': 0, 'bbox': [334, 356, 34, 38], 'area': 598, 'isthing': True}, {'id': 6577231, 'category_id': 3, 'iscrowd': 0, 'bbox': [317, 354, 23, 38], 'area': 345, 'isthing': True}, {'id': 4208697, 'category_id': 3, 'iscrowd': 0, 'bbox': [411, 357, 66, 44], 'area': 1744, 'isthing': True}, {'id': 4013633, 'category_id': 3, 'iscrowd': 0, 'bbox': [304, 346, 32, 46], 'area': 517, 'isthing': True}, {'id': 4736075, 'category_id': 3, 'iscrowd': 0, 'bbox': [365, 345, 43, 53], 'area': 780, 'isthing': True}, {'id': 4934476, 'category_id': 3, 'iscrowd': 0, 'bbox': [351, 357, 30, 39], 'area': 467, 'isthing': True}, {'id': 4674653, 'category_id': 9, 'iscrowd': 0, 'bbox': [355, 52, 28, 64], 'area': 1668, 'isthing': True}, {'id': 3228234, 'category_id': 9, 'iscrowd': 0, 'bbox': [560, 119, 26, 53], 'area': 1147, 'isthing': True}, {'id': 8225421, 'category_id': 9, 'iscrowd': 0, 'bbox': [146, 40, 34, 67], 'area': 1917, 'isthing': True}, {'id': 6833788, 'category_id': 26, 'iscrowd': 0, 'bbox': [591, 376, 17, 16], 'area': 196, 'isthing': True}, {'id': 4019041, 'category_id': 26, 'iscrowd': 0, 'bbox': [544, 364, 7, 14], 'area': 66, 'isthing': True}, {'id': 4346966, 'category_id': 116, 'iscrowd': 0, 'bbox': [0, 0, 640, 413], 'area': 188286, 'isthing': False}, {'id': 15396076, 'category_id': 119, 'iscrowd': 0, 'bbox': [55, 0, 315, 181], 'area': 34159, 'isthing': False}, {'id': 11120823, 'category_id': 123, 'iscrowd': 0, 'bbox': [0, 340, 640, 140], 'area': 60895, 'isthing': False}], 'width': 640, 'height': 480, 'image': tensor([[[249, 250, 252,  ...,  48,  64,  75],
+         [251, 249, 246,  ...,  46,  59,  67],
+         [255, 248, 237,  ...,  44,  51,  55],
+         ...,
+         [172, 172, 172,  ..., 187, 188, 188],
+         [173, 173, 173,  ..., 186, 187, 188],
+         [173, 173, 173,  ..., 186, 187, 188]],
+        [[249, 251, 253,  ...,  44,  60,  71],
+         [251, 250, 247,  ...,  42,  55,  64],
+         [255, 248, 237,  ...,  40,  48,  53],
+         ...,
+         [169, 169, 169,  ..., 183, 184, 184],
+         [170, 170, 170,  ..., 182, 183, 184],
+         [170, 170, 170,  ..., 182, 183, 184]],
+        [[247, 247, 248,  ...,  32,  48,  59],
+         [250, 247, 243,  ...,  31,  43,  52],
+         [255, 247, 235,  ...,  29,  36,  41],
+         ...,
+         [160, 161, 162,  ..., 172, 173, 173],
+         [161, 162, 163,  ..., 171, 172, 173],
+         [161, 162, 163,  ..., 171, 172, 173]]], dtype=torch.uint8), 'sem_seg': tensor([[116, 116, 116,  ..., 116, 116, 116],
+        [116, 116, 116,  ..., 116, 116, 116],
+        [116, 116, 116,  ..., 116, 116, 116],
+        ...,
+        [123, 123, 123,  ..., 123, 123, 123],
+        [123, 123, 123,  ..., 123, 123, 123],
+        [123, 123, 123,  ..., 123, 123, 123]]), 'instances': Instances(num_instances=28, image_height=800, image_width=1067, fields=[gt_boxes: Boxes(tensor([[ 607.7899,  574.5500,  680.1791,  663.0000],
+        [ 556.9407,  593.7500,  613.6917,  656.4333],
+        [ 685.8643,  594.5000,  795.3986,  669.4000],
+        [ 915.5526,  561.8167,  950.1468,  689.3334],
+        [ 958.7829,  554.4166, 1021.2525,  692.0833],
+        [ 133.4584,  562.6000,  153.2645,  611.4167],
+        [ 242.7758,   66.8667,  300.0938,  178.4500],
+        [ 933.0415,  198.2500,  976.4051,  285.9167],
+        [ 592.6018,   85.8833,  638.3328,  192.5667],
+        [ 317.0490,  569.0167,  467.0959,  671.2834],
+        [ 454.8921,  576.5500,  540.6855,  648.0833],
+        [ 184.7244,  569.5833,  249.8447,  616.1333],
+        [ 650.6866,  589.9167,  714.6733,  666.7667],
+        [ 529.2820,  588.9000,  567.1605,  653.5833],
+        [ 506.9417,  576.7833,  559.6749,  654.1667],
+        [ 907.6335,  607.1166,  918.9871,  629.3167],
+        [ 645.9185,  566.4500,  674.1939,  609.2500],
+        [ 699.2351,  557.3667,  727.1772,  600.2833],
+        [ 109.0007,  564.8333,  157.2158,  606.6833],
+        [ 162.2674,  571.8000,  196.7281,  612.8167],
+        [ 611.2576,  566.5000,  635.3151,  595.1333],
+        [ 309.4300,  575.0833,  355.9945,  628.3666],
+        [ 279.7374,  578.2000,  334.8379,  629.0167],
+        [ 257.3637,  574.9000,  304.0783,  624.8500],
+        [ 147.6961,  569.5000,  195.8612,  610.9834],
+        [  99.4644,  572.4500,  117.1032,  602.1666],
+        [ 585.3328,  594.2500,  636.6322,  660.2833],
+        [ 984.6576,  626.5500, 1013.4999,  653.6333]])), gt_classes: tensor([ 3,  3,  3,  0,  0,  0,  9,  9,  9,  2,  2,  2,  3,  3,  3, 26,  0,  0,
+         2,  2,  2,  2,  2,  2,  2,  2,  3, 26])])}, {'file_name': '/mnt/source/datasets/coco/train2017/000000570548.jpg', 'image_id': 570548, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000570548.png', 'segments_info': [{'id': 9214121, 'category_id': 0, 'iscrowd': 0, 'bbox': [0, 160, 148, 297], 'area': 19547, 'isthing': True}, {'id': 12893365, 'category_id': 41, 'iscrowd': 0, 'bbox': [152, 49, 153, 177], 'area': 19622, 'isthing': True}, {'id': 10196372, 'category_id': 45, 'iscrowd': 0, 'bbox': [271, 96, 313, 299], 'area': 31327, 'isthing': True}, {'id': 4827566, 'category_id': 46, 'iscrowd': 0, 'bbox': [106, 88, 204, 291], 'area': 20596, 'isthing': True}, {'id': 9152442, 'category_id': 48, 'iscrowd': 0, 'bbox': [309, 124, 244, 241], 'area': 48380, 'isthing': True}, {'id': 4224664, 'category_id': 87, 'iscrowd': 0, 'bbox': [0, 0, 130, 313], 'area': 23383, 'isthing': False}], 'width': 640, 'height': 480, 'image': tensor([[[134, 135, 136,  ...,   2,   5,   7],
+         [141, 143, 145,  ...,   5,   6,   7],
+         [151, 154, 158,  ...,   9,   8,   8],
+         ...,
+         [ 10,   9,   8,  ...,   7,  20,  29],
+         [ 10,   9,   7,  ...,  20,  28,  33],
+         [ 10,   9,   7,  ...,  28,  33,  36]],
+        [[ 91,  93,  96,  ...,   2,   5,   7],
+         [ 97, 100, 104,  ...,   5,   6,   7],
+         [107, 111, 116,  ...,   9,   8,   8],
+         ...,
+         [ 11,  10,   9,  ...,   5,  18,  27],
+         [ 11,  10,   8,  ...,  16,  24,  29],
+         [ 11,  10,   8,  ...,  23,  28,  31]],
+        [[ 57,  58,  60,  ...,   0,   3,   5],
+         [ 62,  64,  66,  ...,   3,   4,   5],
+         [ 70,  72,  76,  ...,   7,   6,   6],
+         ...,
+         [ 13,  12,  11,  ...,   8,  21,  30],
+         [ 13,  12,  10,  ...,  19,  28,  33],
+         [ 13,  12,  10,  ...,  27,  32,  35]]], dtype=torch.uint8), 'sem_seg': tensor([[ 87,  87,  87,  ..., 255, 255, 255],
+        [ 87,  87,  87,  ..., 255, 255, 255],
+        [ 87,  87,  87,  ..., 255, 255, 255],
+        ...,
+        [255, 255, 255,  ..., 255, 255, 255],
+        [255, 255, 255,  ..., 255, 255, 255],
+        [255, 255, 255,  ..., 255, 255, 255]]), 'instances': Instances(num_instances=5, image_height=800, image_width=1067, fields=[gt_boxes: Boxes(tensor([[515.3610, 206.8000, 921.8380, 607.7167],
+        [  0.0000, 266.0667, 246.3770, 762.2499],
+        [177.1720, 147.0500, 516.2780, 631.6334],
+        [451.7245, 160.2667, 973.7375, 657.9667],
+        [253.7793,  81.7000, 509.2758, 376.5167]])), gt_classes: tensor([48,  0, 46, 45, 41])])}, {'file_name': '/mnt/source/datasets/coco/train2017/000000372861.jpg', 'image_id': 372861, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000372861.png', 'segments_info': [{'id': 7170195, 'category_id': 59, 'iscrowd': 0, 'bbox': [1, 112, 473, 360], 'area': 134185, 'isthing': True}, {'id': 7368337, 'category_id': 81, 'iscrowd': 0, 'bbox': [0, 257, 640, 223], 'area': 8837, 'isthing': False}, {'id': 10920358, 'category_id': 92, 'iscrowd': 0, 'bbox': [483, 141, 132, 206], 'area': 11831, 'isthing': False}, {'id': 1511956, 'category_id': 122, 'iscrowd': 0, 'bbox': [449, 407, 113, 73], 'area': 6370, 'isthing': False}, {'id': 7574446, 'category_id': 131, 'iscrowd': 0, 'bbox': [0, 0, 640, 330], 'area': 83107, 'isthing': False}], 'width': 640, 'height': 480, 'image': tensor([[[198, 198, 198,  ..., 174, 173, 173],
+         [195, 192, 189,  ..., 172, 171, 171],
+         [190, 184, 175,  ..., 168, 169, 169],
+         ...,
+         [163, 153, 139,  ...,  73,  72,  72],
+         [146, 144, 141,  ...,  71,  71,  71],
+         [135, 138, 143,  ...,  70,  70,  70]],
+        [[163, 162, 161,  ..., 154, 153, 153],
+         [162, 159, 154,  ..., 152, 151, 151],
+         [160, 154, 144,  ..., 148, 149, 149],
+         ...,
+         [135, 124, 108,  ...,  44,  32,  24],
+         [126, 123, 118,  ...,  35,  36,  37],
+         [120, 122, 124,  ...,  29,  39,  45]],
+        [[121, 119, 116,  ..., 145, 146, 146],
+         [117, 112, 106,  ..., 143, 144, 144],
+         [110, 102,  90,  ..., 141, 142, 142],
+         ...,
+         [ 87,  78,  64,  ...,  48,  43,  40],
+         [ 83,  82,  81,  ...,  45,  42,  41],
+         [ 81,  85,  92,  ...,  43,  42,  41]]], dtype=torch.uint8), 'sem_seg': tensor([[131, 131, 131,  ..., 131, 131, 131],
+        [131, 131, 131,  ..., 131, 131, 131],
+        [131, 131, 131,  ..., 131, 131, 131],
+        ...,
+        [ 81,  81,  81,  ...,  81,  81,  81],
+        [ 81,  81,  81,  ...,  81,  81,  81],
+        [ 81,  81,  81,  ...,  81,  81,  81]]), 'instances': Instances(num_instances=1, image_height=800, image_width=1067, fields=[gt_boxes: Boxes(tensor([[ 277.5367,  186.9667, 1065.1995,  787.4166]])), gt_classes: tensor([59])])}, {'file_name': '/mnt/source/datasets/coco/train2017/000000553747.jpg', 'image_id': 553747, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000553747.png', 'segments_info': [{'id': 798319, 'category_id': 55, 'iscrowd': 0, 'bbox': [299, 37, 57, 37], 'area': 1240, 'isthing': True}, {'id': 873900, 'category_id': 55, 'iscrowd': 0, 'bbox': [51, 12, 156, 63], 'area': 5837, 'isthing': True}, {'id': 533610, 'category_id': 55, 'iscrowd': 0, 'bbox': [362, 36, 75, 31], 'area': 1606, 'isthing': True}, {'id': 1521816, 'category_id': 55, 'iscrowd': 0, 'bbox': [263, 36, 46, 39], 'area': 1080, 'isthing': True}, {'id': 532060, 'category_id': 55, 'iscrowd': 0, 'bbox': [427, 38, 56, 30], 'area': 1125, 'isthing': True}, {'id': 8819876, 'category_id': 72, 'iscrowd': 0, 'bbox': [1, 71, 498, 256], 'area': 119041, 'isthing': True}, {'id': 1198750, 'category_id': 120, 'iscrowd': 0, 'bbox': [0, 0, 500, 79], 'area': 18372, 'isthing': False}, {'id': 3562884, 'category_id': 127, 'iscrowd': 0, 'bbox': [0, 0, 207, 103], 'area': 5342, 'isthing': False}, {'id': 2836603, 'category_id': 128, 'iscrowd': 0, 'bbox': [31, 38, 469, 53], 'area': 2262, 'isthing': False}], 'width': 500, 'height': 332, 'image': tensor([[[124, 124, 125,  ..., 139, 139, 139],
+         [124, 124, 125,  ..., 140, 140, 140],
+         [123, 123, 124,  ..., 142, 142, 142],
+         ...,
+         [ 52,  52,  52,  ...,  81,  80,  79],
+         [ 51,  51,  52,  ...,  83,  83,  83],
+         [ 51,  51,  52,  ...,  84,  84,  84]],
+        [[ 56,  56,  57,  ...,  54,  54,  54],
+         [ 56,  56,  57,  ...,  55,  55,  55],
+         [ 55,  55,  56,  ...,  57,  57,  57],
+         ...,
+         [ 45,  45,  45,  ...,  64,  63,  63],
+         [ 44,  44,  45,  ...,  66,  67,  67],
+         [ 44,  44,  45,  ...,  67,  68,  68]],
+        [[  7,   7,   8,  ...,   0,   0,   0],
+         [  7,   7,   8,  ...,   1,   1,   1],
+         [  6,   6,   7,  ...,   5,   4,   4],
+         ...,
+         [ 35,  35,  35,  ...,  48,  48,  47],
+         [ 34,  34,  35,  ...,  51,  52,  52],
+         [ 34,  34,  35,  ...,  52,  53,  53]]], dtype=torch.uint8), 'sem_seg': tensor([[120, 120, 120,  ..., 120, 120, 120],
+        [120, 120, 120,  ..., 120, 120, 120],
+        [120, 120, 120,  ..., 120, 120, 120],
+        ...,
+        [255, 255, 255,  ..., 255, 255, 255],
+        [255, 255, 255,  ..., 255, 255, 255],
+        [255, 255, 255,  ..., 255, 255, 255]]), 'instances': Instances(num_instances=6, image_height=800, image_width=1205, fields=[gt_boxes: Boxes(tensor([[   1.8075,  163.3012, 1202.8792,  788.9156],
+        [ 634.3361,   85.5904,  744.2562,  181.0843],
+        [ 720.9998,   88.0964,  859.4543,  177.9759],
+        [ 121.9942,   29.2771,  498.5567,  180.3133],
+        [1028.6603,   92.7470, 1164.4155,  163.4940],
+        [ 871.7934,   85.9759, 1053.1459,  161.4699]])), gt_classes: tensor([72, 55, 55, 55, 55, 55])])}, {'file_name': '/mnt/source/datasets/coco/train2017/000000140017.jpg', 'image_id': 140017, 'pan_seg_file_name': '/mnt/source/datasets/coco/panoptic_train2017/000000140017.png', 'segments_info': [{'id': 8224892, 'category_id': 45, 'iscrowd': 0, 'bbox': [101, 16, 77, 52], 'area': 3339, 'isthing': True}, {'id': 3896733, 'category_id': 53, 'iscrowd': 0, 'bbox': [72, 122, 340, 204], 'area': 52491, 'isthing': True}, {'id': 856080, 'category_id': 69, 'iscrowd': 0, 'bbox': [0, 271, 464, 204], 'area': 55942, 'isthing': True}, {'id': 4873320, 'category_id': 121, 'iscrowd': 0, 'bbox': [12, 0, 628, 437], 'area': 82335, 'isthing': False}, {'id': 727078, 'category_id': 122, 'iscrowd': 0, 'bbox': [437, 390, 167, 90], 'area': 9398, 'isthing': False}, {'id': 3626085, 'category_id': 131, 'iscrowd': 0, 'bbox': [435, 0, 205, 469], 'area': 27622, 'isthing': False}], 'width': 640, 'height': 480, 'image': tensor([[[ 99,  97,  94,  ..., 105, 104, 103],
+         [102,  99,  95,  ..., 103, 103, 103],
+         [107, 103,  97,  ..., 100, 101, 102],
+         ...,
+         [ 64,  64,  65,  ...,   5,   3,   2],
+         [ 64,  65,  67,  ...,   7,   3,   1],
+         [ 64,  66,  69,  ...,   8,   3,   0]],
+        [[100, 100, 100,  ..., 110, 113, 115],
+         [104, 103, 101,  ..., 112, 113, 113],
+         [110, 107, 103,  ..., 115, 112, 110],
+         ...,
+         [ 43,  43,  44,  ...,   7,   7,   7],
+         [ 44,  44,  45,  ...,   5,   6,   6],
+         [ 44,  44,  45,  ...,   4,   5,   5]],
+        [[105, 102,  98,  ..., 113, 113, 113],
+         [104, 101,  96,  ..., 116, 114, 113],
+         [103,  99,  93,  ..., 120, 116, 113],
+         ...,
+         [ 16,  16,  17,  ...,   2,   3,   3],
+         [ 17,  17,  18,  ...,   1,   2,   2],
+         [ 17,  18,  19,  ...,   1,   1,   1]]], dtype=torch.uint8), 'sem_seg': tensor([[131, 131, 131,  ..., 255, 255, 255],
+        [131, 131, 131,  ..., 255, 255, 255],
+        [131, 131, 131,  ..., 255, 255, 255],
+        ...,
+        [255, 255, 255,  ..., 255, 255, 255],
+        [255, 255, 255,  ..., 255, 255, 255],
+        [255, 255, 255,  ..., 255, 255, 255]]), 'instances': Instances(num_instances=3, image_height=800, image_width=1067, fields=[gt_boxes: Boxes(tensor([[ 769.4738,   26.6667,  901.4816,  113.7167],
+        [ 379.7853,  202.6833,  946.7791,  543.5000],
+        [ 293.7251,  451.2333, 1067.0000,  791.0167]])), gt_classes: tensor([45, 53, 69])])}] !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[31m[4m[5mERROR[39m[24m[25m [32m[09/19 11:11:29 d2.engine.train_loop]: [39mException during training:
+Traceback (most recent call last):
+  File "/OneFormer/detectron2/detectron2/engine/train_loop.py", line 155, in train
+    self.run_step()
+  File "/OneFormer/detectron2/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/OneFormer/detectron2/detectron2/engine/train_loop.py", line 310, in run_step
+    loss_dict = self.model(data)
+  File "/opt/miniconda3/envs/oneformer2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/OneFormer/oneformer/oneformer_model.py", line 278, in forward
+    tasks = torch.cat([self.task_tokenizer(x.get("task", default_value)).to(self.device).unsqueeze(0) for x in batched_inputs], dim=0)
+  File "/OneFormer/oneformer/oneformer_model.py", line 278, in <listcomp>
+    tasks = torch.cat([self.task_tokenizer(x.get("task", default_value)).to(self.device).unsqueeze(0) for x in batched_inputs], dim=0)
+NameError: name 'default_value' is not defined
+[32m[09/19 11:11:29 d2.engine.hooks]: [39mTotal training time: 0:00:00 (0:00:00 on hooks)
+[32m[09/19 11:11:29 d2.utils.events]: [39m iter: 0       lr: N/A  max_mem: 1274M

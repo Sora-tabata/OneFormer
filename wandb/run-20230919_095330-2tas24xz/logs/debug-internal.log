@@ -1,0 +1,157 @@
+2023-09-19 09:53:30,406 INFO    MainThread:215089 [internal.py:wandb_internal():90] W&B internal server running at pid: 215089, started at: 2023-09-19 09:53:30.406120
+2023-09-19 09:53:30,407 INFO    WriterThread:215089 [datastore.py:open_for_write():75] open: /OneFormer/wandb/run-20230919_095330-2tas24xz/run-2tas24xz.wandb
+2023-09-19 09:53:30,408 DEBUG   SenderThread:215089 [sender.py:send():235] send: header
+2023-09-19 09:53:30,408 DEBUG   SenderThread:215089 [sender.py:send():235] send: run
+2023-09-19 09:53:30,814 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: check_version
+2023-09-19 09:53:30,816 INFO    SenderThread:215089 [dir_watcher.py:__init__():205] watching files in: /OneFormer/wandb/run-20230919_095330-2tas24xz/files
+2023-09-19 09:53:30,816 INFO    SenderThread:215089 [sender.py:_start_run_threads():812] run started: 2tas24xz with start time 1695117210
+2023-09-19 09:53:30,816 DEBUG   SenderThread:215089 [sender.py:send():235] send: summary
+2023-09-19 09:53:30,816 INFO    SenderThread:215089 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-19 09:53:30,816 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: check_version
+2023-09-19 09:53:30,860 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: run_start
+2023-09-19 09:53:30,865 DEBUG   HandlerThread:215089 [meta.py:__init__():35] meta init
+2023-09-19 09:53:30,865 DEBUG   HandlerThread:215089 [meta.py:__init__():49] meta init done
+2023-09-19 09:53:30,865 DEBUG   HandlerThread:215089 [meta.py:probe():209] probe
+2023-09-19 09:53:30,874 DEBUG   HandlerThread:215089 [meta.py:_setup_git():199] setup git
+2023-09-19 09:53:30,880 DEBUG   HandlerThread:215089 [meta.py:_setup_git():206] setup git done
+2023-09-19 09:53:30,880 DEBUG   HandlerThread:215089 [meta.py:_save_pip():53] save pip
+2023-09-19 09:53:30,881 DEBUG   HandlerThread:215089 [meta.py:_save_pip():67] save pip done
+2023-09-19 09:53:30,881 DEBUG   HandlerThread:215089 [meta.py:_save_conda():74] save conda
+2023-09-19 09:53:31,785 DEBUG   HandlerThread:215089 [meta.py:_save_conda():84] save conda done
+2023-09-19 09:53:31,785 DEBUG   HandlerThread:215089 [meta.py:probe():247] probe done
+2023-09-19 09:53:31,816 INFO    Thread-7  :215089 [dir_watcher.py:_on_file_created():256] file/dir created: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/wandb-metadata.json
+2023-09-19 09:53:31,816 INFO    Thread-7  :215089 [dir_watcher.py:_on_file_created():256] file/dir created: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/wandb-summary.json
+2023-09-19 09:53:31,816 INFO    Thread-7  :215089 [dir_watcher.py:_on_file_created():256] file/dir created: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/conda-environment.yaml
+2023-09-19 09:53:31,817 INFO    Thread-7  :215089 [dir_watcher.py:_on_file_created():256] file/dir created: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/requirements.txt
+2023-09-19 09:53:31,823 DEBUG   SenderThread:215089 [sender.py:send():235] send: files
+2023-09-19 09:53:31,823 INFO    SenderThread:215089 [sender.py:_save_file():949] saving file wandb-metadata.json with policy now
+2023-09-19 09:53:31,825 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-19 09:53:31,825 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: stop_status
+2023-09-19 09:53:32,171 DEBUG   SenderThread:215089 [sender.py:send():235] send: telemetry
+2023-09-19 09:53:32,511 INFO    Thread-11 :215089 [upload_job.py:push():132] Uploaded file /tmp/tmpe6zfoo0rwandb/3dp9pqfp-wandb-metadata.json
+2023-09-19 09:53:32,816 INFO    Thread-7  :215089 [dir_watcher.py:_on_file_created():256] file/dir created: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/output.log
+2023-09-19 09:53:43,819 INFO    Thread-7  :215089 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/output.log
+2023-09-19 09:53:45,819 INFO    Thread-7  :215089 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/output.log
+2023-09-19 09:53:47,453 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-19 09:53:47,453 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: stop_status
+2023-09-19 09:53:49,820 INFO    Thread-7  :215089 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/output.log
+2023-09-19 09:53:51,821 INFO    Thread-7  :215089 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/output.log
+2023-09-19 09:53:52,472 DEBUG   SenderThread:215089 [sender.py:send():235] send: telemetry
+2023-09-19 09:53:53,821 INFO    Thread-7  :215089 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/output.log
+2023-09-19 09:53:55,208 DEBUG   SenderThread:215089 [sender.py:send():235] send: exit
+2023-09-19 09:53:55,208 INFO    SenderThread:215089 [sender.py:send_exit():371] handling exit code: 1
+2023-09-19 09:53:55,208 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-19 09:53:55,208 INFO    SenderThread:215089 [sender.py:send_exit():373] handling runtime: 24
+2023-09-19 09:53:55,210 INFO    SenderThread:215089 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-19 09:53:55,210 INFO    SenderThread:215089 [sender.py:send_exit():379] send defer
+2023-09-19 09:53:55,210 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: poll_exit
+2023-09-19 09:53:55,210 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: defer
+2023-09-19 09:53:55,210 INFO    HandlerThread:215089 [handler.py:handle_request_defer():164] handle defer: 0
+2023-09-19 09:53:55,210 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: defer
+2023-09-19 09:53:55,210 INFO    SenderThread:215089 [sender.py:send_request_defer():388] handle sender defer: 0
+2023-09-19 09:53:55,210 INFO    SenderThread:215089 [sender.py:transition_state():392] send defer: 1
+2023-09-19 09:53:55,210 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: defer
+2023-09-19 09:53:55,210 INFO    HandlerThread:215089 [handler.py:handle_request_defer():164] handle defer: 1
+2023-09-19 09:53:55,263 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: defer
+2023-09-19 09:53:55,263 INFO    SenderThread:215089 [sender.py:send_request_defer():388] handle sender defer: 1
+2023-09-19 09:53:55,263 INFO    SenderThread:215089 [sender.py:transition_state():392] send defer: 2
+2023-09-19 09:53:55,263 DEBUG   SenderThread:215089 [sender.py:send():235] send: stats
+2023-09-19 09:53:55,264 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: defer
+2023-09-19 09:53:55,264 INFO    HandlerThread:215089 [handler.py:handle_request_defer():164] handle defer: 2
+2023-09-19 09:53:55,264 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: defer
+2023-09-19 09:53:55,264 INFO    SenderThread:215089 [sender.py:send_request_defer():388] handle sender defer: 2
+2023-09-19 09:53:55,264 INFO    SenderThread:215089 [sender.py:transition_state():392] send defer: 3
+2023-09-19 09:53:55,264 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: defer
+2023-09-19 09:53:55,264 INFO    HandlerThread:215089 [handler.py:handle_request_defer():164] handle defer: 3
+2023-09-19 09:53:55,264 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: defer
+2023-09-19 09:53:55,264 INFO    SenderThread:215089 [sender.py:send_request_defer():388] handle sender defer: 3
+2023-09-19 09:53:55,264 INFO    SenderThread:215089 [sender.py:transition_state():392] send defer: 4
+2023-09-19 09:53:55,264 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: defer
+2023-09-19 09:53:55,264 INFO    HandlerThread:215089 [handler.py:handle_request_defer():164] handle defer: 4
+2023-09-19 09:53:55,264 DEBUG   SenderThread:215089 [sender.py:send():235] send: summary
+2023-09-19 09:53:55,264 INFO    SenderThread:215089 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-19 09:53:55,264 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: defer
+2023-09-19 09:53:55,264 INFO    SenderThread:215089 [sender.py:send_request_defer():388] handle sender defer: 4
+2023-09-19 09:53:55,264 INFO    SenderThread:215089 [sender.py:transition_state():392] send defer: 5
+2023-09-19 09:53:55,264 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: defer
+2023-09-19 09:53:55,264 INFO    HandlerThread:215089 [handler.py:handle_request_defer():164] handle defer: 5
+2023-09-19 09:53:55,264 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: defer
+2023-09-19 09:53:55,264 INFO    SenderThread:215089 [sender.py:send_request_defer():388] handle sender defer: 5
+2023-09-19 09:53:55,311 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-19 09:53:55,524 INFO    SenderThread:215089 [sender.py:transition_state():392] send defer: 6
+2023-09-19 09:53:55,524 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: poll_exit
+2023-09-19 09:53:55,525 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: defer
+2023-09-19 09:53:55,525 INFO    HandlerThread:215089 [handler.py:handle_request_defer():164] handle defer: 6
+2023-09-19 09:53:55,525 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: defer
+2023-09-19 09:53:55,525 INFO    SenderThread:215089 [sender.py:send_request_defer():388] handle sender defer: 6
+2023-09-19 09:53:55,525 INFO    SenderThread:215089 [dir_watcher.py:finish():336] shutting down directory watcher
+2023-09-19 09:53:55,626 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-19 09:53:55,822 INFO    Thread-7  :215089 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/wandb-summary.json
+2023-09-19 09:53:55,822 INFO    SenderThread:215089 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/config.yaml
+2023-09-19 09:53:55,822 INFO    SenderThread:215089 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/output.log
+2023-09-19 09:53:55,822 INFO    SenderThread:215089 [dir_watcher.py:finish():366] scan: /OneFormer/wandb/run-20230919_095330-2tas24xz/files
+2023-09-19 09:53:55,822 INFO    SenderThread:215089 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/conda-environment.yaml conda-environment.yaml
+2023-09-19 09:53:55,822 INFO    SenderThread:215089 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/wandb-metadata.json wandb-metadata.json
+2023-09-19 09:53:55,822 INFO    SenderThread:215089 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/config.yaml config.yaml
+2023-09-19 09:53:55,823 INFO    SenderThread:215089 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/wandb-summary.json wandb-summary.json
+2023-09-19 09:53:55,823 INFO    SenderThread:215089 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/output.log output.log
+2023-09-19 09:53:55,823 INFO    SenderThread:215089 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230919_095330-2tas24xz/files/requirements.txt requirements.txt
+2023-09-19 09:53:55,823 INFO    SenderThread:215089 [sender.py:transition_state():392] send defer: 7
+2023-09-19 09:53:55,823 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: poll_exit
+2023-09-19 09:53:55,824 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: defer
+2023-09-19 09:53:55,826 INFO    HandlerThread:215089 [handler.py:handle_request_defer():164] handle defer: 7
+2023-09-19 09:53:55,827 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: defer
+2023-09-19 09:53:55,828 INFO    SenderThread:215089 [sender.py:send_request_defer():388] handle sender defer: 7
+2023-09-19 09:53:55,829 INFO    SenderThread:215089 [file_pusher.py:finish():145] shutting down file pusher
+2023-09-19 09:53:55,925 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-19 09:53:55,925 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: poll_exit
+2023-09-19 09:53:56,027 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-19 09:53:56,027 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: poll_exit
+2023-09-19 09:53:56,128 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-19 09:53:56,128 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: poll_exit
+2023-09-19 09:53:56,229 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-19 09:53:56,229 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: poll_exit
+2023-09-19 09:53:56,330 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-19 09:53:56,331 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: poll_exit
+2023-09-19 09:53:56,432 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-19 09:53:56,432 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: poll_exit
+2023-09-19 09:53:56,464 INFO    Thread-13 :215089 [upload_job.py:push():132] Uploaded file /OneFormer/wandb/run-20230919_095330-2tas24xz/files/config.yaml
+2023-09-19 09:53:56,479 INFO    Thread-15 :215089 [upload_job.py:push():132] Uploaded file /OneFormer/wandb/run-20230919_095330-2tas24xz/files/output.log
+2023-09-19 09:53:56,484 INFO    Thread-14 :215089 [upload_job.py:push():132] Uploaded file /OneFormer/wandb/run-20230919_095330-2tas24xz/files/wandb-summary.json
+2023-09-19 09:53:56,502 INFO    Thread-16 :215089 [upload_job.py:push():132] Uploaded file /OneFormer/wandb/run-20230919_095330-2tas24xz/files/requirements.txt
+2023-09-19 09:53:56,504 INFO    Thread-12 :215089 [upload_job.py:push():132] Uploaded file /OneFormer/wandb/run-20230919_095330-2tas24xz/files/conda-environment.yaml
+2023-09-19 09:53:56,533 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-19 09:53:56,533 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: poll_exit
+2023-09-19 09:53:56,634 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-19 09:53:56,634 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: poll_exit
+2023-09-19 09:53:56,705 INFO    Thread-6  :215089 [sender.py:transition_state():392] send defer: 8
+2023-09-19 09:53:56,705 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: defer
+2023-09-19 09:53:56,705 INFO    HandlerThread:215089 [handler.py:handle_request_defer():164] handle defer: 8
+2023-09-19 09:53:56,705 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: defer
+2023-09-19 09:53:56,705 INFO    SenderThread:215089 [sender.py:send_request_defer():388] handle sender defer: 8
+2023-09-19 09:53:56,735 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-19 09:53:57,310 INFO    SenderThread:215089 [sender.py:transition_state():392] send defer: 9
+2023-09-19 09:53:57,310 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: poll_exit
+2023-09-19 09:53:57,310 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: defer
+2023-09-19 09:53:57,310 INFO    HandlerThread:215089 [handler.py:handle_request_defer():164] handle defer: 9
+2023-09-19 09:53:57,310 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: defer
+2023-09-19 09:53:57,310 INFO    SenderThread:215089 [sender.py:send_request_defer():388] handle sender defer: 9
+2023-09-19 09:53:57,310 INFO    SenderThread:215089 [sender.py:transition_state():392] send defer: 10
+2023-09-19 09:53:57,311 DEBUG   SenderThread:215089 [sender.py:send():235] send: final
+2023-09-19 09:53:57,311 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: defer
+2023-09-19 09:53:57,311 DEBUG   SenderThread:215089 [sender.py:send():235] send: footer
+2023-09-19 09:53:57,311 INFO    HandlerThread:215089 [handler.py:handle_request_defer():164] handle defer: 10
+2023-09-19 09:53:57,311 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: defer
+2023-09-19 09:53:57,311 INFO    SenderThread:215089 [sender.py:send_request_defer():388] handle sender defer: 10
+2023-09-19 09:53:57,411 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-19 09:53:57,411 DEBUG   SenderThread:215089 [sender.py:send_request():249] send_request: poll_exit
+2023-09-19 09:53:57,411 INFO    SenderThread:215089 [file_pusher.py:join():150] waiting for file pusher
+2023-09-19 09:53:57,893 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: sampled_history
+2023-09-19 09:53:57,894 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: get_summary
+2023-09-19 09:53:57,894 DEBUG   HandlerThread:215089 [handler.py:handle_request():141] handle_request: shutdown
+2023-09-19 09:53:57,894 INFO    HandlerThread:215089 [handler.py:finish():806] shutting down handler
+2023-09-19 09:53:58,311 INFO    WriterThread:215089 [datastore.py:close():279] close: /OneFormer/wandb/run-20230919_095330-2tas24xz/run-2tas24xz.wandb
+2023-09-19 09:53:58,792 INFO    SenderThread:215089 [sender.py:finish():1111] shutting down sender
+2023-09-19 09:53:58,792 INFO    SenderThread:215089 [file_pusher.py:finish():145] shutting down file pusher
+2023-09-19 09:53:58,793 INFO    SenderThread:215089 [file_pusher.py:join():150] waiting for file pusher
+2023-09-19 09:53:58,794 INFO    MainThread:215089 [internal.py:handle_exit():80] Internal process exited
