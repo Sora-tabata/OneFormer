@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.3.1-devel-ubuntu20.04
+FROM nvidia/cuda:11.7.1-cudnn8-devel-ubuntu20.04
 ARG DEBIAN_FRONTEND=noninteractive
 # Install apt-getable dependencies
 RUN apt-get update
@@ -12,13 +12,13 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh &
     sh Miniconda3-latest-Linux-x86_64.sh -b -p /opt/miniconda3 && \
     rm -r Miniconda3-latest-Linux-x86_64.sh
 
-COPY ./environment.yaml /environment.yaml
+#COPY ./environment.yaml /environment.yaml
 # set path
 ENV PATH /opt/miniconda3/bin:$PATH
 
 RUN pip install --upgrade pip && \
     conda update -n base -c defaults conda && \
-    conda create --name oneformer python=3.8 -y && \
+    conda create --name oneformer python=3.10 -y && \
     #conda env create -f /environment.yaml && \
     conda init && \
     echo "conda activate oneformer" >> ~/.bashrc
