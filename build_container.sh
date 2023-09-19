@@ -18,7 +18,7 @@ docker exec -it oneformer_v2 bash -i -c "apt-get update && \
     apt-get upgrade && \
     apt-get install libgl1-mesa-dev && \
     apt-get install libglib2.0-0 && \
-    conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.3 -c pytorch && \
+    conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=11.7 -c pytorch -c nvidia && \
     cd /OneFormer && \
     python tools/setup_detectron2.py && \
     pip3 install git+https://github.com/cocodataset/panopticapi.git && \
