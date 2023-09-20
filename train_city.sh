@@ -4,7 +4,5 @@ export DETECTRON2_DATASETS="/mnt/source/datasets"
 
 python train_net.py --dist-url 'tcp://127.0.0.1:50163' \
     --num-gpus 1 \
-    --num-machines 1 \
-    --machine-rank 0 \
     --config-file configs/cityscapes/convnext/mapillary_pretrain_oneformer_convnext_xlarge_bs16_90k.yaml \
-    OUTPUT_DIR outputs/mapillary WANDB.NAME cityscapes_panoptic_seg
+    OUTPUT_DIR outputs/mapillary WANDB.NAME cityscapes_panoptic
