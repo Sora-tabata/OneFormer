@@ -63,7 +63,7 @@ class CityscapesInstanceEvaluator(CityscapesEvaluator):
 
     def process(self, inputs, outputs):
         #from cityscapesscripts.helpers.labels import name2label
-        from cityscapesscripts.preparation.labels import name2label
+        from labels import name2label
 
         for input, output in zip(inputs, outputs):
             file_name = input["file_name"]
@@ -113,7 +113,7 @@ class CityscapesInstanceEvaluator(CityscapesEvaluator):
         cityscapes_eval.args.gtInstancesFile = os.path.join(self._temp_dir, "gtInstances.json")
 
         # These lines are adopted from
-        # https://github.com/mcordts/cityscapesScripts/blob/master/cityscapesscripts/evaluation/evalInstanceLevelSemanticLabeling.py # noqa
+        # https://githubcityscapesScripts/cityscapesscripts/preparation/labels.py.com/mcordts/cityscapesScripts/blob/master/cityscapesscripts/evaluation/evalInstanceLevelSemanticLabeling.py # noqa
         gt_dir = PathManager.get_local_path(self._metadata.gt_dir)
         groundTruthImgList = glob.glob(os.path.join(gt_dir, "*", "*_gtFine_instanceIds.png"))
         assert len(
@@ -146,7 +146,7 @@ class CityscapesSemSegEvaluator(CityscapesEvaluator):
 
     def process(self, inputs, outputs):
         #from cityscapesscripts.helpers.labels import trainId2label
-        from cityscapesscripts.preparation.labels import trainId2label
+        from labels import trainId2label
 
         for input, output in zip(inputs, outputs):
             file_name = input["file_name"]
