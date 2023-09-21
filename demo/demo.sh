@@ -1,6 +1,6 @@
-export task=semantic
+export task=panoptic
 python demo.py --config-file ../configs/cityscapes/convnext/mapillary_pretrain_oneformer_convnext_xlarge_bs16_90k.yaml \
-  --input /mnt/source/datasets/img_230607/* \
+  --input /mnt/source/datasets/stuttgart_00/* \
   --output /mnt/source/datasets/shibuya_oneformer/ \
   --task $task \
-  --opts MODEL.IS_TRAIN False MODEL.IS_DEMO True MODEL.WEIGHTS /mnt/source/OneFormer/model_final.pth
+  --opts MODEL.IS_TRAIN False MODEL.IS_DEMO True MODEL.WEIGHTS /mnt/source/OneFormer/model/model_ceymo20230921.pth
