@@ -30,7 +30,7 @@ def get_cityscapes_panoptic_files(image_dir, gt_dir, json_info):
         for basename in PathManager.ls(city_img_dir):
             image_file = os.path.join(city_img_dir, basename)
 
-            suffix = ".png"
+            suffix = "_leftImg8bit.png"
             assert basename.endswith(suffix), basename
             basename = os.path.basename(basename)[: -len(suffix)]
 
