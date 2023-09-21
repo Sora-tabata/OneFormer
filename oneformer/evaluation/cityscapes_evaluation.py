@@ -62,6 +62,7 @@ class CityscapesInstanceEvaluator(CityscapesEvaluator):
     """
 
     def process(self, inputs, outputs):
+        #from cityscapesscripts.helpers.labels import name2label
         from cityscapesscripts.preparation.labels import name2label
 
         for input, output in zip(inputs, outputs):
@@ -144,7 +145,8 @@ class CityscapesSemSegEvaluator(CityscapesEvaluator):
     """
 
     def process(self, inputs, outputs):
-        from cityscapesscripts.helpers.labels import trainId2label
+        #from cityscapesscripts.helpers.labels import trainId2label
+        from cityscapesscripts.preparation.labels import trainId2label
 
         for input, output in zip(inputs, outputs):
             file_name = input["file_name"]
