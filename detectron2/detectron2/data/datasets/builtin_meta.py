@@ -202,6 +202,7 @@ KEYPOINT_CONNECTION_RULES = [
 
 # All Cityscapes categories, together with their nice-looking visualization colors
 # It's from https://github.com/mcordts/cityscapesScripts/blob/master/cityscapesscripts/helpers/labels.py  # noqa
+'''
 CITYSCAPES_CATEGORIES = [
     {"color": (128, 64, 128), "isthing": 0, "id": 7, "trainId": 0, "name": "road"},
     {"color": (244, 35, 232), "isthing": 0, "id": 8, "trainId": 1, "name": "sidewalk"},
@@ -223,6 +224,23 @@ CITYSCAPES_CATEGORIES = [
     {"color": (0, 0, 230), "isthing": 1, "id": 32, "trainId": 17, "name": "motorcycle"},
     {"color": (119, 11, 32), "isthing": 1, "id": 33, "trainId": 18, "name": "bicycle"},
 ]
+'''
+CITYSCAPES_CATEGORIES = [
+
+  {"color": (0, 0, 0), "isthing": 0, "id": 0, "trainId": 255, "name": "unlabeled"},
+  {"color": (0, 255, 255), "isthing": 1, "id": 1, "trainId": 0, "name": "BL"},
+  {"color": (0, 128, 255), "isthing": 1, "id": 2, "trainId": 1, "name": "CL"},
+  {"color": (178, 102, 255), "isthing": 1, "id": 3, "trainId": 2, "name": "DM"},
+  {"color": (255, 255, 51), "isthing": 1, "id": 4, "trainId": 3, "name": "JB"},
+  {"color": (255, 102, 178), "isthing": 1, "id": 5, "trainId": 6, "name": "LA"},
+  {"color": (255, 255, 0), "isthing": 1, "id": 6, "trainId": 5, "name": "PC"},
+  {"color": (255, 0, 127), "isthing": 1, "id": 7, "trainId": 4, "name": "RA"},
+  {"color": (255, 0, 255), "isthing": 1, "id": 8, "trainId": 7, "name": "SA"},
+  {"color": (0, 255, 0), "isthing": 1, "id": 9, "trainId": 8, "name": "SL"},
+  {"color": (255, 128, 0), "isthing": 1, "id": 10, "trainId": 10, "name": "SLA"},
+  {"color": (255, 0, 0), "isthing": 1, "id": 11, "trainId": 9, "name": "SRA"}
+]
+
 
 # fmt: off
 ADE20K_SEM_SEG_CATEGORIES = [
@@ -333,6 +351,7 @@ def _get_builtin_metadata(dataset_name):
         }
     elif dataset_name == "cityscapes":
         # fmt: off
+        '''
         CITYSCAPES_THING_CLASSES = [
             "person", "rider", "car", "truck",
             "bus", "train", "motorcycle", "bicycle",
@@ -341,6 +360,13 @@ def _get_builtin_metadata(dataset_name):
             "road", "sidewalk", "building", "wall", "fence", "pole", "traffic light",
             "traffic sign", "vegetation", "terrain", "sky", "person", "rider", "car",
             "truck", "bus", "train", "motorcycle", "bicycle",
+        ]
+        '''
+        CITYSCAPES_THING_CLASSES = [
+            "BL", "CL", "DM", "JB", "LA", "PC", "RA", "SA", "SL", "SLA", "SRA"
+        ]
+        CITYSCAPES_STUFF_CLASSES = [
+            "unlabeled"
         ]
         # fmt: on
         return {
