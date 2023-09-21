@@ -31,7 +31,18 @@ from oneformer import (
     add_convnext_config,
 )
 from predictor import VisualizationDemo
+import torchvision.transforms as T
+from PIL import Image
+import PIL
+tensor2img = T.ToPILImage()
 
+def tensor_to_image(tensor):
+    tensor = tensor*255
+    tensor = np.array(tensor.cpu(), dtype=np.uint8)
+    if np.ndim(tensor)>3:
+        assert tensor.shape[0] == 1
+        tensor = tensor[0]
+    return PIL.Image.fromarray(tensor)
 # constants
 WINDOW_NAME = "OneFormer Demo"
 
@@ -111,6 +122,14 @@ if __name__ == "__main__":
             img = read_image(path, format="BGR")
             start_time = time.time()
             predictions, visualized_output = demo.run_on_image(img, args.task)
+            
+            cross_walk, road_marking, road = torch.where(predictions['sem_seg'][23]>0.9, 1, 0)\
+                                             ,torch.where(predictions['sem_seg'][24]>0.9, 1, 0)\
+                                             ,torch.where(predictions['sem_seg'][13]>0.9, 2, 0)
+            #print(road_marking.ToPILImage())
+            img_ = tensor_to_image(road_marking)
+            print(os.path.basename(path), "path")
+            img_.save(args.output + os.path.basename(path))
             logger.info(
                 "{}: {} in {:.2f}s".format(
                     path,
@@ -125,12 +144,14 @@ if __name__ == "__main__":
                     for k in visualized_output.keys():
                         os.makedirs(k, exist_ok=True)
                         out_filename = os.path.join(k, args.output)
+                        #img_.save(out_filename)
                         visualized_output[k].save(out_filename)    
                 else:
                     for k in visualized_output.keys():
                         opath = os.path.join(args.output, k)    
                         os.makedirs(opath, exist_ok=True)
                         out_filename = os.path.join(opath, os.path.basename(path))
+                        #img_.save(out_filename)
                         visualized_output[k].save(out_filename)    
             else:
                 raise ValueError("Please specify an output path!")
