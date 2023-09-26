@@ -54,6 +54,6 @@ MODEL:
     PANOPTIC_ON: True
     OVERLAP_THRESHOLD: 0.8
     OBJECT_MASK_THRESHOLD: 0.8
-    TASK: "semantic"
+    TASK: "panoptic"
 TEST:
   DETECTIONS_PER_IMAGE: 150
