@@ -36,6 +36,7 @@ except ImportError:
 
 # Cityscapes imports
 from cityscapesscripts.helpers.csHelpers import *
+from .labels import labels, name2label, id2label, trainId2label, category2labels
 
 # C Support
 # Enable the cython support for faster evaluation

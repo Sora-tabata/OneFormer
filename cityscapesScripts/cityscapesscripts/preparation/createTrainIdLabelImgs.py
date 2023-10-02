@@ -27,6 +27,7 @@ import os, glob, sys
 from cityscapesscripts.helpers.csHelpers import printError
 from cityscapesscripts.preparation.json2labelImg import json2labelImg
 
+
 # The main method
 def main():
     # Where to look for Cityscapes

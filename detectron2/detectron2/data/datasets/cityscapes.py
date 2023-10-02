@@ -13,6 +13,10 @@ from detectron2.structures import BoxMode
 from detectron2.utils.comm import get_world_size
 from detectron2.utils.file_io import PathManager
 from detectron2.utils.logger import setup_logger
+from .labels import name2label
+from .labels import trainId2label
+from .labels import labels
+from .labels import id2label
 
 try:
     import cv2  # noqa
@@ -82,7 +86,7 @@ def load_cityscapes_instances(image_dir, gt_dir, from_json=True, to_polygons=Tru
     logger.info("Loaded {} images from {}".format(len(ret), image_dir))
 
     # Map cityscape ids to contiguous ids
-    from cityscapesscripts.helpers.labels import labels
+    #from cityscapesscripts.helpers.labels import labels
 
     labels = [l for l in labels if l.hasInstances and not l.ignoreInEval]
     dataset_id_to_contiguous_id = {l.id: idx for idx, l in enumerate(labels)}
@@ -138,7 +142,7 @@ def _cityscapes_files_to_dict(files, from_json, to_polygons):
     Returns:
         A dict in Detectron2 Dataset format.
     """
-    from cityscapesscripts.helpers.labels import id2label, name2label
+    #from cityscapesscripts.helpers.labels import id2label, name2label
 
     image_file, instance_id_file, _, json_file = files
 

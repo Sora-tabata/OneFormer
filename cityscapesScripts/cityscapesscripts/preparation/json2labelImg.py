@@ -25,7 +25,8 @@ from PIL import ImageDraw
 
 # cityscapes imports
 from cityscapesscripts.helpers.annotation import Annotation
-from cityscapesscripts.helpers.labels     import name2label
+#from cityscapesscripts.helpers.labels     import name2label
+from .labels import name2label
 
 # Print the information
 def printHelp():

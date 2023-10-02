@@ -363,15 +363,20 @@ def _get_builtin_metadata(dataset_name):
         }
     elif dataset_name == "cityscapes":
         # fmt: off
-        '''
         CITYSCAPES_THING_CLASSES = [
             "person", "rider", "car", "truck",
-            "bus", "train", "motorcycle", "bicycle",
+            "bus", "train", "motorcycle", "bicycle","lane", "right lane", "left lane",
+            "straight lane", "straight left lane", "straight right lane",
+            "right arrow", "left arrow", "straight arrow", "straight left arrow",
+            "straight right arrow"
         ]
         CITYSCAPES_STUFF_CLASSES = [
             "road", "sidewalk", "building", "wall", "fence", "pole", "traffic light",
             "traffic sign", "vegetation", "terrain", "sky", "person", "rider", "car",
-            "truck", "bus", "train", "motorcycle", "bicycle",
+            "truck", "bus", "train", "motorcycle", "bicycle","lane", "right lane", "left lane",
+            "straight lane", "straight left lane", "straight right lane",
+            "right arrow", "left arrow", "straight arrow", "straight left arrow",
+            "straight right arrow"
         ]
         '''
         CITYSCAPES_THING_CLASSES = [
@@ -380,6 +385,7 @@ def _get_builtin_metadata(dataset_name):
         CITYSCAPES_STUFF_CLASSES = [
             "unlabeled"
         ]
+        '''
         # fmt: on
         return {
             "thing_classes": CITYSCAPES_THING_CLASSES,

@@ -27,7 +27,7 @@ from PIL import Image
 
 # cityscapes imports
 from cityscapesscripts.helpers.csHelpers import printError
-from labels import id2label, labels
+from .labels import id2label, labels
 
 
 # The main method

@@ -24,8 +24,8 @@ import numpy as np
 
 # Cityscapes modules
 from cityscapesscripts.helpers.annotation import Annotation
-from cityscapesscripts.helpers.labels import labels, name2label, id2label, trainId2label, category2labels
-
+#from cityscapesscripts.helpers.labels import labels, name2label, id2label, trainId2label, category2labels
+from .labels import labels, name2label, id2label, trainId2label, category2labels
 
 def printError(message):
     """Print an error message and quit"""
