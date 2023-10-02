@@ -35,7 +35,8 @@ from PIL import Image
 
 # Cityscapes imports
 from cityscapesscripts.helpers.csHelpers import printError
-from cityscapesscripts.helpers.labels import labels as csLabels
+#from cityscapesscripts.helpers.labels import labels as csLabels
+from .labels import labels as csLabels
 
 
 OFFSET = 256 * 256 * 256

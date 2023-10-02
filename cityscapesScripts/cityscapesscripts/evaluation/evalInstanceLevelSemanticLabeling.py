@@ -42,7 +42,7 @@ from copy import deepcopy
 # Cityscapes imports
 from cityscapesscripts.helpers.csHelpers import *
 from cityscapesscripts.evaluation.instances2dict import instances2dict
-
+from .labels import labels, name2label, id2label, trainId2label, category2labels
 
 ###################################
 # PLEASE READ THESE INSTRUCTIONS!!!

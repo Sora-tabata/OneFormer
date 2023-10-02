@@ -375,10 +375,10 @@ def _get_builtin_metadata(dataset_name):
         ]
         '''
         CITYSCAPES_THING_CLASSES = [
-            "BL", "CL", "DM", "JB", "LA", "PC", "RA", "SA", "SL", "SLA", "SRA"
+            "BL", "CL", "DM", "JB", "LA", "PC", "RA", "SA", "SL", "SLA", "SRA",
         ]
         CITYSCAPES_STUFF_CLASSES = [
-            "unlabeled"
+            "unlabeled","BL", "CL", "DM", "JB", "LA", "PC", "RA", "SA", "SL", "SLA", "SRA",
         ]
         # fmt: on
         return {
