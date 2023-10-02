@@ -38,9 +38,9 @@ SOLVER:
 INPUT:
   MIN_SIZE_TRAIN: !!python/object/apply:eval ["[int(x * 0.1 * 1024) for x in range(5, 21)]"]
   MIN_SIZE_TRAIN_SAMPLING: "choice"
-  MIN_SIZE_TEST: 1080 #1024
-  MAX_SIZE_TRAIN: 1920 #4096
-  MAX_SIZE_TEST: 1920 #2048
+  MIN_SIZE_TEST: 1024 #1080 #1024
+  MAX_SIZE_TRAIN: 4096 #1920 #4096
+  MAX_SIZE_TEST: 2048 #1920 #2048
   CROP:
     ENABLED: True
     TYPE: "absolute"
