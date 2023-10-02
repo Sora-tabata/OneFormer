@@ -202,7 +202,7 @@ KEYPOINT_CONNECTION_RULES = [
 
 # All Cityscapes categories, together with their nice-looking visualization colors
 # It's from https://github.com/mcordts/cityscapesScripts/blob/master/cityscapesscripts/helpers/labels.py  # noqa
-'''
+
 CITYSCAPES_CATEGORIES = [
     {"color": (128, 64, 128), "isthing": 0, "id": 7, "trainId": 0, "name": "road"},
     {"color": (244, 35, 232), "isthing": 0, "id": 8, "trainId": 1, "name": "sidewalk"},
@@ -223,6 +223,17 @@ CITYSCAPES_CATEGORIES = [
     {"color": (0, 80, 100), "isthing": 1, "id": 31, "trainId": 16, "name": "train"},
     {"color": (0, 0, 230), "isthing": 1, "id": 32, "trainId": 17, "name": "motorcycle"},
     {"color": (119, 11, 32), "isthing": 1, "id": 33, "trainId": 18, "name": "bicycle"},
+    {"color": (0, 255, 255), "isthing": 1, "id": 34, "trainId": 19, "name": "lane"},
+    {"color": (0, 128, 255), "isthing": 1, "id": 35, "trainId": 20, "name": "left lane"},
+    {"color": (178, 102, 255), "isthing": 1, "id": 36, "trainId": 21, "name": "right lane"},
+    {"color": (255, 255, 122), "isthing": 1, "id": 37, "trainId": 22, "name": "straight lane"},
+    {"color": (255, 255, 51), "isthing": 1, "id": 38, "trainId": 23, "name": "straight left lane"},
+    {"color": (255, 102, 178), "isthing": 1, "id": 39, "trainId": 24, "name": "straight right lane"},
+    {"color": (255, 255, 0), "isthing": 1, "id": 40, "trainId": 25, "name": "right arrow"},
+    {"color": (255, 0, 127), "isthing": 1, "id": 41, "trainId": 26, "name": "left arrow"},
+    {"color": (255, 0, 255), "isthing": 1, "id": 42, "trainId": 27, "name": "straight arrow"},
+    {"color": (0, 255, 0), "isthing": 1, "id": 43, "trainId": 28, "name": "straight left arrow"},
+    {"color": (255, 128, 0), "isthing": 1, "id": 44, "trainId": 29, "name": "straight right arrow"},
 ]
 '''
 CITYSCAPES_CATEGORIES = [
@@ -240,6 +251,7 @@ CITYSCAPES_CATEGORIES = [
   {"color": (255, 128, 0), "isthing": 1, "id": 10, "trainId": 10, "name": "SLA"},
   {"color": (255, 0, 0), "isthing": 1, "id": 11, "trainId": 9, "name": "SRA"}
 ]
+'''
 
 
 # fmt: off
