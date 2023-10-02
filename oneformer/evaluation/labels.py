@@ -72,7 +72,7 @@ Road Marking Class	Color Code	Class number
  Straight-Left Arrow (SLA)	(255,128,0)	10
  Straight-Right Arrow (SRA)	(255,0,0)	9
 '''
-'''
+
 labels = [
     #       name                     id    trainId   category            catId     hasInstances   ignoreInEval   color
     Label(  'unlabeled'            ,  0 ,      255 , 'void'            , 0       , False        , True         , (  0,  0,  0) ),
@@ -139,7 +139,7 @@ labels = [
     Label(  'straight right arrow' , 44 ,       29 , 'marking'         , 9       , True        , False        , (255, 128,   0)),
     Label(  'ego vehicle'          ,  1 ,      255 , 'void'            , 0       , False        , True         , (  0,  0,  0) ),
 ]
-
+'''
 
 #--------------------------------------------------------------------------------
 # Create dictionaries for a fast lookup

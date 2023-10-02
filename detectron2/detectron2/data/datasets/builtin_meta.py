@@ -202,7 +202,7 @@ KEYPOINT_CONNECTION_RULES = [
 
 # All Cityscapes categories, together with their nice-looking visualization colors
 # It's from https://github.com/mcordts/cityscapesScripts/blob/master/cityscapesscripts/helpers/labels.py  # noqa
-
+'''
 CITYSCAPES_CATEGORIES = [
     {"color": (128, 64, 128), "isthing": 0, "id": 7, "trainId": 0, "name": "road"},
     {"color": (244, 35, 232), "isthing": 0, "id": 8, "trainId": 1, "name": "sidewalk"},
@@ -251,7 +251,7 @@ CITYSCAPES_CATEGORIES = [
   {"color": (255, 128, 0), "isthing": 1, "id": 10, "trainId": 10, "name": "SLA"},
   {"color": (255, 0, 0), "isthing": 1, "id": 11, "trainId": 9, "name": "SRA"}
 ]
-'''
+
 
 
 # fmt: off
