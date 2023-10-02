@@ -58,11 +58,41 @@ Label = namedtuple( 'Label' , [
 # Further note that the current train IDs are only a suggestion. You can use whatever you like.
 # Make sure to provide your results using the original IDs and not the training IDs.
 # Note that many IDs are ignored in evaluation and thus you never need to predict these!
-
+'''
+Road Marking Class	Color Code	Class number
+ Bus Lane (BL)	(0,255,255)	0
+ Cycle Lane (CL)	(0,128,255)	1
+ Diamond (DM)	(178,102,255)	2
+ Junction Box (JB)	(255,255,51)	3
+ Left Arrow (LA)	(255,102,178)	6
+ Pedestrian Crossing (PC)	(255,255,0)	5
+ Right Arrow (RA)	(255,0,127)	4
+ Straight Arrow (SA)	(255,0,255)	7
+ Slow (SL)	(0,255,0)	8
+ Straight-Left Arrow (SLA)	(255,128,0)	10
+ Straight-Right Arrow (SRA)	(255,0,0)	9
+'''
+'''
 labels = [
     #       name                     id    trainId   category            catId     hasInstances   ignoreInEval   color
     Label(  'unlabeled'            ,  0 ,      255 , 'void'            , 0       , False        , True         , (  0,  0,  0) ),
-    Label(  'ego vehicle'          ,  1 ,      255 , 'void'            , 0       , False        , True         , (  0,  0,  0) ),
+    # Add new road markings here
+    Label(  'BL'             ,  1 ,        0 , 'marking'         , 1       , True        , False        , (  0, 255, 255)),
+    Label(  'CL'           ,  2 ,        1 , 'marking'         , 1       , True        , False        , (  0, 128, 255)),
+    Label(  'DM'              ,  3 ,        2 , 'marking'         , 1       , True        , False        , (178, 102, 255)),
+    Label(  'JB'         ,  4 ,        3 , 'marking'         , 1       , True        , False        , (255, 255,  51)),
+    Label(  'LA'           ,  5 ,        6 , 'marking'         , 1       , True        , False        , (255, 102, 178)),
+    Label(  'PC'  ,  6 ,        5 , 'marking'         , 1       , True        , False        , (255, 255,   0)),
+    Label(  'RA'          ,  7 ,        4 , 'marking'         , 1       , True        , False        , (255,   0, 127)),
+    Label(  'SA'       ,  8 ,        7 , 'marking'         , 1       , True        , False        , (255,   0, 255)),
+    Label(  'SL'                 ,  9 ,        8 , 'marking'         , 1       , True        , False        , (  0, 255,   0)),
+    Label(  'SLA'  , 10 ,       10 , 'marking'         , 1       , True        , False        , (255, 128,   0)),
+    Label(  'SRA' , 11 ,        9 , 'marking'         , 1       , True        , False        , (255,   0,   0)),
+]
+'''
+labels = [
+    #       name                     id    trainId   category            catId     hasInstances   ignoreInEval   color
+    Label(  'unlabeled'            ,  0 ,      255 , 'void'            , 0       , False        , True         , (  0,  0,  0) ),
     Label(  'rectification border' ,  2 ,      255 , 'void'            , 0       , False        , True         , (  0,  0,  0) ),
     Label(  'out of roi'           ,  3 ,      255 , 'void'            , 0       , False        , True         , (  0,  0,  0) ),
     Label(  'static'               ,  4 ,      255 , 'void'            , 0       , False        , True         , (  0,  0,  0) ),
@@ -96,6 +126,18 @@ labels = [
     Label(  'motorcycle'           , 32 ,       17 , 'vehicle'         , 7       , True         , False        , (  0,  0,230) ),
     Label(  'bicycle'              , 33 ,       18 , 'vehicle'         , 7       , True         , False        , (119, 11, 32) ),
     Label(  'license plate'        , -1 ,       -1 , 'vehicle'         , 7       , False        , True         , (  0,  0,142) ),
+    Label(  'lane'                 , 34 ,       19 , 'lane'            , 8       , True        , False        , (  0, 255, 255)),
+    Label(  'left lane'            , 35 ,       20 , 'lane'            , 8       , True        , False        , (  0, 128, 255)),
+    Label(  'right lane'           , 36 ,       21 , 'lane'            , 8       , True        , False        , (178, 102, 255)),
+    Label(  'straight lane'        , 37 ,       22 , 'lane'            , 8       , True        , False        , (255, 255,  122)),
+    Label(  'straight left lane'   , 38 ,       23 , 'lane'            , 8       , True        , False        , (255, 255,  51)),
+    Label(  'straight right lane'  , 39 ,       24 , 'lane'            , 8       , True        , False        , (255, 102, 178)),
+    Label(  'right arrow'          , 40 ,       25 , 'marking'         , 9       , True        , False        , (255, 255,   0)),
+    Label(  'left arrow'           , 41 ,       26 , 'marking'         , 9       , True        , False        , (255,   0, 127)),
+    Label(  'straight arrow'       , 42 ,       27 , 'marking'         , 9       , True        , False        , (255,   0, 255)),
+    Label(  'straight left arrow'  , 43 ,       28 , 'marking'         , 9       , True        , False        , (  0, 255,   0)),
+    Label(  'straight right arrow' , 44 ,       29 , 'marking'         , 9       , True        , False        , (255, 128,   0)),
+    Label(  'ego vehicle'          ,  1 ,      255 , 'void'            , 0       , False        , True         , (  0,  0,  0) ),
 ]
 
 
@@ -157,7 +199,7 @@ def assureSingleInstanceName( name ):
 # just a dummy main
 if __name__ == "__main__":
     # Print all the labels
-    print("List of cityscapes labels:")
+    print("List of Rexroth labels:")
     print("")
     print("    {:>21} | {:>3} | {:>7} | {:>14} | {:>10} | {:>12} | {:>12}".format( 'name', 'id', 'trainId', 'category', 'categoryId', 'hasInstances', 'ignoreInEval' ))
     print("    " + ('-' * 98))
@@ -180,3 +222,4 @@ if __name__ == "__main__":
     trainId = 0
     name = trainId2label[trainId].name
     print("Name of label with trainID '{id}': {name}".format( id=trainId, name=name ))
+
