@@ -156,6 +156,19 @@ args.avgClassSize       = {
     "person"     :  3462.4756337644 ,
     "truck"      : 27855.1264367816 ,
     "trailer"    : 16926.9763313609 ,
+    "lane"       : 250000.0         ,
+    "right lane" : 250000.0         ,
+    "left lane"  : 250000.0         ,
+    "straight lane" : 250000.0      ,
+    "straight left lane" : 250000.0 ,
+    "straight right lane" : 250000.0,
+    "right arrow" : 5000.0          ,
+    "left arrow" : 5000.0           ,
+    "straight arrow" : 5000.0       ,
+    "straight left arrow": 5000.0   ,
+    "straight right arrow" : 5000.0 ,
+    
+    
 }
 
 # store some parameters for finding predictions in the args variable
