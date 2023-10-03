@@ -58,9 +58,9 @@ class VisualizationDemo(object):
             predictions = self.predictor(image, task)
             panoptic_seg, segments_info = predictions["panoptic_seg"]
             vis_output['panoptic_inference'] = visualizer.draw_panoptic_seg_predictions(
-            panoptic_seg.to(self.cpu_device), segments_info, alpha=1
+            panoptic_seg.to(self.cpu_device), segments_info, alpha=0.7
         )
-        
+
         if task == 'panoptic' or task == 'semantic':
             visualizer = Visualizer(image, metadata=self.metadata, instance_mode=ColorMode.IMAGE_BW)
             predictions = self.predictor(image, task)
@@ -73,7 +73,7 @@ class VisualizationDemo(object):
             predictions = self.predictor(image, task)
             instances = predictions["instances"].to(self.cpu_device)
             vis_output['instance_inference'] = visualizer.draw_instance_predictions(predictions=instances, alpha=1)
-        
+
         return predictions, vis_output
 
 
