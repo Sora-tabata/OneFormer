@@ -1,0 +1,1205 @@
+2023-09-21 21:38:16,318 INFO    MainThread:12043 [internal.py:wandb_internal():90] W&B internal server running at pid: 12043, started at: 2023-09-21 21:38:16.318097
+2023-09-21 21:38:16,320 INFO    WriterThread:12043 [datastore.py:open_for_write():75] open: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/run-1ngqzrq4.wandb
+2023-09-21 21:38:16,321 DEBUG   SenderThread:12043 [sender.py:send():235] send: header
+2023-09-21 21:38:16,321 DEBUG   SenderThread:12043 [sender.py:send():235] send: run
+2023-09-21 21:38:16,657 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: check_version
+2023-09-21 21:38:16,659 INFO    SenderThread:12043 [dir_watcher.py:__init__():205] watching files in: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files
+2023-09-21 21:38:16,659 INFO    SenderThread:12043 [sender.py:_start_run_threads():812] run started: 1ngqzrq4 with start time 1695332295
+2023-09-21 21:38:16,660 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:38:16,660 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:38:16,660 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: check_version
+2023-09-21 21:38:16,768 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: run_start
+2023-09-21 21:38:16,780 DEBUG   HandlerThread:12043 [meta.py:__init__():35] meta init
+2023-09-21 21:38:16,780 DEBUG   HandlerThread:12043 [meta.py:__init__():49] meta init done
+2023-09-21 21:38:16,780 DEBUG   HandlerThread:12043 [meta.py:probe():209] probe
+2023-09-21 21:38:16,791 DEBUG   HandlerThread:12043 [meta.py:_setup_git():199] setup git
+2023-09-21 21:38:16,803 DEBUG   HandlerThread:12043 [meta.py:_setup_git():206] setup git done
+2023-09-21 21:38:16,803 DEBUG   HandlerThread:12043 [meta.py:_save_pip():53] save pip
+2023-09-21 21:38:16,803 DEBUG   HandlerThread:12043 [meta.py:_save_pip():67] save pip done
+2023-09-21 21:38:16,803 DEBUG   HandlerThread:12043 [meta.py:_save_conda():74] save conda
+2023-09-21 21:38:17,662 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_created():256] file/dir created: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/conda-environment.yaml
+2023-09-21 21:38:17,662 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_created():256] file/dir created: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/requirements.txt
+2023-09-21 21:38:17,663 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_created():256] file/dir created: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:38:18,285 DEBUG   HandlerThread:12043 [meta.py:_save_conda():84] save conda done
+2023-09-21 21:38:18,285 DEBUG   HandlerThread:12043 [meta.py:probe():247] probe done
+2023-09-21 21:38:18,345 DEBUG   SenderThread:12043 [sender.py:send():235] send: files
+2023-09-21 21:38:18,345 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-metadata.json with policy now
+2023-09-21 21:38:18,352 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:38:18,352 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:38:18,652 DEBUG   SenderThread:12043 [sender.py:send():235] send: telemetry
+2023-09-21 21:38:18,660 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/conda-environment.yaml
+2023-09-21 21:38:18,662 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_created():256] file/dir created: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:18,663 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_created():256] file/dir created: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-metadata.json
+2023-09-21 21:38:18,986 INFO    Thread-11 :12043 [upload_job.py:push():132] Uploaded file /tmp/tmpk1stz57bwandb/klccwve9-wandb-metadata.json
+2023-09-21 21:38:24,663 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:28,665 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:30,666 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:32,667 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:33,654 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:38:33,655 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:38:34,668 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:35,064 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:38:36,669 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:38,670 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:40,671 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:41,088 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:38:41,094 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:38:41,097 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:38:41,100 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:38:41,672 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:38:42,672 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:44,673 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:44,943 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:38:46,674 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:47,288 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:38:47,291 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:38:47,291 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:38:47,292 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:38:47,674 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/config.yaml
+2023-09-21 21:38:47,675 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:38:48,675 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:48,952 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:38:48,953 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:38:50,675 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:52,676 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:53,320 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:38:53,324 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:38:53,324 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:38:53,325 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:38:53,677 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:38:54,677 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:56,678 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:58,678 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:38:59,540 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:38:59,543 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:38:59,544 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:38:59,545 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:38:59,679 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:39:00,679 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:02,680 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:04,236 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:39:04,236 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:39:04,680 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:05,690 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:39:05,693 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:39:05,694 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:39:05,695 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:39:06,681 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:06,681 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:39:08,682 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:10,683 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:11,746 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:39:11,749 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:39:11,750 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:39:11,750 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:39:12,683 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:12,684 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:39:14,684 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:15,132 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:39:16,685 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:17,854 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:39:17,857 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:39:17,857 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:39:17,858 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:39:18,685 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:18,686 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:39:19,501 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:39:19,501 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:39:20,686 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:22,687 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:23,978 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:39:23,981 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:39:23,982 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:39:23,983 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:39:24,688 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:24,689 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:39:26,690 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:28,691 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:30,088 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:39:30,092 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:39:30,093 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:39:30,094 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:39:30,691 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:30,692 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:39:32,692 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:34,693 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:34,812 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:39:34,813 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:39:36,179 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:39:36,182 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:39:36,184 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:39:36,185 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:39:36,693 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:36,694 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:39:39,694 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:41,695 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:42,361 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:39:42,364 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:39:42,365 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:39:42,366 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:39:42,695 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:39:43,696 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:45,319 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:39:45,696 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:47,697 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:48,413 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:39:48,416 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:39:48,417 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:39:48,418 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:39:48,697 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:39:49,697 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:50,092 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:39:50,093 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:39:51,698 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:53,699 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:54,458 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:39:54,460 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:39:54,461 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:39:54,462 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:39:54,699 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:39:55,699 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:57,700 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:39:59,701 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:00,545 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:40:00,548 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:40:00,549 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:40:00,550 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:40:00,701 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:40:01,701 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:03,702 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:05,441 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:40:05,441 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:40:05,703 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:06,687 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:40:06,690 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:40:06,691 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:40:06,692 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:40:06,703 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:40:07,703 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:09,704 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:11,705 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:13,003 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:40:13,006 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:40:13,007 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:40:13,007 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:40:13,705 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:13,706 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:40:15,488 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:40:15,706 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:17,708 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:19,111 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:40:19,114 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:40:19,115 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:40:19,116 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:40:19,709 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:19,709 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:40:20,768 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:40:20,769 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:40:21,710 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:23,711 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:25,250 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:40:25,253 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:40:25,254 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:40:25,255 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:40:25,712 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:25,712 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:40:27,713 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:29,714 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:31,302 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:40:31,305 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:40:31,306 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:40:31,307 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:40:31,715 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:31,715 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:40:33,716 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:35,717 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:36,110 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:40:36,110 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:40:37,402 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:40:37,405 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:40:37,406 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:40:37,407 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:40:37,718 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:37,719 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:40:39,719 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:41,720 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:43,628 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:40:43,631 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:40:43,632 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:40:43,633 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:40:43,722 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:43,722 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:40:45,635 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:40:45,723 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:47,724 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:49,725 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:49,849 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:40:49,852 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:40:49,853 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:40:49,854 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:40:50,725 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:40:51,453 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:40:51,453 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:40:51,726 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:53,727 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:55,728 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:55,889 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:40:55,892 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:40:55,893 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:40:55,894 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:40:56,729 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:40:57,729 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:40:59,730 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:01,731 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:02,053 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:41:02,055 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:41:02,056 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:41:02,057 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:41:02,732 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:41:03,732 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:05,733 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:06,796 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:41:06,796 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:41:07,734 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:08,124 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:41:08,127 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:41:08,128 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:41:08,129 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:41:08,735 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:41:09,735 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:11,737 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:13,738 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:14,230 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:41:14,233 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:41:14,234 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:41:14,235 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:41:14,738 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:41:15,739 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:15,770 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:41:17,740 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:19,741 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:20,307 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:41:20,310 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:41:20,311 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:41:20,312 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:41:20,741 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:41:21,742 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:22,104 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:41:22,104 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:41:23,742 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:25,743 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:26,431 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:41:26,434 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:41:26,435 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:41:26,436 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:41:26,743 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:41:27,744 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:29,744 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:31,745 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:32,628 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:41:32,630 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:41:32,632 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:41:32,633 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:41:32,745 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:41:33,746 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:35,746 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:37,412 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:41:37,412 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:41:37,747 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:38,758 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:41:38,761 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:41:38,762 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:41:38,763 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:41:39,748 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:39,748 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:41:41,748 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:43,749 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:44,927 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:41:44,930 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:41:44,931 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:41:44,932 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:41:45,750 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:45,750 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:41:45,908 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:41:47,751 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:49,752 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:51,078 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:41:51,081 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:41:51,082 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:41:51,083 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:41:51,753 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:51,753 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:41:52,740 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:41:52,740 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:41:53,754 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:55,755 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:57,142 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:41:57,145 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:41:57,146 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:41:57,147 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:41:57,756 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:41:57,756 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:41:59,757 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:01,758 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:03,281 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:42:03,284 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:42:03,285 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:42:03,286 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:42:03,759 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:03,760 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:42:05,760 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:07,761 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:08,044 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:42:08,045 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:42:09,366 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:42:09,368 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:42:09,369 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:42:09,370 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:42:09,762 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:09,763 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:42:11,763 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:13,764 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:15,431 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:42:15,434 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:42:15,435 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:42:15,436 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:42:15,766 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:15,766 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:42:16,061 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:42:17,766 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:19,767 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:21,474 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:42:21,476 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:42:21,478 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:42:21,479 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:42:21,768 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:21,769 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:42:23,380 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:42:23,380 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:42:23,769 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:25,771 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:27,669 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:42:27,672 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:42:27,673 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:42:27,674 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:42:27,772 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:27,772 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:42:29,772 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:31,774 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:33,775 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:33,868 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:42:33,870 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:42:33,871 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:42:33,872 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:42:34,775 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:42:35,775 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:37,776 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:38,744 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:42:38,744 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:42:39,778 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:40,153 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:42:40,155 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:42:40,156 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:42:40,157 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:42:40,778 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:42:41,779 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:43,780 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:45,781 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:46,232 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:42:46,296 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:42:46,299 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:42:46,300 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:42:46,301 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:42:46,781 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:42:47,782 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:49,783 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:51,784 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:52,376 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:42:52,379 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:42:52,380 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:42:52,381 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:42:52,784 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:42:53,785 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:54,066 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:42:54,067 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:42:55,786 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:57,787 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:42:58,450 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:42:58,453 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:42:58,454 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:42:58,455 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:42:58,787 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:42:59,788 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:01,789 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:03,790 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:04,566 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:43:04,569 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:43:04,570 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:43:04,571 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:43:04,790 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:43:05,791 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:07,792 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:09,354 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:43:09,354 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:43:09,793 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:10,604 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:43:10,607 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:43:10,608 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:43:10,609 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:43:10,793 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:43:11,794 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:12,794 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:14,795 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:16,376 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:43:16,796 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:16,843 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:43:16,845 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:43:16,846 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:43:16,847 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:43:17,797 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:43:18,797 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:20,798 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:22,799 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:22,917 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:43:22,919 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:43:22,920 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:43:22,921 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:43:23,800 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:43:24,661 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:43:24,662 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:43:24,800 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:26,800 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:28,801 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:29,020 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:43:29,023 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:43:29,024 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:43:29,025 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:43:29,801 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:43:30,802 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:32,802 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:34,803 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:36,804 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:39,426 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: partial_history
+2023-09-21 21:43:39,428 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 21:43:39,429 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 21:43:39,430 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 21:43:39,805 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 21:43:39,945 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:43:39,945 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:43:42,806 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:46,508 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:43:48,808 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:43:55,272 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:43:55,272 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:43:58,811 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:44:10,579 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:44:10,580 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:44:10,817 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:44:16,656 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:44:22,822 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:44:25,858 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:44:25,858 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:44:32,827 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:44:41,220 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:44:41,221 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:44:42,832 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:44:46,838 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:44:48,835 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:44:54,838 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:44:56,530 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:44:56,530 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:44:58,840 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:45:04,843 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:45:10,846 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:45:11,881 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:45:11,881 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:45:16,849 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:45:16,972 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:45:22,852 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:45:27,242 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:45:27,243 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:45:28,854 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:45:32,856 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:45:38,859 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:45:42,545 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:45:42,545 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:45:44,862 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:45:47,103 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:45:50,865 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:45:56,868 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:45:57,908 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:45:57,909 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:46:00,870 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:46:06,873 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:46:13,227 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:46:13,228 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:46:13,876 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:46:17,275 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:46:17,878 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:46:23,881 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:46:28,569 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:46:28,569 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:46:29,884 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:46:35,887 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:46:41,890 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:46:43,947 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:46:43,948 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:46:45,892 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:46:47,419 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:46:51,895 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:46:57,898 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:47:00,054 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:47:00,054 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:47:01,900 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:47:07,902 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:47:13,905 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:47:15,320 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:47:15,321 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:47:17,551 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:47:17,907 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:47:23,910 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:47:29,913 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:47:30,602 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:47:30,603 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:47:35,916 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:47:39,918 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:47:45,921 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:47:45,964 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:47:45,964 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:47:47,687 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:47:51,923 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:47:55,925 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:48:01,206 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:48:01,206 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:48:01,928 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:48:07,931 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:48:11,933 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:48:13,934 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:48:16,455 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:48:16,455 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:48:17,830 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:48:17,936 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:48:23,939 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:48:29,941 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:48:31,724 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:48:31,725 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:48:33,943 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:48:39,946 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:48:45,949 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:48:46,994 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:48:46,994 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:48:47,963 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:48:51,952 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:48:55,954 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:48:58,955 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:49:02,305 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:49:02,306 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:49:02,957 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:49:08,960 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:49:14,963 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:49:17,594 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:49:17,595 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:49:18,107 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:49:20,966 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:49:24,967 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:49:30,970 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:49:32,961 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:49:32,961 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:49:36,973 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:49:40,975 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:49:42,976 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:49:46,978 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:49:48,236 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:49:48,325 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:49:48,326 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:49:52,981 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:49:58,984 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:50:02,986 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:50:03,603 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:50:03,603 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:50:08,989 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:50:14,992 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:50:18,376 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:50:18,950 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:50:18,951 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:50:20,994 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:50:24,996 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:50:26,997 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:50:33,000 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:50:34,233 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:50:34,234 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:50:37,002 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:50:43,005 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:50:48,518 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:50:49,620 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:50:49,620 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:50:53,009 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:50:59,012 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:51:04,994 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:51:04,994 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:51:05,015 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:51:09,017 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:51:15,020 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:51:18,672 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:51:20,368 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:51:20,368 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:51:21,022 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:51:27,025 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:51:33,028 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:51:35,671 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:51:35,671 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:51:37,030 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:51:40,031 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:51:46,034 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:51:48,801 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:51:50,036 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:51:50,967 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:51:50,967 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:51:56,039 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:52:02,042 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:52:06,346 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:52:06,347 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:52:08,044 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:52:14,047 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:52:18,049 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:52:19,036 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:52:21,688 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:52:21,688 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:52:24,052 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:52:30,055 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:52:34,057 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:52:36,058 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:52:36,983 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:52:36,984 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:52:40,060 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:52:46,063 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:52:49,181 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:52:52,066 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:52:52,293 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:52:52,293 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:52:58,069 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:53:02,071 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:53:07,647 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:53:07,647 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:53:08,074 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:53:14,077 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:53:18,079 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:53:19,323 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:53:20,080 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:53:22,908 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:53:22,908 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:53:26,083 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:53:30,084 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:53:36,087 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:53:38,240 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:53:38,240 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:53:42,091 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:53:48,093 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:53:49,454 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:53:52,095 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:53:53,606 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:53:53,607 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:53:58,099 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:54:04,102 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:54:08,916 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:54:08,916 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:54:10,105 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:54:17,108 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:54:19,607 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:54:21,110 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:54:24,246 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:54:24,247 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:54:27,113 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:54:33,116 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:54:37,118 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:54:39,119 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:54:39,557 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:54:39,558 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:54:45,122 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:54:49,124 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:54:49,734 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:54:54,888 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:54:54,888 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:54:55,127 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:55:01,130 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:55:05,132 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:55:10,235 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:55:10,235 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:55:11,135 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:55:15,137 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:55:19,900 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:55:21,139 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:55:25,562 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:55:25,562 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:55:27,142 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:55:33,145 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:55:39,148 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:55:40,882 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:55:40,882 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:55:43,150 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:55:49,153 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:55:50,046 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:55:55,156 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:55:56,400 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:55:56,400 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:56:01,159 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:56:05,161 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:56:11,164 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:56:12,284 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:56:12,285 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:56:17,166 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:56:20,289 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:56:21,168 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:56:27,171 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:56:27,605 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:56:27,606 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:56:33,174 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:56:39,177 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:56:42,919 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:56:42,919 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:56:45,180 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:56:50,427 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:56:52,183 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:56:58,186 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:56:58,213 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:56:58,214 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:57:02,188 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:57:04,189 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:57:08,191 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:57:13,612 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:57:13,612 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:57:14,194 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:57:20,196 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:57:20,562 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:57:24,198 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:57:28,938 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:57:28,938 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:57:30,201 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:57:36,204 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:57:40,206 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:57:44,252 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:57:44,252 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:57:46,209 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:57:50,720 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:57:52,212 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:57:56,213 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:57:59,572 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:57:59,572 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:58:02,216 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:58:08,219 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:58:14,222 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:58:14,869 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:58:14,870 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:58:18,224 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:58:20,922 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:58:24,227 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:58:30,169 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:58:30,170 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:58:30,230 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:58:34,232 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:58:40,234 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:58:45,478 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:58:45,478 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:58:46,237 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:58:50,239 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:58:51,071 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:58:52,240 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:58:58,243 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:59:00,788 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:59:00,789 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:59:02,245 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:59:04,246 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:59:10,249 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:59:14,251 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:59:16,089 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:59:16,090 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:59:20,253 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:59:21,207 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:59:26,256 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:59:31,387 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:59:31,388 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:59:32,259 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:59:38,262 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:59:45,265 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:59:46,685 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 21:59:46,685 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 21:59:51,268 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:59:51,346 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 21:59:55,270 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 21:59:57,271 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:00:01,273 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:00:02,031 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:00:02,031 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:00:07,276 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:00:13,278 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:00:17,371 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:00:17,371 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:00:19,281 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:00:21,486 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:00:25,284 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:00:31,287 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:00:32,645 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:00:32,645 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:00:37,290 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:00:43,293 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:00:47,885 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:00:47,885 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:00:49,296 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:00:51,628 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:00:55,299 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:01:01,301 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:01:03,227 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:01:03,228 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:01:07,304 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:01:13,307 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:01:18,510 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:01:18,511 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:01:19,310 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:01:21,840 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:01:23,311 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:01:29,314 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:01:33,883 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:01:33,883 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:01:35,317 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:01:41,320 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:01:45,322 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:01:49,141 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:01:49,141 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:01:51,325 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:01:52,036 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:01:57,327 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:02:03,330 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:02:04,466 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:02:04,467 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:02:09,333 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:02:15,336 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:02:19,727 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:02:19,728 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:02:21,339 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:02:22,193 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:02:27,342 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:02:33,345 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:02:35,008 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:02:35,008 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:02:38,347 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:02:44,350 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:02:50,353 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:02:50,356 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:02:50,356 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:02:52,332 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:02:54,355 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:03:00,358 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:03:05,635 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:03:05,635 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:03:06,361 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:03:12,363 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:03:18,366 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:03:20,939 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:03:20,939 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:03:22,368 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:03:22,472 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:03:28,371 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:03:34,374 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:03:36,252 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:03:36,253 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:03:40,377 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:03:44,379 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:03:50,382 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:03:51,508 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:03:51,508 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:03:52,608 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:03:56,384 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:04:02,387 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:04:06,389 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:04:06,971 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:04:06,971 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:04:12,391 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:04:18,394 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:04:22,241 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:04:22,241 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:04:22,742 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:04:24,397 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:04:30,399 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:04:36,402 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:04:37,592 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:04:37,592 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:04:42,405 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:04:46,407 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:04:52,409 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:04:52,865 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:04:52,866 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:04:53,153 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:04:58,412 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:05:02,414 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:05:05,415 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:05:08,155 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:05:08,155 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:05:11,421 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:05:15,423 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:05:21,426 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:05:23,048 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:05:23,421 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:05:23,421 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:05:27,429 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:05:33,431 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:05:37,433 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:05:38,725 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:05:38,725 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:05:43,436 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:05:49,439 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:05:53,206 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:05:53,441 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:05:54,037 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:05:54,037 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:05:59,444 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:06:05,447 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:06:09,378 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:06:09,378 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:06:11,450 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:06:17,453 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:06:23,362 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:06:23,456 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:06:24,762 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:06:24,763 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:06:29,459 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:06:33,461 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:06:35,461 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:06:39,463 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:06:40,281 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:06:40,282 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:06:45,466 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:06:51,469 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:06:53,501 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:06:55,471 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:06:55,581 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:06:55,581 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:07:01,474 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:07:10,920 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:07:10,920 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:07:11,479 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:07:17,482 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:07:23,485 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:07:23,631 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:07:26,253 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:07:26,253 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:07:27,487 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:07:33,490 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:07:39,493 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:07:41,532 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:07:41,532 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:07:45,495 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:07:51,498 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:07:53,771 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:07:55,500 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:07:56,861 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:07:56,862 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:07:58,502 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:08:02,504 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:08:08,507 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:08:12,148 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:08:12,148 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:08:14,509 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:08:18,511 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:08:23,926 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:08:24,514 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:08:27,599 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:08:27,600 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:08:30,517 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:08:36,520 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:08:40,522 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:08:42,916 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:08:42,917 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:08:46,525 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:08:52,528 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:08:54,068 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:08:58,239 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:08:58,240 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:08:58,531 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:09:02,533 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:09:04,534 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:09:08,536 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:09:13,477 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:09:13,478 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:09:14,538 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:09:20,541 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:09:24,203 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:09:26,544 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:09:28,744 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:09:28,744 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:09:32,547 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:09:38,550 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:09:44,028 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:09:44,028 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:09:44,553 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:09:50,555 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:09:54,339 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:09:56,558 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:09:59,309 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:09:59,309 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:10:02,561 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:10:08,564 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:10:14,566 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:10:14,614 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:10:14,615 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:10:20,569 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:10:24,527 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:10:24,571 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:10:26,572 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:10:29,910 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:10:29,911 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:10:30,574 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:10:37,577 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:10:43,580 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:10:45,233 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: stop_status
+2023-09-21 22:10:45,233 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: stop_status
+2023-09-21 22:10:47,582 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:10:51,290 DEBUG   SenderThread:12043 [sender.py:send():235] send: telemetry
+2023-09-21 22:10:52,585 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:10:53,694 DEBUG   SenderThread:12043 [sender.py:send():235] send: exit
+2023-09-21 22:10:53,694 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:53,695 INFO    SenderThread:12043 [sender.py:send_exit():371] handling exit code: 1
+2023-09-21 22:10:53,695 INFO    SenderThread:12043 [sender.py:send_exit():373] handling runtime: 1956
+2023-09-21 22:10:53,696 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 22:10:53,696 INFO    SenderThread:12043 [sender.py:send_exit():379] send defer
+2023-09-21 22:10:53,696 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:53,697 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: defer
+2023-09-21 22:10:53,698 INFO    HandlerThread:12043 [handler.py:handle_request_defer():164] handle defer: 0
+2023-09-21 22:10:53,698 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: defer
+2023-09-21 22:10:53,698 INFO    SenderThread:12043 [sender.py:send_request_defer():388] handle sender defer: 0
+2023-09-21 22:10:53,698 INFO    SenderThread:12043 [sender.py:transition_state():392] send defer: 1
+2023-09-21 22:10:53,699 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: defer
+2023-09-21 22:10:53,699 INFO    HandlerThread:12043 [handler.py:handle_request_defer():164] handle defer: 1
+2023-09-21 22:10:53,763 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: defer
+2023-09-21 22:10:53,763 INFO    SenderThread:12043 [sender.py:send_request_defer():388] handle sender defer: 1
+2023-09-21 22:10:53,764 INFO    SenderThread:12043 [sender.py:transition_state():392] send defer: 2
+2023-09-21 22:10:53,764 DEBUG   SenderThread:12043 [sender.py:send():235] send: stats
+2023-09-21 22:10:53,765 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: defer
+2023-09-21 22:10:53,765 INFO    HandlerThread:12043 [handler.py:handle_request_defer():164] handle defer: 2
+2023-09-21 22:10:53,768 DEBUG   SenderThread:12043 [sender.py:send():235] send: history
+2023-09-21 22:10:53,768 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 22:10:53,770 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 22:10:53,770 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: defer
+2023-09-21 22:10:53,770 INFO    SenderThread:12043 [sender.py:send_request_defer():388] handle sender defer: 2
+2023-09-21 22:10:53,770 INFO    SenderThread:12043 [sender.py:transition_state():392] send defer: 3
+2023-09-21 22:10:53,771 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: defer
+2023-09-21 22:10:53,771 INFO    HandlerThread:12043 [handler.py:handle_request_defer():164] handle defer: 3
+2023-09-21 22:10:53,772 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: defer
+2023-09-21 22:10:53,772 INFO    SenderThread:12043 [sender.py:send_request_defer():388] handle sender defer: 3
+2023-09-21 22:10:53,772 INFO    SenderThread:12043 [sender.py:transition_state():392] send defer: 4
+2023-09-21 22:10:53,772 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: defer
+2023-09-21 22:10:53,773 INFO    HandlerThread:12043 [handler.py:handle_request_defer():164] handle defer: 4
+2023-09-21 22:10:53,773 DEBUG   SenderThread:12043 [sender.py:send():235] send: summary
+2023-09-21 22:10:53,775 INFO    SenderThread:12043 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2023-09-21 22:10:53,775 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: defer
+2023-09-21 22:10:53,775 INFO    SenderThread:12043 [sender.py:send_request_defer():388] handle sender defer: 4
+2023-09-21 22:10:53,775 INFO    SenderThread:12043 [sender.py:transition_state():392] send defer: 5
+2023-09-21 22:10:53,776 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: defer
+2023-09-21 22:10:53,776 INFO    HandlerThread:12043 [handler.py:handle_request_defer():164] handle defer: 5
+2023-09-21 22:10:53,776 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: defer
+2023-09-21 22:10:53,776 INFO    SenderThread:12043 [sender.py:send_request_defer():388] handle sender defer: 5
+2023-09-21 22:10:53,799 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:54,229 INFO    SenderThread:12043 [sender.py:transition_state():392] send defer: 6
+2023-09-21 22:10:54,230 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:54,230 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: defer
+2023-09-21 22:10:54,230 INFO    HandlerThread:12043 [handler.py:handle_request_defer():164] handle defer: 6
+2023-09-21 22:10:54,231 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: defer
+2023-09-21 22:10:54,231 INFO    SenderThread:12043 [sender.py:send_request_defer():388] handle sender defer: 6
+2023-09-21 22:10:54,231 INFO    SenderThread:12043 [dir_watcher.py:finish():336] shutting down directory watcher
+2023-09-21 22:10:54,332 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:54,586 INFO    Thread-7  :12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/config.yaml
+2023-09-21 22:10:54,586 INFO    SenderThread:12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:10:54,587 INFO    SenderThread:12043 [dir_watcher.py:_on_file_modified():269] file/dir modified: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 22:10:54,587 INFO    SenderThread:12043 [dir_watcher.py:finish():366] scan: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files
+2023-09-21 22:10:54,587 INFO    SenderThread:12043 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-metadata.json wandb-metadata.json
+2023-09-21 22:10:54,588 INFO    SenderThread:12043 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/requirements.txt requirements.txt
+2023-09-21 22:10:54,588 INFO    SenderThread:12043 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log output.log
+2023-09-21 22:10:54,588 INFO    SenderThread:12043 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/config.yaml config.yaml
+2023-09-21 22:10:54,599 INFO    SenderThread:12043 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json wandb-summary.json
+2023-09-21 22:10:54,601 INFO    SenderThread:12043 [dir_watcher.py:finish():380] scan save: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/conda-environment.yaml conda-environment.yaml
+2023-09-21 22:10:54,613 INFO    SenderThread:12043 [sender.py:transition_state():392] send defer: 7
+2023-09-21 22:10:54,614 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:54,621 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: defer
+2023-09-21 22:10:54,621 INFO    HandlerThread:12043 [handler.py:handle_request_defer():164] handle defer: 7
+2023-09-21 22:10:54,621 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: defer
+2023-09-21 22:10:54,623 INFO    SenderThread:12043 [sender.py:send_request_defer():388] handle sender defer: 7
+2023-09-21 22:10:54,623 INFO    SenderThread:12043 [file_pusher.py:finish():145] shutting down file pusher
+2023-09-21 22:10:54,716 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:54,716 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:54,818 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:54,818 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:54,920 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:54,920 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:55,022 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:55,022 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:55,124 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:55,125 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:55,227 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:55,227 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:55,328 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:55,329 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:55,431 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:55,431 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:55,533 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:55,533 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:55,621 INFO    Thread-15 :12043 [upload_job.py:push():132] Uploaded file /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/wandb-summary.json
+2023-09-21 22:10:55,636 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:55,636 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:55,738 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:55,738 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:55,840 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:55,841 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:55,931 INFO    Thread-14 :12043 [upload_job.py:push():132] Uploaded file /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/config.yaml
+2023-09-21 22:10:55,943 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:55,943 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:55,967 INFO    Thread-12 :12043 [upload_job.py:push():132] Uploaded file /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/requirements.txt
+2023-09-21 22:10:55,983 INFO    Thread-16 :12043 [upload_job.py:push():132] Uploaded file /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/conda-environment.yaml
+2023-09-21 22:10:56,046 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:56,046 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:56,148 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:56,149 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:56,251 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:56,251 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:56,353 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:56,354 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:56,456 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:56,456 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:56,558 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:56,559 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:56,661 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:56,661 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:56,756 INFO    Thread-13 :12043 [upload_job.py:push():132] Uploaded file /OneFormer/wandb/run-20230921_213815-1ngqzrq4/files/output.log
+2023-09-21 22:10:56,763 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:56,764 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:56,866 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:56,866 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:56,957 INFO    Thread-6 (_thread_body):12043 [sender.py:transition_state():392] send defer: 8
+2023-09-21 22:10:56,958 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: defer
+2023-09-21 22:10:56,958 INFO    HandlerThread:12043 [handler.py:handle_request_defer():164] handle defer: 8
+2023-09-21 22:10:56,959 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: defer
+2023-09-21 22:10:56,959 INFO    SenderThread:12043 [sender.py:send_request_defer():388] handle sender defer: 8
+2023-09-21 22:10:56,968 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:57,562 INFO    SenderThread:12043 [sender.py:transition_state():392] send defer: 9
+2023-09-21 22:10:57,562 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:57,563 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: defer
+2023-09-21 22:10:57,563 INFO    HandlerThread:12043 [handler.py:handle_request_defer():164] handle defer: 9
+2023-09-21 22:10:57,563 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: defer
+2023-09-21 22:10:57,564 INFO    SenderThread:12043 [sender.py:send_request_defer():388] handle sender defer: 9
+2023-09-21 22:10:57,564 INFO    SenderThread:12043 [sender.py:transition_state():392] send defer: 10
+2023-09-21 22:10:57,565 DEBUG   SenderThread:12043 [sender.py:send():235] send: final
+2023-09-21 22:10:57,565 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: defer
+2023-09-21 22:10:57,565 DEBUG   SenderThread:12043 [sender.py:send():235] send: footer
+2023-09-21 22:10:57,566 INFO    HandlerThread:12043 [handler.py:handle_request_defer():164] handle defer: 10
+2023-09-21 22:10:57,566 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: defer
+2023-09-21 22:10:57,566 INFO    SenderThread:12043 [sender.py:send_request_defer():388] handle sender defer: 10
+2023-09-21 22:10:57,664 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: poll_exit
+2023-09-21 22:10:57,665 DEBUG   SenderThread:12043 [sender.py:send_request():249] send_request: poll_exit
+2023-09-21 22:10:57,665 INFO    SenderThread:12043 [file_pusher.py:join():150] waiting for file pusher
+2023-09-21 22:10:58,219 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: sampled_history
+2023-09-21 22:10:58,227 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: get_summary
+2023-09-21 22:10:58,230 DEBUG   HandlerThread:12043 [handler.py:handle_request():141] handle_request: shutdown
+2023-09-21 22:10:58,230 INFO    HandlerThread:12043 [handler.py:finish():806] shutting down handler
+2023-09-21 22:10:58,566 INFO    WriterThread:12043 [datastore.py:close():279] close: /OneFormer/wandb/run-20230921_213815-1ngqzrq4/run-1ngqzrq4.wandb
+2023-09-21 22:10:59,117 INFO    SenderThread:12043 [sender.py:finish():1111] shutting down sender
+2023-09-21 22:10:59,117 INFO    SenderThread:12043 [file_pusher.py:finish():145] shutting down file pusher
+2023-09-21 22:10:59,118 INFO    SenderThread:12043 [file_pusher.py:join():150] waiting for file pusher
+2023-09-21 22:10:59,121 INFO    MainThread:12043 [internal.py:handle_exit():80] Internal process exited
