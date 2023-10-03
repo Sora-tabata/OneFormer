@@ -3,4 +3,4 @@ python demo.py --config-file ../configs/cityscapes/convnext/mapillary_pretrain_o
   --input /mnt/source/datasets/img_230607/* \
   --output /mnt/source/datasets/shibuya_oneformer/ \
   --task $task \
-  --opts MODEL.IS_TRAIN False MODEL.IS_DEMO True MODEL.WEIGHTS /mnt/source/OneFormer/model/model_230926.pth
+  --opts MODEL.IS_TRAIN False MODEL.IS_DEMO True MODEL.WEIGHTS /mnt/source/OneFormer/model/model_1003.pth
