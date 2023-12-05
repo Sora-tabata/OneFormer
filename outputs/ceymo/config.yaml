@@ -459,7 +459,7 @@ MODEL:
     PROJ_NUM_LAYERS: 2
     VOCAB_SIZE: 49408
     WIDTH: 256
-  WEIGHTS: detectron2://ImageNetPretrained/torchvision/R-50.pkl
+  WEIGHTS: /mnt/source/OneFormer/mapillary_pretrain_250_16_convnext_xl_oneformer_mapillary_300k.pth
 OUTPUT_DIR: outputs/ceymo
 SEED: -1
 SOLVER:
